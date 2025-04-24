@@ -1,4 +1,28 @@
+# Supernova Blockchain Website
+
+A modern website for the Supernova blockchain project, featuring quantum resistance and environmental impact monitoring capabilities.
+
 This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+
+## Recent Updates
+
+### Styling Fix (2023-11-11)
+- Removed Tailwind CSS dependencies to resolve PostCSS plugin configuration conflicts
+- Simplified SCSS files by using hardcoded values instead of CSS variables
+- Updated component styling to use direct color values and gradients
+- Streamlined Next.js configuration for better compatibility
+
+## Features
+
+- **Quantum Resistance**: Future-proof your blockchain with post-quantum cryptographic primitives.
+- **Environmental Impact**: Track and mitigate carbon emissions with built-in tools.
+- **Lightning Network**: Scale transactions off-chain with integrated Lightning Network support.
+- **Advanced Security**: Multi-layered protection against various attacks.
+- **Comprehensive Monitoring**: Built-in metrics collection framework.
+- **Production Ready**: Designed with reliability in mind.
+- **Modern, responsive design**
+- **Community engagement platform**
+- **Comprehensive documentation**
 
 ## Getting Started
 
