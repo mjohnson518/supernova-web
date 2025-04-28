@@ -1,0 +1,24 @@
+// Primary Colors
+$cosmic-purple: #392F5A;
+$nova-blue: #4D84FF;
+$quantum-green: #27AE60;
+
+// Secondary Colors
+$stellar-gold: #FFD700;
+$pulsar-pink: #FF3366;
+$nebula-teal: #00F5D4;
+
+// Gradients
+$cosmic-gradient: linear-gradient(135deg, #392F5A, #4D84FF, #6A3093);
+$quantum-gradient: linear-gradient(135deg, #27AE60, #00F5D4, #4D84FF);
+$nova-glow: radial-gradient(circle, #FFD700, rgba(255, 215, 0, 0));
+
+// Background Colors
+$dark-bg: #121212;
+$darker-bg: #080808;
+$light-bg: #f5f5f7;
+
+// Text Colors
+$text-light: #FFFFFF;
+$text-dark: #333333;
+$text-muted: rgba(255, 255, 255, 0.7); 

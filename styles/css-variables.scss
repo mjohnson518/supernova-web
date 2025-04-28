@@ -1,0 +1,72 @@
+@import './themes/colors.scss';
+@import './themes/typography.scss';
+@import './themes/spacing.scss';
+
+:root {
+  /* Colors */
+  --cosmic-purple: #{$cosmic-purple};
+  --nova-blue: #{$nova-blue};
+  --quantum-green: #{$quantum-green};
+  --stellar-gold: #{$stellar-gold};
+  --pulsar-pink: #{$pulsar-pink};
+  --nebula-teal: #{$nebula-teal};
+  
+  --cosmic-gradient: #{$cosmic-gradient};
+  --quantum-gradient: #{$quantum-gradient};
+  --nova-glow: #{$nova-glow};
+  
+  --dark-bg: #{$dark-bg};
+  --darker-bg: #{$darker-bg};
+  --light-bg: #{$light-bg};
+  
+  --text-light: #{$text-light};
+  --text-dark: #{$text-dark};
+  --text-muted: #{$text-muted};
+  
+  /* Typography */
+  --heading-font: #{$heading-font};
+  --body-font: #{$body-font};
+  --code-font: #{$code-font};
+  
+  --font-weight-regular: #{$font-weight-regular};
+  --font-weight-medium: #{$font-weight-medium};
+  --font-weight-bold: #{$font-weight-bold};
+  
+  --font-size-h1: #{$font-size-h1};
+  --font-size-h2: #{$font-size-h2};
+  --font-size-h3: #{$font-size-h3};
+  --font-size-h4: #{$font-size-h4};
+  --font-size-body-large: #{$font-size-body-large};
+  --font-size-body: #{$font-size-body};
+  --font-size-caption: #{$font-size-caption};
+  --font-size-code: #{$font-size-code};
+  
+  --line-height-heading: #{$line-height-heading};
+  --line-height-body: #{$line-height-body};
+  --line-height-code: #{$line-height-code};
+  
+  /* Spacing */
+  --spacing-base: #{$spacing-base};
+  --spacing-xs: #{$spacing-xs};
+  --spacing-sm: #{$spacing-sm};
+  --spacing-md: #{$spacing-md};
+  --spacing-lg: #{$spacing-lg};
+  --spacing-xl: #{$spacing-xl};
+  --spacing-2xl: #{$spacing-2xl};
+  --spacing-3xl: #{$spacing-3xl};
+  
+  --border-radius-sm: #{$border-radius-sm};
+  --border-radius-md: #{$border-radius-md};
+  --border-radius-lg: #{$border-radius-lg};
+  --border-radius-full: #{$border-radius-full};
+  
+  --shadow-sm: #{$shadow-sm};
+  --shadow-md: #{$shadow-md};
+  --shadow-lg: #{$shadow-lg};
+  --shadow-glow-blue: #{$shadow-glow-blue};
+  --shadow-glow-green: #{$shadow-glow-green};
+  
+  --transition-fast: #{$transition-fast};
+  --transition-base: #{$transition-base};
+  --transition-slow: #{$transition-slow};
+} 

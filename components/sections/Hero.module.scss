@@ -1,58 +1,163 @@
 .hero-section {
-  height: 90vh;
+  min-height: 100vh;
   display: flex;
   align-items: center;
   justify-content: center;
-  background: linear-gradient(135deg, #0f0c29, #302b63, #24243e);
-  color: white;
-  text-align: center;
+  position: relative;
+  background: linear-gradient(135deg, #392F5A, #4D84FF, #6A3093);
+  overflow: hidden;
+  
+  // Star particles
+  &:before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-image: radial-gradient(white, rgba(255, 255, 255, 0.2) 2px, transparent 2px),
+                      radial-gradient(white, rgba(255, 255, 255, 0.15) 1px, transparent 1px);
+    background-size: 50px 50px, 30px 30px;
+    background-position: 0 0, 15px 15px;
+    animation: starsFloat 100s linear infinite;
+  }
+  
+  // Nebula effect
+  &:after {
+    content: '';
+    position: absolute;
+    width: 150%;
+    height: 150%;
+    top: -25%;
+    left: -25%;
+    background: radial-gradient(
+      circle at center,
+      rgba(106, 48, 147, 0.2) 0%,
+      rgba(77, 132, 255, 0.1) 40%,
+      transparent 70%
+    );
+    animation: nebulaFloat 40s ease-in-out infinite alternate;
+    mix-blend-mode: screen;
+  }
   
   .hero-content {
-    max-width: 800px;
-    padding: 2rem;
+    max-width: 900px;
+    padding: 48px;
+    text-align: center;
+    position: relative;
+    z-index: 10;
+    animation: fadeIn 1s ease-out;
     
     h1 {
-      font-size: 3.5rem;
-      margin-bottom: 1rem;
+      font-size: 4rem;
+      margin-bottom: 24px;
+      color: #FFFFFF;
+      font-weight: 700;
+      animation: slideUp 0.8s ease-out;
+      text-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+      
+      span {
+        display: block;
+        font-size: 0.5em;
+        font-weight: 500;
+        opacity: 0.9;
+        margin-top: 8px;
+      }
     }
     
     p {
-      font-size: 1.5rem;
-      margin-bottom: 2rem;
-      opacity: 0.8;
+      font-size: 1.25rem;
+      margin-bottom: 48px;
+      color: rgba(255, 255, 255, 0.9);
+      max-width: 600px;
+      margin-left: auto;
+      margin-right: auto;
+      animation: slideUp 0.8s 0.2s ease-out both;
+      line-height: 1.6;
     }
     
     .cta-buttons {
       display: flex;
       justify-content: center;
-      gap: 1rem;
+      gap: 24px;
+      animation: slideUp 0.8s 0.4s ease-out both;
       
-      button {
-        padding: 0.75rem 1.5rem;
+      .primary-button {
+        background: linear-gradient(135deg, #4D84FF, #6A3093);
+        color: white;
+        border: none;
+        padding: 16px 32px;
+        border-radius: 8px;
+        font-weight: 500;
         font-size: 1rem;
-        border-radius: 4px;
-        cursor: pointer;
-        transition: all 0.3s;
+        transition: all 0.3s ease;
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
         
-        &.primary-button {
-          background-color: #4d84ff;
-          color: white;
-          border: none;
-          
-          &:hover {
-            background-color: #3a6cd1;
-          }
+        &:hover {
+          transform: translateY(-2px) scale(1.05);
+          box-shadow: 0 0 15px rgba(77, 132, 255, 0.4);
         }
+      }
+      
+      .secondary-button {
+        background: transparent;
+        color: white;
+        border: 2px solid rgba(255, 255, 255, 0.5);
+        padding: 16px 32px;
+        border-radius: 8px;
+        font-weight: 500;
+        font-size: 1rem;
+        transition: all 0.3s ease;
         
-        &.secondary-button {
-          background-color: transparent;
-          color: white;
-          border: 2px solid white;
-          
-          &:hover {
-            background-color: rgba(255, 255, 255, 0.1);
-          }
+        &:hover {
+          border-color: white;
+          background-color: rgba(255, 255, 255, 0.1);
+          transform: translateY(-2px);
         }
+      }
+    }
+  }
+}
+
+// Animations
+@keyframes starsFloat {
+  from { background-position: 0 0, 15px 15px; }
+  to { background-position: 1000px 1000px, 1015px 1015px; }
+}
+
+@keyframes nebulaFloat {
+  0% { transform: rotate(0deg) scale(1); opacity: 0.3; }
+  50% { transform: rotate(5deg) scale(1.1); opacity: 0.5; }
+  100% { transform: rotate(0deg) scale(1); opacity: 0.3; }
+}
+
+// Responsive styles
+@media (max-width: 768px) {
+  .hero-section {
+    .hero-content {
+      h1 {
+        font-size: 2.8rem;
+      }
+      
+      p {
+        font-size: 1.125rem;
+      }
+      
+      .cta-buttons {
+        flex-direction: column;
+        align-items: center;
+      }
+    }
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-section {
+    .hero-content {
+      padding: 32px 24px;
+      
+      h1 {
+        font-size: 2rem;
       }
     }
   }
