@@ -1,0 +1,49 @@
+.main-layout {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  
+  .header {
+    padding: 1rem 2rem;
+    background-color: rgba(0, 0, 0, 0.8);
+    color: white;
+    
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      
+      .logo {
+        font-size: 1.5rem;
+        font-weight: bold;
+      }
+      
+      .nav-links {
+        display: flex;
+        list-style: none;
+        gap: 2rem;
+        
+        li a {
+          color: white;
+          text-decoration: none;
+          transition: color 0.3s;
+          
+          &:hover {
+            color: #4d84ff;
+          }
+        }
+      }
+    }
+  }
+  
+  main {
+    flex-grow: 1;
+  }
+  
+  .footer {
+    padding: 1.5rem;
+    background-color: rgba(0, 0, 0, 0.9);
+    color: white;
+    text-align: center;
+  }
+} 
