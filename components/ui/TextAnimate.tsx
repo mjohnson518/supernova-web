@@ -2,13 +2,6 @@
 
 import React, { useEffect, useRef, useState, ElementType } from "react";
 
-type AnimationVariant = 
-  | "fadeIn" 
-  | "blurInUp" 
-  | "slideUp" 
-  | "scaleUp" 
-  | "slideLeft";
-
 type SplitBy = "text" | "word" | "character" | "line";
 
 interface TextAnimateProps {
@@ -16,12 +9,10 @@ interface TextAnimateProps {
   className?: string;
   delay?: number;
   duration?: number;
-  variants?: Record<string, unknown>;
   as?: ElementType;
   by?: SplitBy;
   startOnView?: boolean;
   once?: boolean;
-  animation?: AnimationVariant;
 }
 
 export const TextAnimate: React.FC<TextAnimateProps> = ({
@@ -29,12 +20,10 @@ export const TextAnimate: React.FC<TextAnimateProps> = ({
   className = "",
   delay = 0,
   duration = 0.3,
-  variants,
   as: Component = "p",
   by = "word",
   startOnView = true,
   once = false,
-  animation = "blurInUp",
 }) => {
   const containerRef = useRef<HTMLDivElement>(null);
   const [isVisible, setIsVisible] = useState(!startOnView);

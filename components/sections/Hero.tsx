@@ -51,7 +51,6 @@ const Hero = () => {
             Supernova
           </AuroraText>
           <TextAnimate 
-            animation="blurInUp" 
             by="word" 
             delay={0.2} 
             duration={0.8} 
