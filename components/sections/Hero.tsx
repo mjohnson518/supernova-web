@@ -5,7 +5,7 @@ import { AuroraText } from '../ui/AuroraText';
 import { TextAnimate } from '../ui/TextAnimate';
 import { LatticeLines } from '../ui/LatticeLines';
 
-const Hero: React.FC = () => {
+const Hero = () => {
   return (
     <section className={styles['hero-section']} id="hero">
       <div className={styles['star-particles']}>

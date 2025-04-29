@@ -1,7 +1,7 @@
 import React from 'react';
 import styles from './EnvironmentalImpact.module.scss';
 
-const EnvironmentalImpact: React.FC = () => {
+const EnvironmentalImpact = () => {
   return (
     <section className={styles['environmental-impact-section']} id="impact">
       <h2>Environmental Impact</h2>

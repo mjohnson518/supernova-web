@@ -25,7 +25,7 @@ const Icons = {
   )
 };
 
-const Features: React.FC = () => {
+const Features = () => {
   const features = [
     {
       title: 'Quantum Resistance',

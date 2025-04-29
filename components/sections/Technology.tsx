@@ -1,8 +1,7 @@
 import React from 'react';
 import styles from './Technology.module.scss';
-import Image from 'next/image';
 
-const Technology: React.FC = () => {
+const Technology = () => {
   return (
     <section className={styles['technology-section']} id="technology">
       <h2>Core Technology</h2>

@@ -8,7 +8,6 @@ interface ParticlesProps {
   staticity?: number;
   ease?: number;
   refresh?: boolean;
-  color?: string;
   size?: number;
   vx?: number;
   vy?: number;
@@ -37,7 +36,6 @@ export const Particles = ({
   ease = 30,
   size = 0.8,
   refresh = false,
-  color = "#4D84FF",
   vx = 0,
   vy = 0,
   styles = {
@@ -48,7 +46,6 @@ export const Particles = ({
   const [particles, setParticles] = useState<ParticleType[]>([]);
   const containerRef = useRef<HTMLDivElement>(null);
   const [dimensions, setDimensions] = useState({ width: 0, height: 0 });
-  const [interactiveParticles, setInteractiveParticles] = useState<ParticleType[]>([]);
 
   // Generate random particles
   const generateParticles = (container: HTMLDivElement) => {

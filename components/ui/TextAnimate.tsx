@@ -124,8 +124,6 @@ export const TextAnimate: React.FC<TextAnimateProps> = ({
     }
   };
 
-  const animationVariants = getVariants();
-
   return (
     <div ref={containerRef} className={`text-animate-container ${className}`}>
       <Component className="text-animate-content" style={{ display: "inline-block" }}>
