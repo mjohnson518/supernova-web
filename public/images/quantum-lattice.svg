@@ -1,0 +1,166 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" width="100%" height="100%">
+  <!-- Background gradient -->
+  <defs>
+    <linearGradient id="bgGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1A1A2E" />
+      <stop offset="100%" stop-color="#16213E" />
+    </linearGradient>
+    
+    <!-- Glow effects -->
+    <filter id="glow1" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="5" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+    
+    <filter id="glow2" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="10" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+    
+    <filter id="glow3" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="3" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+    
+    <!-- Circuit pattern -->
+    <pattern id="circuitPattern" x="0" y="0" width="100" height="100" patternUnits="userSpaceOnUse">
+      <path d="M10 10 L90 10 L90 90 L10 90 Z" fill="none" stroke="#4D84FF" stroke-width="0.5" opacity="0.15" />
+      <path d="M30 10 L30 90" fill="none" stroke="#4D84FF" stroke-width="0.5" opacity="0.15" />
+      <path d="M50 10 L50 90" fill="none" stroke="#4D84FF" stroke-width="0.5" opacity="0.15" />
+      <path d="M70 10 L70 90" fill="none" stroke="#4D84FF" stroke-width="0.5" opacity="0.15" />
+      <path d="M10 30 L90 30" fill="none" stroke="#4D84FF" stroke-width="0.5" opacity="0.15" />
+      <path d="M10 50 L90 50" fill="none" stroke="#4D84FF" stroke-width="0.5" opacity="0.15" />
+      <path d="M10 70 L90 70" fill="none" stroke="#4D84FF" stroke-width="0.5" opacity="0.15" />
+      <circle cx="50" cy="50" r="3" fill="#4D84FF" opacity="0.2" />
+      <circle cx="30" cy="30" r="2" fill="#4D84FF" opacity="0.2" />
+      <circle cx="70" cy="70" r="2" fill="#4D84FF" opacity="0.2" />
+    </pattern>
+  </defs>
+
+  <!-- Background -->
+  <rect width="800" height="600" fill="url(#bgGradient)" />
+  <rect width="800" height="600" fill="url(#circuitPattern)" />
+  
+  <!-- Central processor/chip -->
+  <g transform="translate(400, 300)">
+    <!-- Processor base -->
+    <rect x="-150" y="-150" width="300" height="300" rx="15" ry="15" 
+          fill="#222639" stroke="#4D84FF" stroke-width="2" />
+    
+    <!-- Processor circuits -->
+    <g opacity="0.8">
+      <path d="M-130 -130 L130 -130 L130 130 L-130 130 Z" fill="none" stroke="#4D84FF" stroke-width="1" />
+      <path d="M-100 -130 L-100 130" fill="none" stroke="#4D84FF" stroke-width="1" />
+      <path d="M-50 -130 L-50 130" fill="none" stroke="#4D84FF" stroke-width="1" />
+      <path d="M0 -130 L0 130" fill="none" stroke="#4D84FF" stroke-width="1" />
+      <path d="M50 -130 L50 130" fill="none" stroke="#4D84FF" stroke-width="1" />
+      <path d="M100 -130 L100 130" fill="none" stroke="#4D84FF" stroke-width="1" />
+      <path d="M-130 -100 L130 -100" fill="none" stroke="#4D84FF" stroke-width="1" />
+      <path d="M-130 -50 L130 -50" fill="none" stroke="#4D84FF" stroke-width="1" />
+      <path d="M-130 0 L130 0" fill="none" stroke="#4D84FF" stroke-width="1" />
+      <path d="M-130 50 L130 50" fill="none" stroke="#4D84FF" stroke-width="1" />
+      <path d="M-130 100 L130 100" fill="none" stroke="#4D84FF" stroke-width="1" />
+    </g>
+    
+    <!-- Glowing center -->
+    <circle cx="0" cy="0" r="40" fill="#4D84FF" opacity="0.2" filter="url(#glow2)" />
+    <circle cx="0" cy="0" r="30" fill="#4D84FF" opacity="0.4" />
+    <circle cx="0" cy="0" r="20" fill="#6A3093" opacity="0.6" />
+    <circle cx="0" cy="0" r="10" fill="#FFFFFF" opacity="0.8" filter="url(#glow1)" />
+    
+    <!-- Lattice structure -->
+    <g filter="url(#glow3)">
+      <!-- Vertical lattice connections -->
+      <g>
+        <path d="M0 -140 L0 -50" stroke="#00F5D4" stroke-width="2" opacity="0.7" />
+        <path d="M0 50 L0 140" stroke="#00F5D4" stroke-width="2" opacity="0.7" />
+        <circle cx="0" cy="-140" r="5" fill="#00F5D4" opacity="0.7" />
+        <circle cx="0" cy="140" r="5" fill="#00F5D4" opacity="0.7" />
+      </g>
+      
+      <!-- Horizontal lattice connections -->
+      <g>
+        <path d="M-140 0 L-50 0" stroke="#00F5D4" stroke-width="2" opacity="0.7" />
+        <path d="M50 0 L140 0" stroke="#00F5D4" stroke-width="2" opacity="0.7" />
+        <circle cx="-140" cy="0" r="5" fill="#00F5D4" opacity="0.7" />
+        <circle cx="140" cy="0" r="5" fill="#00F5D4" opacity="0.7" />
+      </g>
+      
+      <!-- Diagonal lattice connections -->
+      <g>
+        <path d="M-100 -100 L-50 -50" stroke="#00F5D4" stroke-width="2" opacity="0.7" />
+        <path d="M50 50 L100 100" stroke="#00F5D4" stroke-width="2" opacity="0.7" />
+        <path d="M-100 100 L-50 50" stroke="#00F5D4" stroke-width="2" opacity="0.7" />
+        <path d="M50 -50 L100 -100" stroke="#00F5D4" stroke-width="2" opacity="0.7" />
+        <circle cx="-100" cy="-100" r="5" fill="#00F5D4" opacity="0.7" />
+        <circle cx="100" cy="100" r="5" fill="#00F5D4" opacity="0.7" />
+        <circle cx="-100" cy="100" r="5" fill="#00F5D4" opacity="0.7" />
+        <circle cx="100" cy="-100" r="5" fill="#00F5D4" opacity="0.7" />
+      </g>
+    </g>
+    
+    <!-- Outer quantum orbits -->
+    <g opacity="0.5">
+      <ellipse cx="0" cy="0" rx="180" ry="70" 
+              fill="none" stroke="#FF3366" stroke-width="1.5" 
+              transform="rotate(30)" />
+      <ellipse cx="0" cy="0" rx="190" ry="90" 
+              fill="none" stroke="#4D84FF" stroke-width="1.5" 
+              transform="rotate(60)" />
+      <ellipse cx="0" cy="0" rx="200" ry="60" 
+              fill="none" stroke="#00F5D4" stroke-width="1.5" 
+              transform="rotate(90)" />
+    </g>
+    
+    <!-- Quantum particles -->
+    <g>
+      <!-- Create 8 glowing particles around the orbits -->
+      <circle cx="180" cy="0" r="6" fill="#FF3366" filter="url(#glow3)">
+        <animate attributeName="cx" values="180;-180;180" dur="12s" repeatCount="indefinite" />
+        <animate attributeName="cy" values="0;0;0" dur="12s" repeatCount="indefinite" />
+      </circle>
+      
+      <circle cx="0" cy="70" r="6" fill="#4D84FF" filter="url(#glow3)">
+        <animate attributeName="cx" values="0;0;0" dur="8s" repeatCount="indefinite" />
+        <animate attributeName="cy" values="70;-70;70" dur="8s" repeatCount="indefinite" />
+      </circle>
+      
+      <circle cx="120" cy="40" r="6" fill="#00F5D4" filter="url(#glow3)">
+        <animate attributeName="cx" values="120;-120;120" dur="10s" repeatCount="indefinite" />
+        <animate attributeName="cy" values="40;-40;40" dur="10s" repeatCount="indefinite" />
+      </circle>
+      
+      <circle cx="-90" cy="60" r="6" fill="#FF3366" filter="url(#glow3)">
+        <animate attributeName="cx" values="-90;90;-90" dur="9s" repeatCount="indefinite" />
+        <animate attributeName="cy" values="60;-60;60" dur="9s" repeatCount="indefinite" />
+      </circle>
+    </g>
+  </g>
+  
+  <!-- Additional lattice points -->
+  <g opacity="0.6">
+    <g transform="translate(100, 100)">
+      <circle cx="0" cy="0" r="4" fill="#00F5D4" />
+      <path d="M0 0 L50 50" stroke="#00F5D4" stroke-width="1" />
+    </g>
+    <g transform="translate(700, 100)">
+      <circle cx="0" cy="0" r="4" fill="#00F5D4" />
+      <path d="M0 0 L-50 50" stroke="#00F5D4" stroke-width="1" />
+    </g>
+    <g transform="translate(100, 500)">
+      <circle cx="0" cy="0" r="4" fill="#00F5D4" />
+      <path d="M0 0 L50 -50" stroke="#00F5D4" stroke-width="1" />
+    </g>
+    <g transform="translate(700, 500)">
+      <circle cx="0" cy="0" r="4" fill="#00F5D4" />
+      <path d="M0 0 L-50 -50" stroke="#00F5D4" stroke-width="1" />
+    </g>
+  </g>
+  
+  <!-- Text labels -->
+  <g transform="translate(400, 500)" text-anchor="middle" font-family="'Space Grotesk', sans-serif">
+    <text fill="#FFFFFF" font-size="16" font-weight="700">
+      <tspan x="0" y="0">QUANTUM-RESISTANT LATTICE CRYPTOGRAPHY</tspan>
+    </text>
+  </g>
+</svg> 

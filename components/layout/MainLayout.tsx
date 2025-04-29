@@ -41,7 +41,6 @@ const MainLayout: React.FC<MainLayoutProps> = ({ children }) => {
             <li><a href="#technology">Technology</a></li>
             <li><a href="#impact">Environmental Impact</a></li>
             <li><a href="#roadmap">Roadmap</a></li>
-            <li><a href="#team">Team</a></li>
           </ul>
           <button 
             className={styles['mobile-menu-button']} 
@@ -59,7 +58,7 @@ const MainLayout: React.FC<MainLayoutProps> = ({ children }) => {
         <div className={styles['footer-content']}>
           <div className={styles['footer-column']}>
             <h4>Supernova</h4>
-            <p>A quantum-resistant blockchain built for tomorrow&apos;s challenges.</p>
+            <p>A next-generation blockchain prioritizing security, performance, and environmental sustainability.</p>
           </div>
           <div className={styles['footer-column']}>
             <h4>Resources</h4>
