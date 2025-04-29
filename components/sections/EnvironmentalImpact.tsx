@@ -28,7 +28,7 @@ const EnvironmentalImpact: React.FC = () => {
             decentralization.
           </p>
           <p>
-            We're committed to leading the industry toward a more sustainable 
+            We&apos;re committed to leading the industry toward a more sustainable 
             future, proving that performance and environmental responsibility 
             can go hand in hand.
           </p>

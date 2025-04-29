@@ -54,7 +54,7 @@ const Features: React.FC = () => {
       <div className={styles.container}>
         <div className={styles['section-header']}>
           <h2>Key Features</h2>
-          <p>Supernova combines cutting-edge cryptography with sustainable design to create a blockchain that's ready for tomorrow's challenges.</p>
+          <p>Supernova combines cutting-edge cryptography with sustainable design to create a blockchain that&apos;s ready for tomorrow&apos;s challenges.</p>
         </div>
         <div className={styles['features-grid']}>
           {features.map((feature, index) => (

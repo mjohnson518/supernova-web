@@ -59,7 +59,7 @@ const MainLayout: React.FC<MainLayoutProps> = ({ children }) => {
         <div className={styles['footer-content']}>
           <div className={styles['footer-column']}>
             <h4>Supernova</h4>
-            <p>A quantum-resistant blockchain built for tomorrow's challenges.</p>
+            <p>A quantum-resistant blockchain built for tomorrow&apos;s challenges.</p>
           </div>
           <div className={styles['footer-column']}>
             <h4>Resources</h4>
