@@ -6,14 +6,19 @@ import { remark } from 'remark';
 import html from 'remark-html';
 import Link from 'next/link';
 
-type Props = {
-  params: { slug: string[] }
+interface PageParams {
+  slug: string[];
+}
+
+// Updated to match NextJS requirements for params
+interface PageProps {
+  params: PageParams;
 }
 
 // Generate metadata for the page
 export async function generateMetadata({ 
   params 
-}: Props, parent: ResolvingMetadata): Promise<Metadata> {
+}: PageProps, parent: ResolvingMetadata): Promise<Metadata> {
   // Use await to ensure params are properly handled
   await parent;
   
@@ -49,7 +54,7 @@ async function markdownToHtml(markdown: string) {
 function fileExists(filePath: string): boolean {
   try {
     return fs.existsSync(filePath);
-  } catch (error) {
+  } catch (_) {
     return false;
   }
 }
@@ -88,8 +93,8 @@ export async function generateStaticParams() {
           params.push({ slug: slugParts });
         }
       }
-    } catch (error) {
-      console.error(`Error finding markdown files in ${dir}:`, error);
+    } catch (_) {
+      console.error(`Error finding markdown files in ${dir}`);
     }
   }
   
@@ -133,7 +138,7 @@ function generateBreadcrumbs(slugArray: string[]) {
 }
 
 // Get list of documents in a directory
-async function getDirectoryContents(dirPath: string[]): Promise<{files: any[], hasIndex: boolean}> {
+async function getDirectoryContents(dirPath: string[]): Promise<{files: Array<{name: string; path: string; isDirectory: boolean}>, hasIndex: boolean}> {
   const basePath = path.join(process.cwd(), 'docs/nova-docs');
   const fullPath = path.join(basePath, ...dirPath);
   
@@ -260,8 +265,8 @@ async function getDocumentContent(slugArray: string[]): Promise<string | null> {
           return fs.readFileSync(itemPath, 'utf8');
         }
       }
-    } catch (error) {
-      console.error(`Error searching recursively in ${dir}:`, error);
+    } catch (_) {
+      console.error(`Error searching recursively in ${dir}`);
     }
     return null;
   }
@@ -330,7 +335,7 @@ function enhanceHtmlContent(htmlContent: string): string {
   return tableStyles + enhancedHtml;
 }
 
-export default async function DocPage({ params }: Props) {
+export default async function DocPage({ params }: PageProps) {
   // Make a copy of the params.slug array to avoid synchronous access
   const slugArray = [...params.slug];
   
@@ -352,10 +357,10 @@ export default async function DocPage({ params }: Props) {
   const breadcrumbs = generateBreadcrumbs(slugArray);
   
   // Get content based on slug array
-  let content = await getDocumentContent(slugArray);
+  const content = await getDocumentContent(slugArray);
   
   // Check if we're looking at a directory without an index.md
-  let directoryFiles: any[] = [];
+  let directoryFiles: Array<{name: string; path: string; isDirectory: boolean}> = [];
   let isDirectoryView = false;
   
   if (!content) {

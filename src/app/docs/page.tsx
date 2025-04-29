@@ -12,7 +12,7 @@ export const metadata: Metadata = {
 function fileExists(filePath: string): boolean {
   try {
     return fs.existsSync(filePath);
-  } catch (error) {
+  } catch (_) {
     return false;
   }
 }
@@ -27,6 +27,7 @@ async function getDocumentationCategories() {
     path: string;
     description: string;
     priority: number;  // Lower number = higher priority
+    highlight?: boolean;
   }
   
   const categories: DocCategory[] = [];
@@ -34,52 +35,68 @@ async function getDocumentationCategories() {
   // Define our preferred categories in the new structure
   const primaryCategories = [
     {
-      directory: 'overview',
       title: 'Project Overview',
-      description: 'Get a comprehensive overview of the Supernova project architecture, features, and technology',
+      description: 'Introduction to Supernova, its purpose, and architecture',
+      path: '/docs/overview',
+      directory: 'overview',
       priority: 1
     },
     {
-      directory: 'technical-docs',
-      title: 'Technical Documentation',
-      description: 'Detailed technical information about Supernova blockchain architecture and implementation',
-      priority: 2
+      title: 'Roadmap',
+      description: 'Our ambitious development timeline for security, scalability, and sustainability',
+      path: '/docs/overview/roadmap',
+      directory: 'overview',
+      priority: 2,
+      highlight: true
     },
     {
-      directory: 'developers',
-      title: 'Developer Guide',
-      description: 'Resources and guides for developers building on the Supernova platform',
+      title: 'Technical Documentation',
+      description: 'Technical specifications and implementation details',
+      path: '/docs/technical-docs',
+      directory: 'technical-docs',
       priority: 3
     },
     {
-      directory: 'node-operation',
-      title: 'Node Operation',
-      description: 'Instructions for running and maintaining Supernova nodes',
+      title: 'Developer Guide',
+      description: 'Resources and guides for developers building on the Supernova platform',
+      path: '/docs/developers',
+      directory: 'developers',
       priority: 4
     },
     {
-      directory: 'environmental',
-      title: 'Environmental Features',
-      description: 'Documentation about Supernova\'s carbon-negative approach and environmental initiatives',
+      title: 'Node Operation',
+      description: 'Instructions for running and maintaining Supernova nodes',
+      path: '/docs/node-operation',
+      directory: 'node-operation',
       priority: 5
     },
     {
-      directory: 'governance',
-      title: 'Governance',
-      description: 'Information about the Supernova Foundation, tokenomics, and governance processes',
+      title: 'Environmental Features',
+      description: 'Documentation about Supernova\'s carbon-negative approach and environmental initiatives',
+      path: '/docs/environmental',
+      directory: 'environmental',
       priority: 6
     },
     {
-      directory: 'api-reference',
-      title: 'API Reference',
-      description: 'Comprehensive API documentation for integrating with Supernova',
+      title: 'Governance',
+      description: 'Information about the Supernova Foundation, tokenomics, and governance processes',
+      path: '/docs/governance',
+      directory: 'governance',
       priority: 7
     },
     {
-      directory: 'core',
+      title: 'API Reference',
+      description: 'Comprehensive API documentation for integrating with Supernova',
+      path: '/docs/api-reference',
+      directory: 'api-reference',
+      priority: 8
+    },
+    {
       title: 'Core Reference',
       description: 'Documentation for the core components of the Supernova blockchain',
-      priority: 8
+      path: '/docs/core',
+      directory: 'core',
+      priority: 9
     }
   ];
   
@@ -90,9 +107,10 @@ async function getDocumentationCategories() {
       if (fileExists(categoryDir)) {
         categories.push({
           title: category.title,
-          path: category.directory,
+          path: category.path,
           description: category.description,
-          priority: category.priority
+          priority: category.priority,
+          highlight: category.highlight
         });
       }
     }
@@ -124,8 +142,8 @@ async function getDocumentationCategories() {
             });
           }
         }
-      } catch (error) {
-        console.error('Error reading docs directory:', error);
+      } catch (_) {
+        console.error('Error reading docs directory');
       }
     }
   }
@@ -160,14 +178,24 @@ export default async function DocsPage() {
       
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
         {categories.map((category, index) => {
+          const isHighlighted = category.highlight;
+          
           return (
-            <div key={index} className="bg-gray-800 shadow rounded-lg p-6 hover:shadow-lg transition-shadow border border-gray-700">
+            <div 
+              key={index} 
+              className={`${isHighlighted ? 'bg-gradient-to-br from-gray-800 to-blue-900 border-blue-700' : 'bg-gray-800 border-gray-700'} shadow rounded-lg p-6 hover:shadow-lg transition-shadow border`}
+            >
+              {isHighlighted && (
+                <div className="inline-block bg-blue-600 text-white text-xs px-2 py-1 rounded mb-3">
+                  New
+                </div>
+              )}
               <h3 className="text-xl font-semibold mb-2 text-blue-400">{category.title}</h3>
               <p className="text-gray-300 mb-4">
                 {category.description}
               </p>
               <Link 
-                href={`/docs/${category.path}`}
+                href={category.path}
                 className="text-blue-400 hover:text-blue-300 font-medium flex items-center group"
               >
                 View Documentation 
@@ -189,7 +217,7 @@ export default async function DocsPage() {
       <div className="mt-12 p-6 bg-gradient-to-br from-gray-800 to-blue-900 shadow rounded-lg border border-blue-700">
         <h2 className="text-xl font-semibold mb-4 text-white">Need More Help?</h2>
         <p className="text-gray-300 mb-6">
-          Can't find what you're looking for in the documentation? Reach out to the Supernova community for assistance.
+          Can&apos;t find what you&apos;re looking for in the documentation? Reach out to the Supernova community for assistance.
         </p>
         <div className="flex flex-wrap gap-4">
           <a 

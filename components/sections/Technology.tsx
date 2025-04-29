@@ -1,5 +1,6 @@
 import React from 'react';
 import styles from './Technology.module.scss';
+import Image from 'next/image';
 
 const Technology = () => {
   return (
@@ -37,10 +38,12 @@ const Technology = () => {
         </div>
         <div className={styles['technology-visual']}>
           <div className={styles['quantum-lattice-container']}>
-            <img 
+            <Image 
               src="/images/quantum-lattice.svg" 
               alt="Quantum Lattice Visualization"
               className={styles['quantum-lattice']}
+              width={500}
+              height={500}
             />
           </div>
         </div>

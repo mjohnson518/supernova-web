@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useEffect, useRef, useState } from "react";
+import React, { useEffect, useRef, useState, useCallback } from "react";
 
 interface ParticlesProps {
   className?: string;
@@ -48,7 +48,7 @@ export const Particles = ({
   const [dimensions, setDimensions] = useState({ width: 0, height: 0 });
 
   // Generate random particles
-  const generateParticles = (container: HTMLDivElement) => {
+  const generateParticles = useCallback((container: HTMLDivElement) => {
     const width = container.offsetWidth;
     const height = container.offsetHeight;
     setDimensions({ width, height });
@@ -69,7 +69,7 @@ export const Particles = ({
     }));
 
     setParticles(newParticles);
-  };
+  }, [quantity, size, vx, vy]);
 
   // Initialize particles
   useEffect(() => {
@@ -88,7 +88,7 @@ export const Particles = ({
         window.removeEventListener("resize", handleResize);
       };
     }
-  }, [containerRef, quantity, refresh, size]);
+  }, [containerRef, generateParticles, refresh]);
 
   // Add mouse interaction effect
   useEffect(() => {

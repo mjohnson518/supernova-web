@@ -55,10 +55,12 @@ const MainLayout = ({ children }: MainLayoutProps) => {
             <Link href="/" style={{cursor: 'pointer'}}>Supernova</Link>
           </div>
           <ul className={styles['nav-links']}>
-            <li><a href="#features">Features</a></li>
-            <li><a href="#technology">Technology</a></li>
-            <li><a href="#impact">Environmental Impact</a></li>
+            <li><Link href="/#features">Features</Link></li>
+            <li><Link href="/#technology">Technology</Link></li>
+            <li><Link href="/#impact">Environmental Impact</Link></li>
+            <li><Link href="/roadmap">Roadmap</Link></li>
             <li><Link href="/docs">Documentation</Link></li>
+            
           </ul>
           <button 
             className={styles['hamburger-menu-button']} 
@@ -71,9 +73,10 @@ const MainLayout = ({ children }: MainLayoutProps) => {
         {mobileMenuOpen && (
           <div className={styles['mobile-menu']}>
             <ul>
-              <li><a href="#features">Features</a></li>
-              <li><a href="#technology">Technology</a></li>
-              <li><a href="#impact">Environmental Impact</a></li>
+              <li><Link href="/#features">Features</Link></li>
+              <li><Link href="/roadmap">Roadmap</Link></li>
+              <li><Link href="/#technology">Technology</Link></li>
+              <li><Link href="/#impact">Environmental Impact</Link></li>
               <li className={styles.divider}></li>
               <li><Link href="/docs">All Documentation</Link></li>
               <li><Link href="/docs/overview">Overview</Link></li>
@@ -100,10 +103,11 @@ const MainLayout = ({ children }: MainLayoutProps) => {
           <div className={styles['footer-column']}>
             <h4>Resources</h4>
             <ul>
-              <li><a href="/whitepaper">Whitepaper</a></li>
+              <li><Link href="/whitepaper">Whitepaper</Link></li>
+              <li><Link href="/roadmap">Roadmap</Link></li>
               <li><Link href="/docs">Documentation</Link></li>
-              <li><a href="/blog">Blog</a></li>
-              <li><a href="/faq">FAQ</a></li>
+              <li><Link href="/blog">Blog</Link></li>
+              <li><Link href="/faq">FAQ</Link></li>
             </ul>
           </div>
           <div className={styles['footer-column']}>
@@ -117,9 +121,9 @@ const MainLayout = ({ children }: MainLayoutProps) => {
           <div className={styles['footer-column']}>
             <h4>Legal</h4>
             <ul>
-              <li><a href="/terms">Terms of Service</a></li>
-              <li><a href="/privacy">Privacy Policy</a></li>
-              <li><a href="/cookies">Cookie Policy</a></li>
+              <li><Link href="/terms">Terms of Service</Link></li>
+              <li><Link href="/privacy">Privacy Policy</Link></li>
+              <li><Link href="/cookies">Cookie Policy</Link></li>
             </ul>
           </div>
         </div>
