@@ -1,6 +1,7 @@
 "use client";
 
 import React, { useState, useEffect } from 'react';
+import Link from 'next/link';
 import styles from './MainLayout.module.scss';
 
 interface MainLayoutProps {
@@ -35,12 +36,15 @@ const MainLayout = ({ children }: MainLayoutProps) => {
     <div className={styles['main-layout']}>
       <header className={`${styles.header} ${scrolled ? styles.scrolled : ''}`}>
         <nav>
-          <div className={styles.logo}>Supernova</div>
+          <div className={styles.logo}>
+            <Link href="/">Supernova</Link>
+          </div>
           <ul className={styles['nav-links']}>
             <li><a href="#features">Features</a></li>
             <li><a href="#technology">Technology</a></li>
             <li><a href="#impact">Environmental Impact</a></li>
             <li><a href="#roadmap">Roadmap</a></li>
+            <li><Link href="/docs">Documentation</Link></li>
           </ul>
           <button 
             className={styles['mobile-menu-button']} 
@@ -64,7 +68,7 @@ const MainLayout = ({ children }: MainLayoutProps) => {
             <h4>Resources</h4>
             <ul>
               <li><a href="/whitepaper">Whitepaper</a></li>
-              <li><a href="/docs">Documentation</a></li>
+              <li><Link href="/docs">Documentation</Link></li>
               <li><a href="/blog">Blog</a></li>
               <li><a href="/faq">FAQ</a></li>
             </ul>
@@ -75,7 +79,7 @@ const MainLayout = ({ children }: MainLayoutProps) => {
               <li><a href="https://twitter.com" target="_blank" rel="noopener noreferrer">Twitter</a></li>
               <li><a href="https://discord.com" target="_blank" rel="noopener noreferrer">Discord</a></li>
               <li><a href="https://telegram.org" target="_blank" rel="noopener noreferrer">Telegram</a></li>
-              <li><a href="https://github.com" target="_blank" rel="noopener noreferrer">GitHub</a></li>
+              <li><a href="https://github.com/mjohnson518/supernova" target="_blank" rel="noopener noreferrer">GitHub</a></li>
             </ul>
           </div>
           <div className={styles['footer-column']}>
