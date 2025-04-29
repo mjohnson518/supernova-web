@@ -11,17 +11,12 @@ type AnimationVariant =
 
 type SplitBy = "text" | "word" | "character" | "line";
 
-interface Variants {
-  hidden: Record<string, unknown>;
-  visible: Record<string, unknown>;
-}
-
 interface TextAnimateProps {
   children: string;
   className?: string;
   delay?: number;
   duration?: number;
-  variants?: Variants;
+  variants?: Record<string, unknown>;
   as?: ElementType;
   by?: SplitBy;
   startOnView?: boolean;
@@ -85,44 +80,6 @@ export const TextAnimate: React.FC<TextAnimateProps> = ({
       observer.disconnect();
     };
   }, [startOnView, once]);
-
-  // Get animation variants
-  const getVariants = (): Variants => {
-    if (variants) return variants;
-
-    switch (animation) {
-      case "fadeIn":
-        return {
-          hidden: { opacity: 0 },
-          visible: { opacity: 1 },
-        };
-      case "blurInUp":
-        return {
-          hidden: { opacity: 0, y: 10, filter: "blur(8px)" },
-          visible: { opacity: 1, y: 0, filter: "blur(0px)" },
-        };
-      case "slideUp":
-        return {
-          hidden: { opacity: 0, y: 20 },
-          visible: { opacity: 1, y: 0 },
-        };
-      case "scaleUp":
-        return {
-          hidden: { opacity: 0, scale: 0.8 },
-          visible: { opacity: 1, scale: 1 },
-        };
-      case "slideLeft":
-        return {
-          hidden: { opacity: 0, x: 20 },
-          visible: { opacity: 1, x: 0 },
-        };
-      default:
-        return {
-          hidden: { opacity: 0 },
-          visible: { opacity: 1 },
-        };
-    }
-  };
 
   return (
     <div ref={containerRef} className={`text-animate-container ${className}`}>
