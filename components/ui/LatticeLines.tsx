@@ -90,7 +90,7 @@ export const LatticeLines: React.FC<LatticeLineProps> = ({
       // Randomly create new connections
       if (Math.random() < connectionFrequency && connections.length < 20) { // Limit connections
         const fromIndex = Math.floor(Math.random() * points.length);
-        let toIndex;
+        let toIndex: number;
         do {
           toIndex = Math.floor(Math.random() * points.length);
         } while (toIndex === fromIndex);
