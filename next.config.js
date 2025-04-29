@@ -3,6 +3,11 @@ const path = require('path');
 
 const nextConfig = {
   reactStrictMode: true,
+  output: 'standalone',
+  images: {
+    unoptimized: true,
+    domains: ['supernovanetwork.xyz'],
+  },
   sassOptions: {
     includePaths: [path.join(__dirname, 'styles')],
   },

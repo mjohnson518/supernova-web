@@ -1,17 +1,26 @@
 [build]
   command = "npm run build"
-  publish = ".next"
+  publish = ".next/standalone"
+  
+[[plugins]]
+  package = "@netlify/plugin-nextjs"
+
+# These redirects are required for Next.js with app router
+[[redirects]]
+  from = "/_next/static/*"
+  to = "/static/:splat"
+  status = 200
 
 [[redirects]]
-  from = "https://docs.supernovanetwork.xyz/*"
-  to = "https://supernovanetwork.xyz/docs/:splat"
+  from = "/_next/image*"
+  to = "/.netlify/image-api*"
   status = 200
-  force = true
 
 [[redirects]]
   from = "/*"
   to = "/404"
   status = 404
+  force = false
 
 [build.environment]
-  NETLIFY_NEXT_PLUGIN_SKIP = "true" 
+  NETLIFY_NEXT_PLUGIN_SKIP = "false" 
