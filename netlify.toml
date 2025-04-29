@@ -1,0 +1,17 @@
+[build]
+  command = "npm run build"
+  publish = ".next"
+
+[[redirects]]
+  from = "https://docs.supernovanetwork.xyz/*"
+  to = "https://supernovanetwork.xyz/docs/:splat"
+  status = 200
+  force = true
+
+[[redirects]]
+  from = "/*"
+  to = "/404"
+  status = 404
+
+[build.environment]
+  NETLIFY_NEXT_PLUGIN_SKIP = "true" 

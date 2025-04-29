@@ -62,8 +62,8 @@ const Hero = () => {
         </h1>
         <p>
           A next-generation PoW blockchain combining quantum-resistant cryptography, 
-          advanced security features, and environmental consciousness for a scalable, 
-          secure, and sustainable decentralized future.
+          advanced security features, and environmental consciousness for a secure, 
+          scalable, and sustainable decentralized future.
         </p>
         <div className={styles['cta-buttons']}>
           <a 

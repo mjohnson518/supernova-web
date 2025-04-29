@@ -1,33 +1,12 @@
 <svg width="32" height="32" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
   <defs>
     <linearGradient id="supernovaGradient" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#4D84FF" />
-      <stop offset="50%" stop-color="#00F5D4" />
+      <stop offset="0%" stop-color="#392F5A" />
+      <stop offset="50%" stop-color="#4D84FF" />
       <stop offset="100%" stop-color="#6A3093" />
     </linearGradient>
-    <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
-      <feGaussianBlur stdDeviation="1.5" result="blur" />
-      <feComposite in="SourceGraphic" in2="blur" operator="over" />
-    </filter>
   </defs>
   
-  <!-- Background circle -->
-  <circle cx="16" cy="16" r="15" fill="#1A1A2E" stroke="url(#supernovaGradient)" stroke-width="1" />
-  
-  <!-- Center star burst -->
-  <g filter="url(#glow)">
-    <circle cx="16" cy="16" r="6" fill="url(#supernovaGradient)" />
-    
-    <!-- Star rays -->
-    <path d="M16,4 L16,28" stroke="url(#supernovaGradient)" stroke-width="1.5" opacity="0.8" />
-    <path d="M4,16 L28,16" stroke="url(#supernovaGradient)" stroke-width="1.5" opacity="0.8" />
-    <path d="M7,7 L25,25" stroke="url(#supernovaGradient)" stroke-width="1.5" opacity="0.8" />
-    <path d="M7,25 L25,7" stroke="url(#supernovaGradient)" stroke-width="1.5" opacity="0.8" />
-  </g>
-  
-  <!-- Small orbiting particles -->
-  <circle cx="22" cy="10" r="1.5" fill="#00F5D4" opacity="0.9" />
-  <circle cx="10" cy="22" r="1.5" fill="#4D84FF" opacity="0.9" />
-  <circle cx="24" cy="20" r="1.5" fill="#FF3366" opacity="0.9" />
-  <circle cx="8" cy="12" r="1.5" fill="#6A3093" opacity="0.9" />
+  <!-- Simple gradient circle -->
+  <circle cx="16" cy="16" r="15" fill="url(#supernovaGradient)" />
 </svg> 
