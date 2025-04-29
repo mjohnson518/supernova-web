@@ -39,7 +39,7 @@ export const LatticeLines: React.FC<LatticeLineProps> = ({
   const [points, setPoints] = useState<LatticePoint[]>([]);
   const [connections, setConnections] = useState<Connection[]>([]);
   const containerRef = useRef<HTMLDivElement>(null);
-  const animationRef = useRef<number>();
+  const animationRef = useRef<number | undefined>(undefined);
   const [dimensions, setDimensions] = useState({ width: 0, height: 0 });
 
   // Generate invisible anchor points
