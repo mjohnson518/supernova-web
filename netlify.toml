@@ -1,9 +1,13 @@
 [build]
   command = "npm run build"
-  publish = ".next/standalone"
+  publish = "out"
   
 [[plugins]]
   package = "@netlify/plugin-nextjs"
+
+[functions]
+  # Increase the timeout if your builds are timing out
+  node_bundler = "esbuild"
 
 # These redirects are required for Next.js with app router
 [[redirects]]
@@ -18,9 +22,8 @@
 
 [[redirects]]
   from = "/*"
-  to = "/404"
+  to = "/_not-found"
   status = 404
-  force = false
 
 [build.environment]
   NETLIFY_NEXT_PLUGIN_SKIP = "false" 
