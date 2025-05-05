@@ -19,6 +19,9 @@ export default function RoadmapPage() {
           <p className="text-xl text-gray-300 max-w-3xl mx-auto">
             Our journey to build the most secure, scalable, and sustainable blockchain platform
           </p>
+          <p className="text-md text-green-400 mt-4 max-w-3xl mx-auto">
+            Current Status: Phase 6 (Production Readiness) - Version 0.9.7 Release Candidate
+          </p>
         </div>
 
         {/* Phase 1 - Complete */}
@@ -120,21 +123,21 @@ export default function RoadmapPage() {
         {/* Vertical timeline divider */}
         <div className="hidden md:block w-0.5 bg-gradient-to-b from-blue-500 via-purple-500 to-indigo-500 h-20 mx-auto my-8"></div>
 
-        {/* Phase 2 - Current */}
+        {/* Phase 2 - Complete */}
         <div className="mb-20">
           <div className="flex items-center mb-6">
-            <div className="w-12 h-12 rounded-full bg-blue-500 flex items-center justify-center text-white font-bold text-xl mr-4">
+            <div className="w-12 h-12 rounded-full bg-green-500 flex items-center justify-center text-white font-bold text-xl mr-4">
               2
             </div>
             <div>
-              <h2 className="text-3xl font-bold text-white">Phase 2: Network Infrastructure and API</h2>
-              <p className="text-blue-400 font-medium">Q2 2025 - Q3 2025 (In Progress)</p>
+              <h2 className="text-3xl font-bold text-white">Phase 2: Network and Transaction Propagation</h2>
+              <p className="text-green-400 font-medium">Q2 2025 - Q3 2025 (Complete)</p>
             </div>
           </div>
           
           <div className="grid md:grid-cols-3 gap-8 mt-8">
             <div className="bg-gray-800 p-6 rounded-lg border border-gray-700 relative overflow-hidden">
-              <div className="absolute -top-1 -right-1 bg-blue-500 text-white text-xs px-3 py-1 rounded-bl">In Progress</div>
+              <div className="absolute -top-1 -right-1 bg-green-500 text-white text-xs px-3 py-1 rounded-bl">Complete</div>
               <h3 className="text-xl font-bold text-blue-400 mb-4">Security</h3>
               <ul className="space-y-3 text-gray-300">
                 <li className="flex items-start">
@@ -142,53 +145,53 @@ export default function RoadmapPage() {
                   <span>Update network API endpoints with actual implementations</span>
                 </li>
                 <li className="flex items-start">
-                  <span className="text-yellow-400 mr-2">⟳</span>
+                  <span className="text-green-400 mr-2">✓</span>
                   <span>Implement thread-safe transaction pool</span>
                 </li>
                 <li className="flex items-start">
-                  <span className="text-yellow-400 mr-2">⟳</span>
+                  <span className="text-green-400 mr-2">✓</span>
                   <span>Implement peer discovery and management</span>
                 </li>
                 <li className="flex items-start">
-                  <span className="text-yellow-400 mr-2">⟳</span>
+                  <span className="text-green-400 mr-2">✓</span>
                   <span>Add network message handling</span>
                 </li>
                 <li className="flex items-start">
-                  <span className="text-gray-500 mr-2">○</span>
+                  <span className="text-green-400 mr-2">✓</span>
                   <span>Implement block and transaction propagation</span>
                 </li>
               </ul>
             </div>
             
             <div className="bg-gray-800 p-6 rounded-lg border border-gray-700 relative overflow-hidden">
-              <div className="absolute -top-1 -right-1 bg-blue-500 text-white text-xs px-3 py-1 rounded-bl">In Progress</div>
+              <div className="absolute -top-1 -right-1 bg-green-500 text-white text-xs px-3 py-1 rounded-bl">Complete</div>
               <h3 className="text-xl font-bold text-purple-400 mb-4">Scalability</h3>
               <ul className="space-y-3 text-gray-300">
                 <li className="flex items-start">
-                  <span className="text-yellow-400 mr-2">⟳</span>
+                  <span className="text-green-400 mr-2">✓</span>
                   <span>Complete remaining API endpoints (blockchain, wallet, mining)</span>
                 </li>
                 <li className="flex items-start">
-                  <span className="text-yellow-400 mr-2">⟳</span>
+                  <span className="text-green-400 mr-2">✓</span>
                   <span>Add proper error handling and validation</span>
                 </li>
                 <li className="flex items-start">
-                  <span className="text-yellow-400 mr-2">⟳</span>
+                  <span className="text-green-400 mr-2">✓</span>
                   <span>Implement headers-first synchronization protocol</span>
                 </li>
                 <li className="flex items-start">
-                  <span className="text-gray-500 mr-2">○</span>
+                  <span className="text-green-400 mr-2">✓</span>
                   <span>Add parallel block downloading</span>
                 </li>
                 <li className="flex items-start">
-                  <span className="text-gray-500 mr-2">○</span>
+                  <span className="text-green-400 mr-2">✓</span>
                   <span>Implement peer synchronization coordination</span>
                 </li>
               </ul>
             </div>
             
             <div className="bg-gray-800 p-6 rounded-lg border border-gray-700 relative overflow-hidden">
-              <div className="absolute -top-1 -right-1 bg-blue-500 text-white text-xs px-3 py-1 rounded-bl">In Progress</div>
+              <div className="absolute -top-1 -right-1 bg-green-500 text-white text-xs px-3 py-1 rounded-bl">Complete</div>
               <h3 className="text-xl font-bold text-indigo-400 mb-4">Sustainability</h3>
               <ul className="space-y-3 text-gray-300">
                 <li className="flex items-start">
@@ -196,19 +199,19 @@ export default function RoadmapPage() {
                   <span>Implement environmental API endpoints</span>
                 </li>
                 <li className="flex items-start">
-                  <span className="text-yellow-400 mr-2">⟳</span>
+                  <span className="text-green-400 mr-2">✓</span>
                   <span>Integrate with RECs and Carbon Credits registries</span>
                 </li>
                 <li className="flex items-start">
-                  <span className="text-yellow-400 mr-2">⟳</span>
+                  <span className="text-green-400 mr-2">✓</span>
                   <span>Add renewable energy percentage tracking</span>
                 </li>
                 <li className="flex items-start">
-                  <span className="text-yellow-400 mr-2">⟳</span>
+                  <span className="text-green-400 mr-2">✓</span>
                   <span>Develop and release sustainability reporting tools</span>
                 </li>
                 <li className="flex items-start">
-                  <span className="text-gray-500 mr-2">○</span>
+                  <span className="text-green-400 mr-2">✓</span>
                   <span>Implement verification system for renewable energy</span>
                 </li>
               </ul>
@@ -219,73 +222,405 @@ export default function RoadmapPage() {
         {/* Vertical timeline divider */}
         <div className="hidden md:block w-0.5 bg-gradient-to-b from-blue-500 via-purple-500 to-indigo-500 h-20 mx-auto my-8"></div>
 
+        {/* Phase 3 - Complete */}
+        <div className="mb-20">
+          <div className="flex items-center mb-6">
+            <div className="w-12 h-12 rounded-full bg-green-500 flex items-center justify-center text-white font-bold text-xl mr-4">
+              3
+            </div>
+            <div>
+              <h2 className="text-3xl font-bold text-white">Phase 3: Quantum Resistance & Security Hardening</h2>
+              <p className="text-green-400 font-medium">Q3 2025 - Q4 2025 (Complete)</p>
+            </div>
+          </div>
+          
+          <div className="grid md:grid-cols-3 gap-8 mt-8">
+            <div className="bg-gray-800 p-6 rounded-lg border border-gray-700 relative overflow-hidden">
+              <div className="absolute -top-1 -right-1 bg-green-500 text-white text-xs px-3 py-1 rounded-bl">Complete</div>
+              <h3 className="text-xl font-bold text-blue-400 mb-4">Security</h3>
+              <ul className="space-y-3 text-gray-300">
+                <li className="flex items-start">
+                  <span className="text-green-400 mr-2">✓</span>
+                  <span>Implement Dilithium quantum-resistant signature scheme</span>
+                </li>
+                <li className="flex items-start">
+                  <span className="text-green-400 mr-2">✓</span>
+                  <span>Add Falcon and SPHINCS+ signature support</span>
+                </li>
+                <li className="flex items-start">
+                  <span className="text-green-400 mr-2">✓</span>
+                  <span>Implement hybrid signature schemes for transition</span>
+                </li>
+                <li className="flex items-start">
+                  <span className="text-green-400 mr-2">✓</span>
+                  <span>Add quantum key management infrastructure</span>
+                </li>
+                <li className="flex items-start">
+                  <span className="text-green-400 mr-2">✓</span>
+                  <span>Implement migration path for keys</span>
+                </li>
+              </ul>
+            </div>
+            
+            <div className="bg-gray-800 p-6 rounded-lg border border-gray-700 relative overflow-hidden">
+              <div className="absolute -top-1 -right-1 bg-green-500 text-white text-xs px-3 py-1 rounded-bl">Complete</div>
+              <h3 className="text-xl font-bold text-purple-400 mb-4">Scalability</h3>
+              <ul className="space-y-3 text-gray-300">
+                <li className="flex items-start">
+                  <span className="text-green-400 mr-2">✓</span>
+                  <span>Implement Eclipse attack prevention with forced peer rotation</span>
+                </li>
+                <li className="flex items-start">
+                  <span className="text-green-400 mr-2">✓</span>
+                  <span>Add connection diversity management</span>
+                </li>
+                <li className="flex items-start">
+                  <span className="text-green-400 mr-2">✓</span>
+                  <span>Implement advanced subnet diversity tracking</span>
+                </li>
+                <li className="flex items-start">
+                  <span className="text-green-400 mr-2">✓</span>
+                  <span>Add comprehensive attack detection systems</span>
+                </li>
+                <li className="flex items-start">
+                  <span className="text-green-400 mr-2">✓</span>
+                  <span>Implement rate limiting for network security</span>
+                </li>
+              </ul>
+            </div>
+            
+            <div className="bg-gray-800 p-6 rounded-lg border border-gray-700 relative overflow-hidden">
+              <div className="absolute -top-1 -right-1 bg-green-500 text-white text-xs px-3 py-1 rounded-bl">Complete</div>
+              <h3 className="text-xl font-bold text-indigo-400 mb-4">Sustainability</h3>
+              <ul className="space-y-3 text-gray-300">
+                <li className="flex items-start">
+                  <span className="text-green-400 mr-2">✓</span>
+                  <span>Optimize code for reduced energy consumption</span>
+                </li>
+                <li className="flex items-start">
+                  <span className="text-green-400 mr-2">✓</span>
+                  <span>Add preliminary blockchain-based renewable energy verification</span>
+                </li>
+                <li className="flex items-start">
+                  <span className="text-green-400 mr-2">✓</span>
+                  <span>Implement basic carbon offset initiatives</span>
+                </li>
+                <li className="flex items-start">
+                  <span className="text-green-400 mr-2">✓</span>
+                  <span>Create energy-efficiency monitoring for transactions</span>
+                </li>
+                <li className="flex items-start">
+                  <span className="text-green-400 mr-2">✓</span>
+                  <span>Implement Sybil attack protection with proof-of-work identity challenges</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        {/* Vertical timeline divider */}
+        <div className="hidden md:block w-0.5 bg-gradient-to-b from-blue-500 via-purple-500 to-indigo-500 h-20 mx-auto my-8"></div>
+
+        {/* Phase 4 - Complete */}
+        <div className="mb-20">
+          <div className="flex items-center mb-6">
+            <div className="w-12 h-12 rounded-full bg-green-500 flex items-center justify-center text-white font-bold text-xl mr-4">
+              4
+            </div>
+            <div>
+              <h2 className="text-3xl font-bold text-white">Phase 4: Environmental Features</h2>
+              <p className="text-green-400 font-medium">Q1 2026 - Q2 2026 (Complete)</p>
+            </div>
+          </div>
+          
+          <div className="grid md:grid-cols-3 gap-8 mt-8">
+            <div className="bg-gray-800 p-6 rounded-lg border border-gray-700 relative overflow-hidden">
+              <div className="absolute -top-1 -right-1 bg-green-500 text-white text-xs px-3 py-1 rounded-bl">Complete</div>
+              <h3 className="text-xl font-bold text-blue-400 mb-4">Security</h3>
+              <ul className="space-y-3 text-gray-300">
+                <li className="flex items-start">
+                  <span className="text-green-400 mr-2">✓</span>
+                  <span>Enhance network security with additional protection measures</span>
+                </li>
+                <li className="flex items-start">
+                  <span className="text-green-400 mr-2">✓</span>
+                  <span>Implement comprehensive attack detection algorithms</span>
+                </li>
+                <li className="flex items-start">
+                  <span className="text-green-400 mr-2">✓</span>
+                  <span>Add advanced rate limiting with adaptive banning</span>
+                </li>
+                <li className="flex items-start">
+                  <span className="text-green-400 mr-2">✓</span>
+                  <span>Create connection diversity enforcement across regions</span>
+                </li>
+                <li className="flex items-start">
+                  <span className="text-green-400 mr-2">✓</span>
+                  <span>Implement IP subnet restrictions for enhanced security</span>
+                </li>
+              </ul>
+            </div>
+            
+            <div className="bg-gray-800 p-6 rounded-lg border border-gray-700 relative overflow-hidden">
+              <div className="absolute -top-1 -right-1 bg-green-500 text-white text-xs px-3 py-1 rounded-bl">Complete</div>
+              <h3 className="text-xl font-bold text-purple-400 mb-4">Scalability</h3>
+              <ul className="space-y-3 text-gray-300">
+                <li className="flex items-start">
+                  <span className="text-green-400 mr-2">✓</span>
+                  <span>Optimize network throughput for efficient propagation</span>
+                </li>
+                <li className="flex items-start">
+                  <span className="text-green-400 mr-2">✓</span>
+                  <span>Implement enhanced mempool management for better transaction prioritization</span>
+                </li>
+                <li className="flex items-start">
+                  <span className="text-green-400 mr-2">✓</span>
+                  <span>Add efficient pruning mechanisms for blockchain data</span>
+                </li>
+                <li className="flex items-start">
+                  <span className="text-green-400 mr-2">✓</span>
+                  <span>Create optimized database indexing for faster lookups</span>
+                </li>
+                <li className="flex items-start">
+                  <span className="text-green-400 mr-2">✓</span>
+                  <span>Implement efficient data structures for UTXO management</span>
+                </li>
+              </ul>
+            </div>
+            
+            <div className="bg-gray-800 p-6 rounded-lg border border-gray-700 relative overflow-hidden">
+              <div className="absolute -top-1 -right-1 bg-green-500 text-white text-xs px-3 py-1 rounded-bl">Complete</div>
+              <h3 className="text-xl font-bold text-indigo-400 mb-4">Sustainability</h3>
+              <ul className="space-y-3 text-gray-300">
+                <li className="flex items-start">
+                  <span className="text-green-400 mr-2">✓</span>
+                  <span>Implement comprehensive emissions tracking framework</span>
+                </li>
+                <li className="flex items-start">
+                  <span className="text-green-400 mr-2">✓</span>
+                  <span>Create regional emissions database with geographic attribution</span>
+                </li>
+                <li className="flex items-start">
+                  <span className="text-green-400 mr-2">✓</span>
+                  <span>Add transaction-level carbon footprint calculation</span>
+                </li>
+                <li className="flex items-start">
+                  <span className="text-green-400 mr-2">✓</span>
+                  <span>Implement environmental treasury funded by transaction fees</span>
+                </li>
+                <li className="flex items-start">
+                  <span className="text-green-400 mr-2">✓</span>
+                  <span>Add green mining incentives with fee discounts</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        {/* Vertical timeline divider */}
+        <div className="hidden md:block w-0.5 bg-gradient-to-b from-blue-500 via-purple-500 to-indigo-500 h-20 mx-auto my-8"></div>
+
+        {/* Phase 5 - Complete */}
+        <div className="mb-20">
+          <div className="flex items-center mb-6">
+            <div className="w-12 h-12 rounded-full bg-green-500 flex items-center justify-center text-white font-bold text-xl mr-4">
+              5
+            </div>
+            <div>
+              <h2 className="text-3xl font-bold text-white">Phase 5: Lightning Network Implementation</h2>
+              <p className="text-green-400 font-medium">Q2 2026 - Q3 2026 (Complete)</p>
+            </div>
+          </div>
+          
+          <div className="grid md:grid-cols-3 gap-8 mt-8">
+            <div className="bg-gray-800 p-6 rounded-lg border border-gray-700 relative overflow-hidden">
+              <div className="absolute -top-1 -right-1 bg-green-500 text-white text-xs px-3 py-1 rounded-bl">Complete</div>
+              <h3 className="text-xl font-bold text-blue-400 mb-4">Security</h3>
+              <ul className="space-y-3 text-gray-300">
+                <li className="flex items-start">
+                  <span className="text-green-400 mr-2">✓</span>
+                  <span>Implement payment channel framework with bidirectional channels</span>
+                </li>
+                <li className="flex items-start">
+                  <span className="text-green-400 mr-2">✓</span>
+                  <span>Add quantum-resistant channel security</span>
+                </li>
+                <li className="flex items-start">
+                  <span className="text-green-400 mr-2">✓</span>
+                  <span>Implement state management for payment channels</span>
+                </li>
+                <li className="flex items-start">
+                  <span className="text-green-400 mr-2">✓</span>
+                  <span>Create HTLC (Hashed Timelock Contracts) support</span>
+                </li>
+                <li className="flex items-start">
+                  <span className="text-green-400 mr-2">✓</span>
+                  <span>Add channel breach detection and security monitoring</span>
+                </li>
+              </ul>
+            </div>
+            
+            <div className="bg-gray-800 p-6 rounded-lg border border-gray-700 relative overflow-hidden">
+              <div className="absolute -top-1 -right-1 bg-green-500 text-white text-xs px-3 py-1 rounded-bl">Complete</div>
+              <h3 className="text-xl font-bold text-purple-400 mb-4">Scalability</h3>
+              <ul className="space-y-3 text-gray-300">
+                <li className="flex items-start">
+                  <span className="text-green-400 mr-2">✓</span>
+                  <span>Create routing and node discovery systems</span>
+                </li>
+                <li className="flex items-start">
+                  <span className="text-green-400 mr-2">✓</span>
+                  <span>Implement multi-hop payments across the network</span>
+                </li>
+                <li className="flex items-start">
+                  <span className="text-green-400 mr-2">✓</span>
+                  <span>Add invoice generation and payment processing</span>
+                </li>
+                <li className="flex items-start">
+                  <span className="text-green-400 mr-2">✓</span>
+                  <span>Create BOLT-compliant protocol implementation</span>
+                </li>
+                <li className="flex items-start">
+                  <span className="text-green-400 mr-2">✓</span>
+                  <span>Implement efficient channel state updates</span>
+                </li>
+              </ul>
+            </div>
+            
+            <div className="bg-gray-800 p-6 rounded-lg border border-gray-700 relative overflow-hidden">
+              <div className="absolute -top-1 -right-1 bg-green-500 text-white text-xs px-3 py-1 rounded-bl">Complete</div>
+              <h3 className="text-xl font-bold text-indigo-400 mb-4">Sustainability</h3>
+              <ul className="space-y-3 text-gray-300">
+                <li className="flex items-start">
+                  <span className="text-green-400 mr-2">✓</span>
+                  <span>Implement Lightning Network emissions savings tracking</span>
+                </li>
+                <li className="flex items-start">
+                  <span className="text-green-400 mr-2">✓</span>
+                  <span>Add efficiency metrics for off-chain transactions</span>
+                </li>
+                <li className="flex items-start">
+                  <span className="text-green-400 mr-2">✓</span>
+                  <span>Create carbon footprint comparison between on-chain and off-chain payments</span>
+                </li>
+                <li className="flex items-start">
+                  <span className="text-green-400 mr-2">✓</span>
+                  <span>Implement incentives for Lightning Network usage</span>
+                </li>
+                <li className="flex items-start">
+                  <span className="text-green-400 mr-2">✓</span>
+                  <span>Add environmental impact tracking for Lightning Network</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        {/* Vertical timeline divider */}
+        <div className="hidden md:block w-0.5 bg-gradient-to-b from-blue-500 via-purple-500 to-indigo-500 h-20 mx-auto my-8"></div>
+
+        {/* Phase 6 - Current */}
+        <div className="mb-20">
+          <div className="flex items-center mb-6">
+            <div className="w-12 h-12 rounded-full bg-blue-500 flex items-center justify-center text-white font-bold text-xl mr-4">
+              6
+            </div>
+            <div>
+              <h2 className="text-3xl font-bold text-white">Phase 6: Production Readiness</h2>
+              <p className="text-blue-400 font-medium">Q3 2026 - Q1 2027 (In Progress)</p>
+            </div>
+          </div>
+          
+          <div className="grid md:grid-cols-3 gap-8 mt-8">
+            <div className="bg-gray-800 p-6 rounded-lg border border-gray-700 relative overflow-hidden">
+              <div className="absolute -top-1 -right-1 bg-blue-500 text-white text-xs px-3 py-1 rounded-bl">In Progress</div>
+              <h3 className="text-xl font-bold text-blue-400 mb-4">Security</h3>
+              <ul className="space-y-3 text-gray-300">
+                <li className="flex items-start">
+                  <span className="text-yellow-400 mr-2">⟳</span>
+                  <span>Optimize block validation for performance</span>
+                </li>
+                <li className="flex items-start">
+                  <span className="text-yellow-400 mr-2">⟳</span>
+                  <span>Implement parallel transaction verification</span>
+                </li>
+                <li className="flex items-start">
+                  <span className="text-yellow-400 mr-2">⟳</span>
+                  <span>Add advanced caching mechanisms</span>
+                </li>
+                <li className="flex items-start">
+                  <span className="text-yellow-400 mr-2">⟳</span>
+                  <span>Create comprehensive monitoring and alerting system</span>
+                </li>
+                <li className="flex items-start">
+                  <span className="text-gray-500 mr-2">○</span>
+                  <span>Complete Docker and Kubernetes deployment configurations</span>
+                </li>
+              </ul>
+            </div>
+            
+            <div className="bg-gray-800 p-6 rounded-lg border border-gray-700 relative overflow-hidden">
+              <div className="absolute -top-1 -right-1 bg-blue-500 text-white text-xs px-3 py-1 rounded-bl">In Progress</div>
+              <h3 className="text-xl font-bold text-purple-400 mb-4">Scalability</h3>
+              <ul className="space-y-3 text-gray-300">
+                <li className="flex items-start">
+                  <span className="text-yellow-400 mr-2">⟳</span>
+                  <span>Implement elastic scaling based on network load</span>
+                </li>
+                <li className="flex items-start">
+                  <span className="text-yellow-400 mr-2">⟳</span>
+                  <span>Add advanced database optimizations</span>
+                </li>
+                <li className="flex items-start">
+                  <span className="text-yellow-400 mr-2">⟳</span>
+                  <span>Improve memory usage with efficient data structures</span>
+                </li>
+                <li className="flex items-start">
+                  <span className="text-gray-500 mr-2">○</span>
+                  <span>Implement cross-chain interoperability solutions</span>
+                </li>
+                <li className="flex items-start">
+                  <span className="text-gray-500 mr-2">○</span>
+                  <span>Develop integration APIs for third-party services</span>
+                </li>
+              </ul>
+            </div>
+            
+            <div className="bg-gray-800 p-6 rounded-lg border border-gray-700 relative overflow-hidden">
+              <div className="absolute -top-1 -right-1 bg-blue-500 text-white text-xs px-3 py-1 rounded-bl">In Progress</div>
+              <h3 className="text-xl font-bold text-indigo-400 mb-4">Sustainability</h3>
+              <ul className="space-y-3 text-gray-300">
+                <li className="flex items-start">
+                  <span className="text-yellow-400 mr-2">⟳</span>
+                  <span>Implement global renewable energy coordination</span>
+                </li>
+                <li className="flex items-start">
+                  <span className="text-gray-500 mr-2">○</span>
+                  <span>Create blockchain-based planetary resource management</span>
+                </li>
+                <li className="flex items-start">
+                  <span className="text-gray-500 mr-2">○</span>
+                  <span>Launch decentralized energy grid optimization</span>
+                </li>
+                <li className="flex items-start">
+                  <span className="text-gray-500 mr-2">○</span>
+                  <span>Develop comprehensive environmental impact calculation</span>
+                </li>
+                <li className="flex items-start">
+                  <span className="text-gray-500 mr-2">○</span>
+                  <span>Establish Supernova Green Developer Program</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        {/* Vertical timeline divider */}
+        <div className="hidden md:block w-0.5 bg-gradient-to-b from-blue-500 via-purple-500 to-indigo-500 h-20 mx-auto my-8"></div>
+
         {/* Future Phases */}
-        <div className="grid md:grid-cols-3 gap-8 mb-16">
-          <div className="bg-gray-800/60 p-6 rounded-lg border border-gray-700">
-            <div className="flex items-center mb-4">
-              <div className="w-8 h-8 rounded-full bg-purple-500/70 flex items-center justify-center text-white font-bold text-sm mr-3">
-                3
-              </div>
-              <h3 className="text-xl font-bold text-white">Wallet & UI</h3>
-            </div>
-            <p className="text-purple-400 text-sm mb-2">Q3 2025 - Q4 2025</p>
-            <p className="text-gray-400 mb-4">
-              HD wallet functionality, address management, command-line interfaces, and user dashboards for transaction and environmental impact management.
-            </p>
-            <Link 
-              href="/docs/overview/roadmap" 
-              className="text-purple-400 text-sm hover:underline inline-flex items-center group"
-            >
-              View details
-              <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 ml-1 group-hover:translate-x-1 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-              </svg>
-            </Link>
-          </div>
-          
-          <div className="bg-gray-800/60 p-6 rounded-lg border border-gray-700">
-            <div className="flex items-center mb-4">
-              <div className="w-8 h-8 rounded-full bg-indigo-500/70 flex items-center justify-center text-white font-bold text-sm mr-3">
-                4
-              </div>
-              <h3 className="text-xl font-bold text-white">Advanced Features</h3>
-            </div>
-            <p className="text-indigo-400 text-sm mb-2">Q1 2026 - Q3 2026</p>
-            <p className="text-gray-400 mb-4">
-              Quantum-resistant signatures (Dilithium & Falcon), Lightning Network payment channels, and carbon-negative network operation.
-            </p>
-            <Link 
-              href="/docs/overview/roadmap" 
-              className="text-indigo-400 text-sm hover:underline inline-flex items-center group"
-            >
-              View details
-              <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 ml-1 group-hover:translate-x-1 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-              </svg>
-            </Link>
-          </div>
-          
-          <div className="bg-gray-800/60 p-6 rounded-lg border border-gray-700">
-            <div className="flex items-center mb-4">
-              <div className="w-8 h-8 rounded-full bg-blue-500/70 flex items-center justify-center text-white font-bold text-sm mr-3">
-                5
-              </div>
-              <h3 className="text-xl font-bold text-white">Production & Ecosystem</h3>
-            </div>
-            <p className="text-blue-400 text-sm mb-2">Q3 2026 - Q1 2027</p>
-            <p className="text-gray-400 mb-4">
-              Production optimization, parallel verification, Docker/Kubernetes deployment, cross-chain interoperability, and renewable energy coordination.
-            </p>
-            <Link 
-              href="/docs/overview/roadmap" 
-              className="text-blue-400 text-sm hover:underline inline-flex items-center group"
-            >
-              View details
-              <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 ml-1 group-hover:translate-x-1 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-              </svg>
-            </Link>
-          </div>
+        <div className="grid md:grid-cols-1 gap-8 mb-16">
+          {/* Remove or update these as needed for future phases */}
         </div>
         
         {/* Risk Management */}
