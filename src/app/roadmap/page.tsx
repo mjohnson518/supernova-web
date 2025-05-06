@@ -519,7 +519,7 @@ export default function RoadmapPage() {
         {/* Vertical timeline divider */}
         <div className="hidden md:block w-0.5 bg-gradient-to-b from-blue-500 via-purple-500 to-indigo-500 h-20 mx-auto my-8"></div>
 
-        {/* Phase 6 - Current */}
+        {/* Phase 6 - In Progress */}
         <div className="mb-20">
           <div className="flex items-center mb-6">
             <div className="w-12 h-12 rounded-full bg-blue-500 flex items-center justify-center text-white font-bold text-xl mr-4">
@@ -527,7 +527,7 @@ export default function RoadmapPage() {
             </div>
             <div>
               <h2 className="text-3xl font-bold text-white">Phase 6: Production Readiness</h2>
-              <p className="text-blue-400 font-medium">Q3 2026 - Q1 2027 (In Progress)</p>
+              <p className="text-yellow-400 font-medium">Q3 2025 - Q4 2025 (In Progress)</p>
             </div>
           </div>
           
@@ -537,23 +537,27 @@ export default function RoadmapPage() {
               <h3 className="text-xl font-bold text-blue-400 mb-4">Security</h3>
               <ul className="space-y-3 text-gray-300">
                 <li className="flex items-start">
-                  <span className="text-yellow-400 mr-2">⟳</span>
+                  <span className="text-green-400 mr-2">✓</span>
                   <span>Optimize block validation for performance</span>
                 </li>
                 <li className="flex items-start">
-                  <span className="text-yellow-400 mr-2">⟳</span>
+                  <span className="text-green-400 mr-2">✓</span>
                   <span>Implement parallel transaction verification</span>
                 </li>
                 <li className="flex items-start">
-                  <span className="text-yellow-400 mr-2">⟳</span>
+                  <span className="text-green-400 mr-2">✓</span>
                   <span>Add advanced caching mechanisms</span>
                 </li>
                 <li className="flex items-start">
-                  <span className="text-yellow-400 mr-2">⟳</span>
+                  <span className="text-green-400 mr-2">✓</span>
                   <span>Create comprehensive monitoring and alerting system</span>
                 </li>
                 <li className="flex items-start">
-                  <span className="text-gray-500 mr-2">○</span>
+                  <span className="text-green-400 mr-2">✓</span>
+                  <span>Implement backup and disaster recovery protocols</span>
+                </li>
+                <li className="flex items-start">
+                  <span className="text-green-400 mr-2">✓</span>
                   <span>Complete Docker and Kubernetes deployment configurations</span>
                 </li>
               </ul>
@@ -564,23 +568,27 @@ export default function RoadmapPage() {
               <h3 className="text-xl font-bold text-purple-400 mb-4">Scalability</h3>
               <ul className="space-y-3 text-gray-300">
                 <li className="flex items-start">
-                  <span className="text-yellow-400 mr-2">⟳</span>
+                  <span className="text-green-400 mr-2">✓</span>
                   <span>Implement elastic scaling based on network load</span>
                 </li>
                 <li className="flex items-start">
-                  <span className="text-yellow-400 mr-2">⟳</span>
+                  <span className="text-green-400 mr-2">✓</span>
                   <span>Add advanced database optimizations</span>
                 </li>
                 <li className="flex items-start">
-                  <span className="text-yellow-400 mr-2">⟳</span>
+                  <span className="text-green-400 mr-2">✓</span>
                   <span>Improve memory usage with efficient data structures</span>
                 </li>
                 <li className="flex items-start">
-                  <span className="text-gray-500 mr-2">○</span>
+                  <span className="text-yellow-400 mr-2">⟳</span>
                   <span>Implement cross-chain interoperability solutions</span>
                 </li>
                 <li className="flex items-start">
-                  <span className="text-gray-500 mr-2">○</span>
+                  <span className="text-yellow-400 mr-2">⟳</span>
+                  <span>Create specialized execution environments</span>
+                </li>
+                <li className="flex items-start">
+                  <span className="text-yellow-400 mr-2">⟳</span>
                   <span>Develop integration APIs for third-party services</span>
                 </li>
               </ul>
@@ -595,20 +603,24 @@ export default function RoadmapPage() {
                   <span>Implement global renewable energy coordination</span>
                 </li>
                 <li className="flex items-start">
-                  <span className="text-gray-500 mr-2">○</span>
+                  <span className="text-yellow-400 mr-2">⟳</span>
                   <span>Create blockchain-based planetary resource management</span>
                 </li>
                 <li className="flex items-start">
-                  <span className="text-gray-500 mr-2">○</span>
+                  <span className="text-yellow-400 mr-2">⟳</span>
                   <span>Launch decentralized energy grid optimization</span>
                 </li>
                 <li className="flex items-start">
-                  <span className="text-gray-500 mr-2">○</span>
+                  <span className="text-yellow-400 mr-2">⟳</span>
                   <span>Develop comprehensive environmental impact calculation</span>
                 </li>
                 <li className="flex items-start">
-                  <span className="text-gray-500 mr-2">○</span>
+                  <span className="text-yellow-400 mr-2">⟳</span>
                   <span>Establish Supernova Green Developer Program</span>
+                </li>
+                <li className="flex items-start">
+                  <span className="text-yellow-400 mr-2">⟳</span>
+                  <span>Create incentives for carbon-negative applications</span>
                 </li>
               </ul>
             </div>
@@ -618,11 +630,114 @@ export default function RoadmapPage() {
         {/* Vertical timeline divider */}
         <div className="hidden md:block w-0.5 bg-gradient-to-b from-blue-500 via-purple-500 to-indigo-500 h-20 mx-auto my-8"></div>
 
-        {/* Future Phases */}
-        <div className="grid md:grid-cols-1 gap-8 mb-16">
-          {/* Remove or update these as needed for future phases */}
+        {/* Phase 7 - Planned */}
+        <div className="mb-20">
+          <div className="flex items-center mb-6">
+            <div className="w-12 h-12 rounded-full bg-gray-600 flex items-center justify-center text-white font-bold text-xl mr-4">
+              7
+            </div>
+            <div>
+              <h2 className="text-3xl font-bold text-white">Phase 7: Advanced Network Features</h2>
+              <p className="text-gray-400 font-medium">Q4 2025 - Q2 2026 (Planned)</p>
+            </div>
+          </div>
+          
+          <div className="grid md:grid-cols-3 gap-8 mt-8">
+            <div className="bg-gray-800 p-6 rounded-lg border border-gray-700 relative overflow-hidden">
+              <div className="absolute -top-1 -right-1 bg-gray-600 text-white text-xs px-3 py-1 rounded-bl">Planned</div>
+              <h3 className="text-xl font-bold text-blue-400 mb-4">Security</h3>
+              <ul className="space-y-3 text-gray-300">
+                <li className="flex items-start">
+                  <span className="text-gray-500 mr-2">○</span>
+                  <span>Implement advanced threat detection and prevention</span>
+                </li>
+                <li className="flex items-start">
+                  <span className="text-gray-500 mr-2">○</span>
+                  <span>Add AI-powered security monitoring</span>
+                </li>
+                <li className="flex items-start">
+                  <span className="text-gray-500 mr-2">○</span>
+                  <span>Develop automated security response system</span>
+                </li>
+                <li className="flex items-start">
+                  <span className="text-gray-500 mr-2">○</span>
+                  <span>Implement advanced cryptographic scheme rotation</span>
+                </li>
+                <li className="flex items-start">
+                  <span className="text-gray-500 mr-2">○</span>
+                  <span>Create comprehensive privacy enhancements</span>
+                </li>
+                <li className="flex items-start">
+                  <span className="text-gray-500 mr-2">○</span>
+                  <span>Develop zero-knowledge proof integrations</span>
+                </li>
+              </ul>
+            </div>
+            
+            <div className="bg-gray-800 p-6 rounded-lg border border-gray-700 relative overflow-hidden">
+              <div className="absolute -top-1 -right-1 bg-gray-600 text-white text-xs px-3 py-1 rounded-bl">Planned</div>
+              <h3 className="text-xl font-bold text-purple-400 mb-4">Scalability</h3>
+              <ul className="space-y-3 text-gray-300">
+                <li className="flex items-start">
+                  <span className="text-gray-500 mr-2">○</span>
+                  <span>Implement Layer 2 scaling solutions beyond Lightning</span>
+                </li>
+                <li className="flex items-start">
+                  <span className="text-gray-500 mr-2">○</span>
+                  <span>Add advanced state channel technology</span>
+                </li>
+                <li className="flex items-start">
+                  <span className="text-gray-500 mr-2">○</span>
+                  <span>Create cross-chain atomic swap infrastructure</span>
+                </li>
+                <li className="flex items-start">
+                  <span className="text-gray-500 mr-2">○</span>
+                  <span>Implement advanced sharding techniques</span>
+                </li>
+                <li className="flex items-start">
+                  <span className="text-gray-500 mr-2">○</span>
+                  <span>Develop optimistic rollup support</span>
+                </li>
+                <li className="flex items-start">
+                  <span className="text-gray-500 mr-2">○</span>
+                  <span>Create zk-rollup infrastructure</span>
+                </li>
+              </ul>
+            </div>
+            
+            <div className="bg-gray-800 p-6 rounded-lg border border-gray-700 relative overflow-hidden">
+              <div className="absolute -top-1 -right-1 bg-gray-600 text-white text-xs px-3 py-1 rounded-bl">Planned</div>
+              <h3 className="text-xl font-bold text-indigo-400 mb-4">Sustainability</h3>
+              <ul className="space-y-3 text-gray-300">
+                <li className="flex items-start">
+                  <span className="text-gray-500 mr-2">○</span>
+                  <span>Implement blockchain-based carbon credit trading platform</span>
+                </li>
+                <li className="flex items-start">
+                  <span className="text-gray-500 mr-2">○</span>
+                  <span>Create planetary resource tracking system</span>
+                </li>
+                <li className="flex items-start">
+                  <span className="text-gray-500 mr-2">○</span>
+                  <span>Develop renewable energy certificate marketplace</span>
+                </li>
+                <li className="flex items-start">
+                  <span className="text-gray-500 mr-2">○</span>
+                  <span>Implement comprehensive climate impact monitoring</span>
+                </li>
+                <li className="flex items-start">
+                  <span className="text-gray-500 mr-2">○</span>
+                  <span>Create incentives system for sustainable blockchain applications</span>
+                </li>
+                <li className="flex items-start">
+                  <span className="text-gray-500 mr-2">○</span>
+                  <span>Develop global environmental reporting standards</span>
+                </li>
+              </ul>
+            </div>
+          </div>
         </div>
-        
+
         {/* Risk Management */}
         <div className="bg-gradient-to-r from-blue-900/30 via-purple-900/30 to-indigo-900/30 p-8 rounded-lg border border-gray-700 mb-16">
           <h3 className="text-2xl font-bold text-white mb-6 text-center">Risk Management</h3>
