@@ -20,7 +20,7 @@ export default function RoadmapPage() {
             Our journey to build the most secure, scalable, and sustainable blockchain platform
           </p>
           <p className="text-md text-green-400 mt-4 max-w-3xl mx-auto">
-            Current Status: Phase 6 (Production Readiness) - Version 0.9.7 Release Candidate
+            Current Status: Phase 6 (Production Readiness) - Version 0.9.9 Final Release Candidate
           </p>
         </div>
 
