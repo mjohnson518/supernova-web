@@ -54,11 +54,11 @@ export default function RoadmapPage() {
                   <span>Implement comprehensive transaction verification</span>
                 </li>
                 <li className="flex items-start">
-                  <span className="text-yellow-400 mr-2">⟳</span>
+                  <span className="text-green-400 mr-2">✓</span>
                   <span>Add support for multiple signature schemes</span>
                 </li>
                 <li className="flex items-start">
-                  <span className="text-yellow-400 mr-2">⟳</span>
+                  <span className="text-green-400 mr-2">✓</span>
                   <span>Implement block validation with Merkle tree verification</span>
                 </li>
               </ul>
@@ -77,15 +77,15 @@ export default function RoadmapPage() {
                   <span>Create foundation for block propagation</span>
                 </li>
                 <li className="flex items-start">
-                  <span className="text-yellow-400 mr-2">⟳</span>
+                  <span className="text-green-400 mr-2">✓</span>
                   <span>Implement proper chain state tracking</span>
                 </li>
                 <li className="flex items-start">
-                  <span className="text-yellow-400 mr-2">⟳</span>
+                  <span className="text-green-400 mr-2">✓</span>
                   <span>Add fork detection and reorganization handling</span>
                 </li>
                 <li className="flex items-start">
-                  <span className="text-gray-500 mr-2">○</span>
+                  <span className="text-green-400 mr-2">✓</span>
                   <span>Implement UTXO set with database persistence</span>
                 </li>
               </ul>
@@ -108,11 +108,11 @@ export default function RoadmapPage() {
                   <span>Implement carbon footprint calculation</span>
                 </li>
                 <li className="flex items-start">
-                  <span className="text-yellow-400 mr-2">⟳</span>
+                  <span className="text-green-400 mr-2">✓</span>
                   <span>Add regional emissions factors database</span>
                 </li>
                 <li className="flex items-start">
-                  <span className="text-gray-500 mr-2">○</span>
+                  <span className="text-green-400 mr-2">✓</span>
                   <span>Implement transaction-level emissions attribution</span>
                 </li>
               </ul>
