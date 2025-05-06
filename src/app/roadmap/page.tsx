@@ -131,7 +131,7 @@ export default function RoadmapPage() {
             </div>
             <div>
               <h2 className="text-3xl font-bold text-white">Phase 2: Network and Transaction Propagation</h2>
-              <p className="text-green-400 font-medium">Q2 2025 - Q3 2025 (Complete)</p>
+              <p className="text-green-400 font-medium">Q4 2024 - Q1 2025 (Complete)</p>
             </div>
           </div>
           
@@ -230,7 +230,7 @@ export default function RoadmapPage() {
             </div>
             <div>
               <h2 className="text-3xl font-bold text-white">Phase 3: Quantum Resistance & Security Hardening</h2>
-              <p className="text-green-400 font-medium">Q3 2025 - Q4 2025 (Complete)</p>
+              <p className="text-green-400 font-medium">Q4 2024 - Q2 2025 (Complete)</p>
             </div>
           </div>
           
@@ -329,7 +329,7 @@ export default function RoadmapPage() {
             </div>
             <div>
               <h2 className="text-3xl font-bold text-white">Phase 4: Environmental Features</h2>
-              <p className="text-green-400 font-medium">Q1 2026 - Q2 2026 (Complete)</p>
+              <p className="text-green-400 font-medium">Q4 2024 - Q1 2025 (Complete)</p>
             </div>
           </div>
           
@@ -428,7 +428,7 @@ export default function RoadmapPage() {
             </div>
             <div>
               <h2 className="text-3xl font-bold text-white">Phase 5: Lightning Network Implementation</h2>
-              <p className="text-green-400 font-medium">Q2 2026 - Q3 2026 (Complete)</p>
+              <p className="text-green-400 font-medium">Q4 2024 - Q2 2025 (Complete)</p>
             </div>
           </div>
           
@@ -527,7 +527,7 @@ export default function RoadmapPage() {
             </div>
             <div>
               <h2 className="text-3xl font-bold text-white">Phase 6: Production Readiness</h2>
-              <p className="text-yellow-400 font-medium">Q3 2025 - Q4 2025 (In Progress)</p>
+              <p className="text-yellow-400 font-medium">Q1 2025 - Q2 2025 (In Progress)</p>
             </div>
           </div>
           
@@ -604,14 +604,6 @@ export default function RoadmapPage() {
                 </li>
                 <li className="flex items-start">
                   <span className="text-yellow-400 mr-2">⟳</span>
-                  <span>Create blockchain-based planetary resource management</span>
-                </li>
-                <li className="flex items-start">
-                  <span className="text-yellow-400 mr-2">⟳</span>
-                  <span>Launch decentralized energy grid optimization</span>
-                </li>
-                <li className="flex items-start">
-                  <span className="text-yellow-400 mr-2">⟳</span>
                   <span>Develop comprehensive environmental impact calculation</span>
                 </li>
                 <li className="flex items-start">
@@ -638,7 +630,7 @@ export default function RoadmapPage() {
             </div>
             <div>
               <h2 className="text-3xl font-bold text-white">Phase 7: Advanced Network Features</h2>
-              <p className="text-gray-400 font-medium">Q4 2025 - Q2 2026 (Planned)</p>
+              <p className="text-gray-400 font-medium">Q3 2025 - Q4 2025 (Planned)</p>
             </div>
           </div>
           
