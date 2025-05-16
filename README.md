@@ -6,6 +6,14 @@ This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-
 
 ## Recent Updates
 
+### Website Expansion (2025-01-15)
+- Added three new web applications within a unified codebase:
+  - Testnet & Faucet UI (testnet.supernovanetwork.xyz)
+  - Block Explorer - NovaScan (explorer.supernovanetwork.xyz)
+  - Network Status Dashboard (status.supernovanetwork.xyz)
+- Implemented subdomain routing through Netlify for a seamless multi-site experience
+- Created shared component libraries for consistent UI/UX across all applications
+
 ### Styling Fix (2023-11-11)
 - Removed Tailwind CSS dependencies to resolve PostCSS plugin configuration conflicts
 - Simplified SCSS files by using hardcoded values instead of CSS variables
@@ -24,6 +32,34 @@ This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-
 - **Community engagement platform**
 - **Comprehensive documentation**
 
+## Web Applications
+
+### Main Website (supernovanetwork.xyz)
+The primary web presence for the Supernova blockchain project, providing an overview of features, technology, and community resources.
+
+### Documentation (docs.supernovanetwork.xyz)
+Comprehensive documentation for developers, node operators, and community members.
+
+### Testnet & Faucet UI (testnet.supernovanetwork.xyz)
+Resources for developers building on Supernova testnet, including:
+- Request testnet tokens via faucet
+- Testnet network configuration
+- Development environment setup guides
+
+### Block Explorer - NovaScan (explorer.supernovanetwork.xyz)
+A comprehensive blockchain explorer with:
+- Block and transaction browsing
+- Address lookup and history
+- Network statistics
+- Environmental impact tracking
+
+### Network Status Dashboard (status.supernovanetwork.xyz)
+Real-time monitoring of the Supernova network:
+- Network health indicators
+- Performance metrics
+- Node distribution
+- Environmental impact metrics
+
 ## Getting Started
 
 First, run the development server:
@@ -40,24 +76,16 @@ bun dev
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+You can access the various sections locally via:
+- Main site: http://localhost:3000
+- Documentation: http://localhost:3000/docs
+- Testnet & Faucet: http://localhost:3000/testnet
+- Block Explorer: http://localhost:3000/explorer
+- Status Dashboard: http://localhost:3000/status
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Subdomain Configuration
 
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+This project uses subdomains to create a multi-site experience from a single codebase. See [SUBDOMAINS.md](SUBDOMAINS.md) for detailed configuration instructions.
 
 ## Documentation Setup Instructions
 
@@ -105,3 +133,22 @@ Navigate to http://localhost:3000/docs to view the documentation locally.
 ### Updating Documentation
 
 The documentation is sourced from the [Supernova Github repository](https://github.com/mjohnson518/supernova) and is stored in the `/docs/supernova-docs` directory.
+
+## Learn More
+
+To learn more about Next.js, take a look at the following resources:
+
+- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
+- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+
+You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+
+## Deployment on Netlify
+
+This project is configured for deployment on Netlify with subdomain support:
+
+1. Push your changes to the repository
+2. Netlify will automatically build and deploy the site
+3. Configure DNS records for each subdomain as described in [SUBDOMAINS.md](SUBDOMAINS.md)
+
+The Netlify configuration in `netlify.toml` includes all necessary redirects and function configurations for the subdomains to work correctly.

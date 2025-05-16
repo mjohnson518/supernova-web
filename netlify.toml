@@ -20,6 +20,31 @@
   to = "/.netlify/image-api*"
   status = 200
 
+# Subdomain handling
+[[redirects]]
+  from = "https://testnet.supernovanetwork.xyz/*"
+  to = "/.netlify/functions/subdomain-router"
+  status = 200
+  force = true
+
+[[redirects]]
+  from = "https://explorer.supernovanetwork.xyz/*"
+  to = "/.netlify/functions/subdomain-router"
+  status = 200
+  force = true
+
+[[redirects]]
+  from = "https://status.supernovanetwork.xyz/*"
+  to = "/.netlify/functions/subdomain-router"
+  status = 200
+  force = true
+
+[[redirects]]
+  from = "https://docs.supernovanetwork.xyz/*"
+  to = "/docs/:splat"
+  status = 200
+  force = true
+
 [[redirects]]
   from = "/*"
   to = "/_not-found"
