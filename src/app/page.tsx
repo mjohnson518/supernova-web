@@ -4,6 +4,7 @@ import Hero from '../../components/sections/Hero';
 import Features from '../../components/sections/Features';
 import Technology from '../../components/sections/Technology';
 import EnvironmentalImpact from '../../components/sections/EnvironmentalImpact';
+import '../../styles/globals.scss';
 
 export default function HomePage() {
   return (

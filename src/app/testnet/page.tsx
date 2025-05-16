@@ -102,7 +102,7 @@ export default function TestnetPage() {
             Our developer community is here to support you. Join our Discord channel or check out the documentation to get started.
           </p>
           <div className="flex flex-wrap justify-center gap-4">
-            <a href="/docs" className="px-6 py-3 bg-gray-800 text-white rounded-md hover:bg-gray-700 transition-colors">
+            <a href="https://docs.supernovanetwork.xyz" target="_blank" rel="noopener noreferrer" className="px-6 py-3 bg-gray-800 text-white rounded-md hover:bg-gray-700 transition-colors">
               View Documentation
             </a>
             <a href="https://discord.gg/supernova" className="px-6 py-3 bg-indigo-600 text-white rounded-md hover:bg-indigo-700 transition-colors">

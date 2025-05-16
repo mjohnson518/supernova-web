@@ -17,6 +17,17 @@ const nextConfig = {
     includePaths: [path.join(__dirname, 'styles')],
   },
   
+  // Simple redirect for favicon
+  async redirects() {
+    return [
+      {
+        source: '/favicon.ico',
+        destination: '/api/favicon',
+        permanent: true,
+      },
+    ];
+  },
+  
   webpack: (config) => {
     config.resolve.alias = {
       ...config.resolve.alias,
@@ -25,16 +36,13 @@ const nextConfig = {
     return config;
   },
   
+  // Turn off ESLint during builds
   eslint: {
-    // Turn off ESLint during builds
     ignoreDuringBuilds: true,
   },
   
+  // Turn off TypeScript checking during builds
   typescript: {
-    // !! WARN !!
-    // Dangerously allow production builds to successfully complete even if
-    // your project has type errors.
-    // !! WARN !!
     ignoreBuildErrors: true,
   },
 };

@@ -3,43 +3,39 @@
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
 import styles from './MainLayout.module.scss';
+import { usePathname } from 'next/navigation';
+import '../../styles/globals.scss'; // Ensure global styles are loaded
 
 interface MainLayoutProps {
   children: React.ReactNode;
 }
 
-const MainLayout = ({ children }: MainLayoutProps) => {
+export default function MainLayout({ children }: MainLayoutProps) {
   const [scrolled, setScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const pathname = usePathname();
 
   useEffect(() => {
     const handleScroll = () => {
-      const isScrolled = window.scrollY > 10;
-      if (isScrolled !== scrolled) {
-        setScrolled(isScrolled);
+      const offset = window.scrollY;
+      if (offset > 50) {
+        setScrolled(true);
+      } else {
+        setScrolled(false);
       }
     };
 
     window.addEventListener('scroll', handleScroll);
+    
     return () => {
       window.removeEventListener('scroll', handleScroll);
     };
-  }, [scrolled]);
+  }, []);
 
+  // Close mobile menu on navigation
   useEffect(() => {
-    // Close dropdown when clicking outside
-    const handleClickOutside = (event: MouseEvent) => {
-      if (mobileMenuOpen && !(event.target as Element).closest(`.${styles['mobile-menu']}`) && 
-          !(event.target as Element).closest(`.${styles['hamburger-menu-button']}`)) {
-        setMobileMenuOpen(false);
-      }
-    };
-
-    document.addEventListener('click', handleClickOutside);
-    return () => {
-      document.removeEventListener('click', handleClickOutside);
-    };
-  }, [mobileMenuOpen]);
+    setMobileMenuOpen(false);
+  }, [pathname]);
 
   const toggleMobileMenu = () => {
     setMobileMenuOpen(!mobileMenuOpen);
@@ -54,14 +50,8 @@ const MainLayout = ({ children }: MainLayoutProps) => {
           <div className={styles.logo}>
             <Link href="/" style={{cursor: 'pointer'}}>Supernova</Link>
           </div>
-          <ul className={styles['nav-links']}>
-            <li><Link href="/#features">Features</Link></li>
-            <li><Link href="/#technology">Technology</Link></li>
-            <li><Link href="/#impact">Environmental Impact</Link></li>
-            <li><Link href="/roadmap">Roadmap</Link></li>
-            <li><Link href="/docs">Documentation</Link></li>
-            
-          </ul>
+          
+          {/* Only show the hamburger menu button */}
           <button 
             className={styles['hamburger-menu-button']} 
             onClick={toggleMobileMenu}
@@ -70,29 +60,68 @@ const MainLayout = ({ children }: MainLayoutProps) => {
             ☰
           </button>
         </nav>
+        
+        {/* Mobile menu contains all navigation items */}
         {mobileMenuOpen && (
           <div className={styles['mobile-menu']}>
             <ul>
               <li><Link href="/#features">Features</Link></li>
-              <li><Link href="/roadmap">Roadmap</Link></li>
               <li><Link href="/#technology">Technology</Link></li>
               <li><Link href="/#impact">Environmental Impact</Link></li>
+              <li><Link href="/roadmap">Roadmap</Link></li>
+              
+              {/* Documentation Header & Links */}
               <li className={styles.divider}></li>
-              <li><Link href="/docs">All Documentation</Link></li>
-              <li><Link href="/docs/overview">Overview</Link></li>
-              <li><Link href="/docs/technical-docs">Technical Docs</Link></li>
-              <li><Link href="/docs/developers">Developer Guide</Link></li>
-              <li><Link href="/docs/node-operation">Node Operation</Link></li>
-              <li><Link href="/docs/environmental">Environmental</Link></li>
-              <li><Link href="/docs/governance">Governance</Link></li>
-              <li><Link href="/docs/api-reference">API Reference</Link></li>
-              <li><Link href="/docs/core">Core Reference</Link></li>
+              <li className={styles.appHeader}>
+                <Link href="https://docs.supernovanetwork.xyz" target="_blank" rel="noopener noreferrer">
+                  Documentation
+                </Link>
+              </li>
+              <li className={styles.subItem}>
+                <Link href="https://docs.supernovanetwork.xyz/overview" target="_blank" rel="noopener noreferrer">
+                  Overview
+                </Link>
+              </li>
+              <li className={styles.subItem}>
+                <Link href="https://docs.supernovanetwork.xyz/technical-docs" target="_blank" rel="noopener noreferrer">
+                  Technical Docs
+                </Link>
+              </li>
+              <li className={styles.subItem}>
+                <Link href="https://docs.supernovanetwork.xyz/developers" target="_blank" rel="noopener noreferrer">
+                  Developer Guide
+                </Link>
+              </li>
+              <li className={styles.subItem}>
+                <Link href="https://docs.supernovanetwork.xyz/node-operation" target="_blank" rel="noopener noreferrer">
+                  Node Operation
+                </Link>
+              </li>
+              
+              {/* Apps Section */}
+              <li className={styles.divider}></li>
+              <li className={styles.appHeader}>Supernova Apps</li>
+              <li className={styles.appItem}>
+                <Link href="https://testnet.supernovanetwork.xyz" target="_blank" rel="noopener noreferrer">
+                  Testnet & Faucet
+                </Link>
+              </li>
+              <li className={styles.appItem}>
+                <Link href="https://explorer.supernovanetwork.xyz" target="_blank" rel="noopener noreferrer">
+                  NovaScan Block Explorer
+                </Link>
+              </li>
+              <li className={styles.appItem}>
+                <Link href="https://status.supernovanetwork.xyz" target="_blank" rel="noopener noreferrer">
+                  Network Status
+                </Link>
+              </li>
             </ul>
           </div>
         )}
       </header>
 
-      <main>{children}</main>
+      <main className={styles.main}>{children}</main>
 
       <footer className={styles.footer}>
         <div className={styles['footer-content']}>
@@ -103,9 +132,8 @@ const MainLayout = ({ children }: MainLayoutProps) => {
           <div className={styles['footer-column']}>
             <h4>Resources</h4>
             <ul>
-              <li><Link href="/whitepaper">Whitepaper</Link></li>
               <li><Link href="/roadmap">Roadmap</Link></li>
-              <li><Link href="/docs">Documentation</Link></li>
+              <li><Link href="https://docs.supernovanetwork.xyz" target="_blank" rel="noopener noreferrer">Documentation</Link></li>
               <li><Link href="/blog">Blog</Link></li>
               <li><Link href="/faq">FAQ</Link></li>
             </ul>
@@ -133,6 +161,4 @@ const MainLayout = ({ children }: MainLayoutProps) => {
       </footer>
     </div>
   );
-};
-
-export default MainLayout; 
+} 

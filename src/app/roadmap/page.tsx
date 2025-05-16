@@ -864,7 +864,9 @@ export default function RoadmapPage() {
         {/* CTA */}
         <div className="text-center mt-16">
           <Link
-            href="/docs/overview/roadmap"
+            href="https://docs.supernovanetwork.xyz/overview/roadmap"
+            target="_blank"
+            rel="noopener noreferrer"
             className="inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-md text-white bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700 shadow-sm focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
           >
             Read detailed roadmap
