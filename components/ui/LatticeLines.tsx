@@ -28,12 +28,12 @@ interface Connection {
 
 export const LatticeLines: React.FC<LatticeLineProps> = ({
   className = "",
-  numPoints = 25,
+  numPoints = 20,
   minDistance = 100,
   maxDistance = 250,
   lineColor = "#4D84FF",
   lineOpacity = 0.2,
-  lineDuration = 3,
+  lineDuration = 2,
   connectionFrequency = 0.1
 }) => {
   const [points, setPoints] = useState<LatticePoint[]>([]);
