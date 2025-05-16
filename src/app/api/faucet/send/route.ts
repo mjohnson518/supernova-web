@@ -1,6 +1,9 @@
 import { NextResponse } from 'next/server';
 import { validateAddress } from '../../../../../lib/blockchain/validation';
 
+// This tells Next.js how to handle this route in static export
+export const dynamic = 'force-static';
+
 export async function POST(request: Request) {
   try {
     // Parse the request body
