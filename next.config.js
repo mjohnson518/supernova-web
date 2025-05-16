@@ -17,17 +17,6 @@ const nextConfig = {
     includePaths: [path.join(__dirname, 'styles')],
   },
   
-  // Simple redirect for favicon
-  async redirects() {
-    return [
-      {
-        source: '/favicon.ico',
-        destination: '/api/favicon',
-        permanent: true,
-      },
-    ];
-  },
-  
   webpack: (config) => {
     config.resolve.alias = {
       ...config.resolve.alias,
