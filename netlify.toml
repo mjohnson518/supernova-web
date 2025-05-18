@@ -20,28 +20,54 @@
   to = "/.netlify/image-api*"
   status = 200
 
-# Subdomain handling
+# Main network subdomain handling
 [[redirects]]
   from = "https://testnet.supernovanetwork.xyz/*"
-  to = "/.netlify/functions/subdomain-router"
+  to = "/testnet/:splat"
   status = 200
   force = true
 
 [[redirects]]
   from = "https://explorer.supernovanetwork.xyz/*"
-  to = "/.netlify/functions/subdomain-router"
+  to = "/explorer/:splat"
   status = 200
   force = true
 
 [[redirects]]
   from = "https://status.supernovanetwork.xyz/*"
-  to = "/.netlify/functions/subdomain-router"
+  to = "/status/:splat"
   status = 200
   force = true
 
 [[redirects]]
   from = "https://docs.supernovanetwork.xyz/*"
   to = "/docs/:splat"
+  status = 200
+  force = true
+
+# Testnet-specific subdomain handling
+[[redirects]]
+  from = "https://explorer.testnet.supernovanetwork.xyz/*"
+  to = "/testnet/explorer/:splat"
+  status = 200
+  force = true
+
+[[redirects]]
+  from = "https://status.testnet.supernovanetwork.xyz/*"
+  to = "/testnet/status/:splat"
+  status = 200
+  force = true
+
+# Alternative testnet domain format
+[[redirects]]
+  from = "https://testnet-explorer.supernovanetwork.xyz/*"
+  to = "/testnet/explorer/:splat"
+  status = 200
+  force = true
+
+[[redirects]]
+  from = "https://testnet-status.supernovanetwork.xyz/*"
+  to = "/testnet/status/:splat"
   status = 200
   force = true
 

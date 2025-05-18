@@ -194,7 +194,7 @@ export default function ExplorerPage() {
         <div className="mb-16">
           <div className="flex items-center justify-between mb-6">
             <h2 className="text-2xl font-bold">Latest Blocks</h2>
-            <a href="/explorer/blocks" className="text-blue-400 hover:text-blue-300 text-sm">View All Blocks</a>
+            <a href="blocks" className="text-blue-400 hover:text-blue-300 text-sm">View All Blocks</a>
           </div>
           <div className="bg-gray-800/50 rounded-lg border border-gray-700 p-6">
             <BlockList blocks={sampleBlocks} />
@@ -204,7 +204,7 @@ export default function ExplorerPage() {
         <div className="mb-16">
           <div className="flex items-center justify-between mb-6">
             <h2 className="text-2xl font-bold">Latest Transactions</h2>
-            <a href="/explorer/transactions" className="text-blue-400 hover:text-blue-300 text-sm">View All Transactions</a>
+            <a href="transactions" className="text-blue-400 hover:text-blue-300 text-sm">View All Transactions</a>
           </div>
           <div className="bg-gray-800/50 rounded-lg border border-gray-700 p-6">
             <TransactionList transactions={sampleTransactions} />
@@ -256,7 +256,7 @@ export default function ExplorerPage() {
           </div>
           
           <div className="mt-8 text-center">
-            <a href="/explorer/environmental" className="inline-flex items-center px-4 py-2 border border-transparent text-sm font-medium rounded-md shadow-sm text-white bg-green-600 hover:bg-green-700">
+            <a href="environmental" className="inline-flex items-center px-4 py-2 border border-transparent text-sm font-medium rounded-md shadow-sm text-white bg-green-600 hover:bg-green-700">
               View Environmental Dashboard
               <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 ml-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />

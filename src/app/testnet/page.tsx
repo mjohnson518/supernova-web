@@ -89,7 +89,7 @@ export default function TestnetPage() {
                 </tr>
                 <tr>
                   <td className="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-300">Block Explorer</td>
-                  <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-300">https://explorer.testnet.supernovanetwork.xyz</td>
+                  <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-300">https://explorer.supernovanetwork.xyz</td>
                 </tr>
               </tbody>
             </table>
