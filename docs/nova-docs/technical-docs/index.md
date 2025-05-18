@@ -1,19 +1,22 @@
-# Technical Documentation
+# Supernova Overview
 
-This section provides detailed technical information about the Supernova blockchain's architecture, implementation, and security features.
+Welcome to the Supernova blockchain documentation. This section provides a high-level introduction to the Supernova project, its architecture, and core concepts.
 
 ## Contents
 
-- [Network Implementation](network-implementation.md) - Details of the network protocol and infrastructure
-- [Quantum Security](quantum-security.md) - Quantum-resistant cryptographic approaches
+- [Introduction](introduction.md) - Core concepts and technology behind Supernova
+- [Project Overview](project-overview.md) - Goals and vision of the Supernova project
 
-## Technical Overview
+## What is Supernova?
 
-Supernova combines several advanced technologies to create a blockchain platform that is both high-performance and environmentally sustainable. The technical architecture prioritizes:
+Supernova is a next-generation blockchain platform designed to be carbon-negative, highly scalable, and quantum-resistant. Built on a unique consensus mechanism that blends Proof-of-Stake with renewable energy validation, Supernova aims to provide enterprise-grade throughput while prioritizing environmental sustainability.
 
-1. **Scalability** - Through a novel consensus mechanism and network topology
-2. **Security** - With quantum-resistant cryptography and robust validation
-3. **Sustainability** - By integrating renewable energy validation into the consensus process
-4. **Interoperability** - With cross-chain compatibility features
+## Key Features
 
-Developers and node operators will find detailed specifications in this section to understand how Supernova works at a technical level. 
+- **Carbon-negative operation**: Actively reduces carbon footprint through renewable energy partnerships
+- **High transaction throughput**: Designed for enterprise-level scalability
+- **Quantum resistance**: Forward-looking cryptographic algorithms to resist quantum computing attacks
+- **Developer-friendly**: Comprehensive tools and APIs for building on the platform
+- **Governance model**: Transparent foundation-based governance structure
+
+Explore the documentation to learn more about these features and how to use the Supernova network. 
