@@ -1,50 +1,19 @@
-# Developer Guide
+# Developer Documentation
 
-Welcome to the Supernova Developer Guide. This section provides resources, tutorials, and documentation to help you build applications on the Supernova platform.
+This section provides resources, guides, and reference materials for developers building on the Supernova blockchain.
 
-## Getting Started with Development
+## Contents
 
-Whether you're building a new application or integrating Supernova into an existing system, this guide will help you understand the development workflow, available tools, and best practices.
+- [Developer Guide](guide.md) - Getting started with Supernova development
+- [Integration Guide](integration-guide.md) - How to integrate existing systems with Supernova
 
-## Documentation in this Section
+## Development Overview
 
-Browse the developer guides available in this section:
+Supernova provides a robust platform for building decentralized applications with a focus on environmental sustainability. The developer toolkit includes:
 
-- [Integration Guide for Exchanges and Service Providers](/docs/developers/integration-guide) - Comprehensive guide for exchanges, wallets, and service providers integrating with Supernova
+- **Supernova SDK** - For building applications in multiple languages
+- **Smart Contract Support** - For deploying decentralized logic
+- **API Access** - For interacting with the blockchain
+- **Testing Tools** - For validating applications before deployment
 
-## Development Topics
-
-This section covers a range of developer-focused topics:
-
-- **Setting up your development environment**
-- **Building and deploying applications**
-- **Integration patterns and architectural guidance**
-- **Testing and debugging strategies**
-- **Security best practices**
-- **Performance optimization**
-
-## SDK and Libraries
-
-Supernova will provide official SDKs and libraries for multiple programming languages:
-
-- **JavaScript/TypeScript**
-- **Python**
-- **Rust**
-- **Java**
-- **Go**
-
-
-Each SDK provides idiomatic access to Supernova's functionality, making it easy to integrate with applications built in your preferred language.
-
-## Sample Applications
-
-Explore example applications and code samples that demonstrate common integration patterns and use cases.
-
-## Developer Resources
-
-- **GitHub repositories**
-- **Development tools**
-- **Testing frameworks**
-- **Community resources**
-
-Browse the developer documentation to find the information you need to build successfully on Supernova. 
+The guides in this section will help you get started with development on Supernova, whether you're building a new application or integrating with an existing system. 

@@ -1,56 +1,30 @@
 # Governance
 
-Welcome to the Supernova Governance documentation. This section provides information about the governance structure, tokenomics, and decision-making processes in the Supernova ecosystem.
+This section covers the governance model of Supernova, including the Supernova Foundation and decision-making processes.
 
-## Documentation in this Section
+## Contents
 
-Browse the governance documentation available in this section:
-
-- [Supernova Foundation](/docs/governance/foundation) - Information about the structure, mission, and operations of the Supernova Foundation
-- [Tokenomics](/docs/governance/tokenomics) - Details on Supernova's economic model, token distribution, and incentive mechanisms
-
-## Supernova Foundation
-
-The Supernova Foundation is a Swiss non-profit entity responsible for overseeing the development, promotion, and governance of the Supernova blockchain. This section covers:
-
-- **Foundation Structure**: Organization, leadership, and legal framework
-- **Mission and Vision**: Core principles guiding the foundation
-- **Operational Model**: How the foundation functions and makes decisions
-- **Transparency Practices**: Reporting and accountability measures
-
-## Tokenomics
-
-This section details the economic model of the Supernova blockchain:
-
-- **Token Distribution**: Initial allocation and release schedule
-- **Mining Rewards**: Block rewards, halving schedule, and incentive structure
-- **Fee Structure**: Transaction fees and their distribution
-- **Treasury Management**: Management of foundation assets
-- **Environmental Treasury**: Allocation for environmental initiatives
+- [Foundation](foundation.md) - Information about the Supernova Foundation and its role
 
 ## Governance Model
 
-Supernova employs a hybrid governance model that balances different stakeholder interests:
+Supernova employs a hybrid governance model that combines:
 
-- **On-Chain Governance**: Mechanisms for token-based voting and proposals
-- **Technical Governance**: Protocol upgrade and development processes
-- **Environmental Governance**: Management of environmental initiatives
-- **Foundation Governance**: Decision-making within the foundation structure
+1. **Foundation Oversight** - The Supernova Foundation provides strategic direction
+2. **On-Chain Governance** - Token holders can vote on protocol upgrades and treasury allocations
+3. **Technical Committee** - Expert panel that evaluates technical proposals
+4. **Environmental Council** - Ensures adherence to environmental commitments
 
-## Community Participation
+This model aims to balance decentralization with the need for expertise and strategic direction, particularly in maintaining the project's environmental commitments.
 
-Learn how to participate in Supernova governance:
+## Proposal Process
 
-- **Proposal System**: How to create and submit governance proposals
-- **Voting Mechanisms**: How voting works and how to participate
-- **Community Calls**: Regular community discussions and updates
-- **Working Groups**: Contributing to specific areas of development
+Community members can submit proposals through the following process:
 
-## Governance Resources
+1. **Pre-proposal Discussion** - Community forum debate
+2. **Formal Submission** - Detailed proposal with specific implementation details
+3. **Technical Review** - Assessment by the Technical Committee
+4. **Community Vote** - On-chain voting by token holders
+5. **Implementation** - Execution of approved proposals
 
-- **Governance Documentation**: Formal governance procedures and rules
-- **Improvement Proposals**: Archive of past and current proposals
-- **Decision Records**: Documentation of governance decisions
-- **Governance Roadmap**: Upcoming governance improvements
-
-Browse the documentation in this section to learn more about how Supernova is governed and how you can participate in its development. 
+The governance section provides more details about participation in this process. 

@@ -448,7 +448,7 @@ Test the following aspects:
 For integration support, contact:
 
 - **Documentation**: [https://docs.supernovanetwork.xyz](https://docs.supernova.io)
-- **Discord**: [SuperNova Developers](https://discord.gg/7WcHAnRT)
+- **Discord**: [SuperNova Developers](https://discord.gg/supernova-dev)
 - **GitHub**: [SuperNova Issues](https://github.com/username/supernova/issues)
 - **Email**: integration-support@supernova.io
 

@@ -1,56 +1,31 @@
-# Core Reference
+# Core Components
 
-Welcome to the Supernova Core Reference documentation. This section provides detailed information about the core components and systems that make up the Supernova blockchain.
+This section documents the core components of the Supernova blockchain platform.
 
-## Documentation in this Section
+## Contents
 
-Browse the core documentation available in this section:
-
-- [Core Reference Guide](/docs/core/core-reference-guide) - Detailed technical specifications and implementation details of Supernova's core components
+- [Project Roadmap](project-roadmap.md) - Development timeline and future plans
 
 ## Core Architecture
 
-The Supernova blockchain is built with a modular architecture designed for security, performance, and extensibility:
+Supernova's architecture consists of several key components:
 
-- **Consensus Layer**: Implementation of the proof-of-work consensus mechanism
-- **Network Layer**: Peer-to-peer communication and data transmission
-- **Storage Layer**: Blockchain data storage and retrieval systems
-- **Execution Layer**: Transaction processing and state management
-- **API Layer**: Interfaces for external interaction with the blockchain
+1. **Consensus Layer** - Implements the hybrid PoS/renewable energy validation mechanism
+2. **Execution Layer** - Processes transactions and smart contracts
+3. **Data Layer** - Manages blockchain state and history
+4. **Network Layer** - Handles peer discovery and communication
+5. **API Layer** - Provides interfaces for interacting with the blockchain
 
-## Core Components
+These components work together to create a scalable, sustainable blockchain platform capable of supporting enterprise-grade applications while maintaining a negative carbon footprint.
 
-This section documents the key components of the Supernova core:
+## Design Principles
 
-- **Blockchain Structure**: Blocks, transactions, and chain organization
-- **Cryptography**: Digital signatures, hashing, and encryption mechanisms
-- **State Machine**: Rules for state transitions and validation
-- **Mempool**: Transaction queue management
-- **P2P Protocol**: Network discovery and communication
-- **Virtual Machine**: Execution environment for smart contracts
+The core components of Supernova were designed with the following principles:
 
-## Core Processes
+- **Sustainability** - Environmental impact is a first-class consideration
+- **Scalability** - Architecture supports high transaction throughput
+- **Security** - Forward-looking security against classical and quantum threats
+- **Simplicity** - Clean interfaces between components
+- **Interoperability** - Designed to work with existing blockchain ecosystems
 
-Learn about the fundamental processes that keep the Supernova blockchain running:
-
-- **Block Production**: Mining, validation, and propagation
-- **Transaction Lifecycle**: Submission, validation, execution, and confirmation
-- **Fork Resolution**: Mechanisms for maintaining consensus
-- **Chain Reorganization**: Handling blockchain reorganizations
-- **State Synchronization**: Maintaining consistent state across nodes
-
-## Core Interfaces
-
-This section documents the interfaces between different components:
-
-- **Inter-module Communication**: How components interact within a node
-- **Serialization Formats**: Data structures and encoding
-- **Event System**: Notification and event handling
-
-## Core Reference Documentation
-
-- **Data Structures**: Detailed specifications of core data types
-- **Algorithms**: Implementation details of key algorithms
-- **Configuration Parameters**: Core configuration options and their effects
-
-Browse the documentation in this section to gain a deep understanding of how Supernova works at its core. 
+The documentation in this section provides details on how these principles are implemented in the core architecture. 

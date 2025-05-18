@@ -1,34 +1,22 @@
-# Project Overview
+# Supernova Overview
 
-Welcome to the Supernova blockchain project overview. This section provides a high-level introduction to Supernova, its purpose, and architecture.
+Welcome to the Supernova blockchain documentation. This section provides a high-level introduction to the Supernova project, its architecture, and core concepts.
 
-## Documentation in this Section
+## Contents
 
-Browse the overview documentation available in this section:
+- [Introduction](introduction.md) - Core concepts and technology behind Supernova
+- [Project Overview](project-overview.md) - Goals and vision of the Supernova project
 
-- [Introduction](/docs/overview/introduction) - A comprehensive introduction to Supernova, its purpose, and key features
-- [Architecture](/docs/overview/architecture) - Detailed overview of Supernova's technical architecture and design principles
+## What is Supernova?
 
-## About Supernova
+Supernova is a next-generation blockchain platform designed to be carbon-negative, highly scalable, and quantum-resistant. Built on a unique consensus mechanism that blends Proof-of-Stake with renewable energy validation, Supernova aims to provide enterprise-grade throughput while prioritizing environmental sustainability.
 
-Supernova is a next-generation proof-of-work blockchain designed with a focus on:
+## Key Features
 
-- **Quantum Resistance** - Using post-quantum cryptographic primitives to ensure long-term security
-- **Environmental Sustainability** - Implementing mechanisms for carbon-negative blockchain operations
-- **Enterprise Reliability** - Built for mission-critical financial infrastructure applications
-- **Scalability** - Designed to handle enterprise-grade throughput requirements
-- **Security** - Multi-layered security approach to protect against various attack vectors
+- **Carbon-negative operation**: Actively reduces carbon footprint through renewable energy partnerships
+- **High transaction throughput**: Designed for enterprise-level scalability
+- **Quantum resistance**: Forward-looking cryptographic algorithms to resist quantum computing attacks
+- **Developer-friendly**: Comprehensive tools and APIs for building on the platform
+- **Governance model**: Transparent foundation-based governance structure
 
-## Key Innovations
-
-Supernova introduces several key innovations to the blockchain space:
-
-- **Post-quantum signatures** using lattice-based cryptography
-- **Carbon-negative operations** through environmental treasury and incentives
-- **Enhanced security model** with multiple layers of protection
-- **Lightning Network integration** for fast, low-fee transactions
-- **Comprehensive API support** for enterprise integrations
-
-## Getting Started
-
-Explore the documentation in this section to learn more about Supernova and its capabilities. The [Introduction](/docs/overview/introduction) provides a detailed overview of the project, while the [Architecture](/docs/overview/architecture) document offers insights into the technical implementation. 
+Explore the documentation to learn more about these features and how to use the Supernova network. 

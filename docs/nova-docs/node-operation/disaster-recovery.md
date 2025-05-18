@@ -6,10 +6,12 @@ This document outlines the disaster recovery capabilities and procedures for Sup
 
 SuperNova incorporates comprehensive disaster recovery mechanisms designed to detect, diagnose, and repair various types of data corruption. The system prioritizes data integrity and availability, with multiple strategies for recovery depending on the nature and severity of the issue.
 
-## Types of Corruption
+## Corruption Types
+
+SuperNova can detect and handle the following types of corruption:
 
 | Corruption Type | Description | Severity | 
-| --------------- | ----------- | -------- |
+|----------------|-------------|----------|
 | **FileLevelCorruption** | Physical damage to database files | Critical |
 | **RecordCorruption** | Individual records within the database are corrupted | High |
 | **IndexCorruption** | Database indexes are damaged but core data is intact | Medium |
@@ -150,8 +152,8 @@ Configure monitoring to alert on:
 
 ## Recovery Performance Considerations
 
-| Recovery Strategy | Typical Duration | Network Impact |
-| ----------------- | ---------------- | -------------- |
+| Recovery Strategy | Typical Duration | Network Impact | 
+|-------------------|------------------|----------------|
 | RestoreFromBackup | Minutes to hours | Node offline during recovery |
 | RebuildCorruptedRecords | Seconds to minutes | Degraded performance |
 | RebuildIndexes | Minutes to hours | Read-heavy operations degraded |

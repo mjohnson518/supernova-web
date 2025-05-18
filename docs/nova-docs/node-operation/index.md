@@ -1,47 +1,30 @@
 # Node Operation
 
-Welcome to the Supernova Node Operation documentation. This section provides comprehensive information about running, maintaining, and optimizing Supernova nodes.
+This section provides documentation for running and maintaining Supernova blockchain nodes.
 
-## Documentation in this Section
+## Contents
 
-Browse the node operation documentation available in this section:
-
-- [Installation Guide](/docs/node-operation/installation-guide) - Step-by-step instructions for setting up a Supernova node
-- [Miner Reporting](/docs/node-operation/miner-reporting) - Details on mining statistics and performance reporting
-- [Disaster Recovery](/docs/node-operation/disaster-recovery) - Procedures for node recovery and data backup strategies
+- [Deployment Guide](deployment-guide.md) - How to deploy a Supernova node
+- [Disaster Recovery](disaster-recovery.md) - Procedures for recovering from failures
 
 ## Node Types
 
-Supernova supports several types of nodes with different purposes:
+Supernova supports several types of nodes:
 
-- **Full Node**: Validates and stores the complete blockchain
-- **Mining Node**: Participates in block production (includes full node functionality)
-- **Light Node**: Connects to the network with minimal resource usage
-- **Archive Node**: Stores the full history of the blockchain
-- **API Node**: Configured to serve API requests
+1. **Validator Nodes** - Participate in consensus and block production
+2. **Full Nodes** - Maintain a complete copy of the blockchain
+3. **Light Nodes** - Connect to the network with minimal resource requirements
+4. **Archive Nodes** - Store the complete history of the blockchain
 
-## Getting Started
+## Hardware Requirements
 
-- [Installation Guide](/docs/node-operation/installation-guide): Step-by-step instructions for setting up a node
-- [Hardware Requirements](/docs/node-operation/hardware-requirements): Recommended specifications for different node types
-- [Configuration Options](/docs/node-operation/configuration): Available settings and configuration parameters
+The requirements vary by node type, but generally include:
 
-## Node Management
+| Node Type | CPU | RAM | Storage | Network |
+|-----------|-----|-----|---------|---------|
+| Validator | 8+ cores | 16+ GB | 500+ GB SSD | 100+ Mbps |
+| Full Node | 4+ cores | 8+ GB | 500+ GB SSD | 50+ Mbps |
+| Light Node | 2+ cores | 4+ GB | 100+ GB SSD | 10+ Mbps |
+| Archive Node | 16+ cores | 32+ GB | 2+ TB SSD | 100+ Mbps |
 
-- **Monitoring and Maintenance**: Tools and practices for keeping your node healthy
-- **Upgrading**: Procedures for safely upgrading your node software
-- **Backup and Recovery**: Strategies for data protection and disaster recovery
-- **Security Considerations**: Best practices for securing your node
-
-## Mining Operations
-
-- **Mining Setup**: Configuring a node for mining
-- **Pool Mining**: Joining or running a mining pool
-- **Mining Economics**: Rewards, fees, and economics of mining
-- **Renewable Energy Mining**: Guide to mining with renewable energy sources
-
-## Troubleshooting
-
-Common issues and their solutions, diagnostic procedures, and where to get additional help.
-
-Browse the documentation in this section to learn more about operating Supernova nodes effectively. 
+Consult the deployment guide for detailed requirements and configuration options. 
