@@ -73,27 +73,27 @@ export default function MainLayout({ children }: MainLayoutProps) {
               {/* Documentation Header & Links */}
               <li className={styles.divider}></li>
               <li className={styles.appHeader}>
-                <Link href="https://docs.supernovanetwork.xyz" target="_blank" rel="noopener noreferrer">
+                <Link href="https://supernovanetwork.xyz/docs" target="_blank" rel="noopener noreferrer">
                   Documentation
                 </Link>
               </li>
               <li className={styles.subItem}>
-                <Link href="https://docs.supernovanetwork.xyz/overview" target="_blank" rel="noopener noreferrer">
+                <Link href="https://supernovanetwork.xyz/docs/overview" target="_blank" rel="noopener noreferrer">
                   Overview
                 </Link>
               </li>
               <li className={styles.subItem}>
-                <Link href="https://docs.supernovanetwork.xyz/technical-docs" target="_blank" rel="noopener noreferrer">
+                <Link href="https://supernovanetwork.xyz/docs/technical-docs" target="_blank" rel="noopener noreferrer">
                   Technical Docs
                 </Link>
               </li>
               <li className={styles.subItem}>
-                <Link href="https://docs.supernovanetwork.xyz/developers" target="_blank" rel="noopener noreferrer">
+                <Link href="https://supernovanetwork.xyz/docs/developers" target="_blank" rel="noopener noreferrer">
                   Developer Guide
                 </Link>
               </li>
               <li className={styles.subItem}>
-                <Link href="https://docs.supernovanetwork.xyz/node-operation" target="_blank" rel="noopener noreferrer">
+                <Link href="https://supernovanetwork.xyz/docs/node-operation" target="_blank" rel="noopener noreferrer">
                   Node Operation
                 </Link>
               </li>
@@ -133,7 +133,7 @@ export default function MainLayout({ children }: MainLayoutProps) {
             <h4>Resources</h4>
             <ul>
               <li><Link href="/roadmap">Roadmap</Link></li>
-              <li><Link href="https://docs.supernovanetwork.xyz" target="_blank" rel="noopener noreferrer">Documentation</Link></li>
+              <li><Link href="https://supernovanetwork.xyz/docs" target="_blank" rel="noopener noreferrer">Documentation</Link></li>
               <li><Link href="/blog">Blog</Link></li>
               <li><Link href="/faq">FAQ</Link></li>
             </ul>
