@@ -1,4 +1,4 @@
-# Supernova Testnet: Complete Testing Guide
+# Supernova Testnet: Complete Testing Guide {#testnet-guide}
 
 This guide provides detailed instructions for testing the Supernova blockchain on the testnet environment. Follow these steps to build, deploy, and interact with the testnet for development and validation purposes.
 
@@ -47,6 +47,8 @@ This guide provides detailed instructions for testing the Supernova blockchain o
   - [Performance Testing](#performance-testing)
   - [Stress Testing](#stress-testing)
   - [Node Statistics](#node-statistics)
+- [Using Utility Scripts](#using-utility-scripts)
+- [Known Issues and Fixes](#known-issues-and-fixes)
 - [Troubleshooting](#troubleshooting)
 - [Testnet Reset Procedure](#testnet-reset-procedure)
 - [Getting Help](#getting-help)
@@ -62,6 +64,7 @@ Before beginning, ensure you have the following installed:
 - Docker Engine v20.10 or newer
 - Docker Compose v2.0 or newer
 - Git
+- Rust toolchain (for building from source)
 - 16GB RAM minimum (32GB recommended)
 - 100GB free disk space
 - Open ports: 8545 (RPC), 8080 (Faucet), 26656-26657 (P2P/Tendermint)
@@ -110,6 +113,7 @@ docker exec -it supernova-seed-1 supernova wallet send --address RECIPIENT_ADDRE
    ```bash
    cat deployments/testnet/docker-compose.yml
    cat deployments/testnet/config/genesis.json
+   cat deployments/testnet/README.md
    ```
 
 ### Building the Docker Image {#building-the-docker-image}
@@ -126,6 +130,12 @@ docker exec -it supernova-seed-1 supernova wallet send --address RECIPIENT_ADDRE
 
    ```bash
    docker images | grep supernova
+   ```
+
+   Alternatively, you can build from source:
+
+   ```bash
+   cargo build --release
    ```
 
 ### Deploying the Testnet {#deploying-the-testnet}
@@ -199,11 +209,19 @@ Supernova includes ASCII art animations that can be displayed during node startu
 ./run_node.sh --with-animation
 
 # Or use the standalone banner tool
-cargo run --bin supernova-banner -- testnet
+cargo run --bin supernova-banner -- static
 cargo run --bin supernova-banner -- slide-in
 cargo run --bin supernova-banner -- dissolve-out
 cargo run --bin supernova-banner -- complete
+cargo run --bin supernova-banner -- testnet
 ```
+
+The different animation modes provide various visual effects:
+- `static`: Display a static ASCII logo
+- `slide-in`: Animate the logo sliding in from the left
+- `dissolve-out`: Animate the logo dissolving away
+- `complete`: Run a full animation sequence
+- `testnet`: Show the testnet-specific animation
 
 ## Wallet Operations {#wallet-operations}
 
@@ -267,6 +285,9 @@ docker exec -it supernova-seed-1 supernova wallet balance --name main
 
 # Check by address
 docker exec -it supernova-seed-1 supernova wallet balance --address YOUR_ADDRESS
+
+# See detailed UTXO information
+docker exec -it supernova-seed-1 supernova wallet list-utxos
 ```
 
 ### Quantum-Resistant Addresses {#quantum-resistant-addresses}
@@ -321,6 +342,12 @@ docker exec -it supernova-seed-1 supernova wallet list-addresses
 
    Visit [https://explorer.testnet.supernovanetwork.xyz](https://explorer.testnet.supernovanetwork.xyz) and search for your transaction ID.
 
+3. **View Transaction History**
+
+   ```bash
+   docker exec -it supernova-seed-1 supernova wallet history
+   ```
+
 ### Advanced Transaction Options {#advanced-transaction-options}
 
 1. **Send with Memo**
@@ -355,6 +382,14 @@ docker exec -it supernova-seed-1 supernova wallet list-addresses
      --address RECIPIENT_ADDRESS \
      --amount 1 \
      --fee-rate high
+   ```
+
+4. **Label Transactions**
+
+   ```bash
+   docker exec -it supernova-seed-1 supernova wallet label-tx \
+     --txid YOUR_TRANSACTION_ID \
+     --label "Test payment"
    ```
 
 ### Quantum-Protected Transactions {#quantum-protected-transactions}
@@ -709,6 +744,72 @@ docker exec -it supernova-seed-1 supernova node peers
 docker exec -it supernova-seed-1 supernova node mempool
 ```
 
+## Using Utility Scripts {#using-utility-scripts}
+
+Supernova provides several utility scripts to simplify testnet operations:
+
+```bash
+# Navigate to the scripts directory
+cd scripts
+
+# Start all testnet services
+./start_testnet.sh
+
+# Stop all testnet services
+./stop_testnet.sh
+
+# Reset the testnet state
+./reset_testnet.sh
+
+# Generate test data
+./generate_test_data.sh --tx-count 1000
+
+# Monitor node health
+./monitor_nodes.sh
+
+# Run a health check
+./health_check.sh
+```
+
+## Known Issues and Fixes {#known-issues-and-fixes}
+
+Some known issues in the testnet implementation and their fixes:
+
+1. **RPC Connection Issues**
+
+   If you encounter RPC connection issues, check your firewall settings and ensure ports are properly exposed.
+
+   ```bash
+   # Verify port exposure
+   docker-compose ps
+   
+   # Check if ports are accessible
+   curl -v http://localhost:8545
+   ```
+
+2. **Node Synchronization Problems**
+
+   Occasionally nodes may fall out of sync. This can be resolved by:
+
+   ```bash
+   # Restart the affected node
+   docker-compose restart supernova-node-1
+   
+   # In severe cases, reset the node's data
+   docker-compose down
+   docker volume rm testnet_blockchain_data
+   docker-compose up -d
+   ```
+
+3. **Memory Issues with Multiple Nodes**
+
+   Running many nodes may cause memory pressure. Adjust Docker resource limits:
+
+   ```bash
+   # Edit Docker Compose file to add resource limits
+   # Example: add "mem_limit: 2g" to each service
+   ```
+
 ## Troubleshooting {#troubleshooting}
 
 ### Common Issues and Solutions
@@ -771,6 +872,10 @@ docker-compose down -v
 
 # Restart from clean state
 docker-compose up -d
+
+# Alternative: use the reset script
+cd scripts
+./reset_testnet.sh
 ```
 
 ## Getting Help {#getting-help}
