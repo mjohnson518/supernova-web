@@ -23,51 +23,51 @@
 # Main network subdomain handling
 [[redirects]]
   from = "https://testnet.supernovanetwork.xyz/*"
-  to = "/testnet/:splat"
+  to = "/.netlify/functions/subdomain-router"
   status = 200
   force = true
 
 [[redirects]]
   from = "https://explorer.supernovanetwork.xyz/*"
-  to = "/explorer/:splat"
+  to = "/.netlify/functions/subdomain-router"
   status = 200
   force = true
 
 [[redirects]]
   from = "https://status.supernovanetwork.xyz/*"
-  to = "/status/:splat"
+  to = "/.netlify/functions/subdomain-router"
   status = 200
   force = true
 
 [[redirects]]
   from = "https://docs.supernovanetwork.xyz/*"
-  to = "/docs/:splat"
+  to = "/.netlify/functions/subdomain-router"
   status = 200
   force = true
 
 # Testnet-specific subdomain handling
 [[redirects]]
   from = "https://explorer.testnet.supernovanetwork.xyz/*"
-  to = "/testnet/explorer/:splat"
+  to = "/.netlify/functions/subdomain-router"
   status = 200
   force = true
 
 [[redirects]]
   from = "https://status.testnet.supernovanetwork.xyz/*"
-  to = "/testnet/status/:splat"
+  to = "/.netlify/functions/subdomain-router"
   status = 200
   force = true
 
 # Alternative testnet domain format
 [[redirects]]
   from = "https://testnet-explorer.supernovanetwork.xyz/*"
-  to = "/testnet/explorer/:splat"
+  to = "/.netlify/functions/subdomain-router"
   status = 200
   force = true
 
 [[redirects]]
   from = "https://testnet-status.supernovanetwork.xyz/*"
-  to = "/testnet/status/:splat"
+  to = "/.netlify/functions/subdomain-router"
   status = 200
   force = true
 
