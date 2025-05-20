@@ -6,6 +6,7 @@ This guide provides detailed instructions for testing the Supernova blockchain o
 
 - [Overview](#overview)
 - [Prerequisites](#prerequisites)
+- [Simplified Docker Setup](#simplified-docker-setup)
 - [Quick Start](#quick-start)
 - [Detailed Setup Instructions](#detailed-setup-instructions)
   - [Environment Preparation](#environment-preparation)
@@ -69,9 +70,36 @@ Before beginning, ensure you have the following installed:
 - 100GB free disk space
 - Open ports: 8545 (RPC), 8080 (Faucet), 26656-26657 (P2P/Tendermint)
 
+## Simplified Docker Setup {#simplified-docker-setup}
+
+For the easiest and most reliable testnet deployment, use our new streamlined Docker setup:
+
+```bash
+# Clone the repository
+git clone https://github.com/mjohnson518/supernova.git
+cd supernova
+
+# Make the Docker setup script executable
+chmod +x docker_setup.sh
+
+# Run the Docker setup script
+./docker_setup.sh
+```
+
+This script automates the entire setup process by:
+- Building the necessary Docker images
+- Setting up the testnet configuration
+- Launching all required services
+- Creating a default wallet
+- Funding it with test tokens
+
+After running the script, your testnet will be fully operational and ready for testing. The script also generates a summary of available endpoints and credentials.
+
+For more details on the Docker setup, refer to the [TESTNET_FIXES_UPDATED.md](https://github.com/mjohnson518/supernova/blob/main/TESTNET_FIXES_UPDATED.md) document.
+
 ## Quick Start {#quick-start}
 
-For those who want to get up and running quickly:
+For those who want to get up and running quickly with the standard approach:
 
 ```bash
 # Clone repository
@@ -115,6 +143,17 @@ docker exec -it supernova-seed-1 supernova wallet send --address RECIPIENT_ADDRE
    cat deployments/testnet/config/genesis.json
    cat deployments/testnet/README.md
    ```
+
+3. **Apply Required Fixes**
+
+   The repository includes fixes for common issues. Review these before proceeding:
+
+   ```bash
+   cat TESTNET_FIXES_UPDATED.md
+   cat FINAL_SOLUTION.md
+   ```
+
+   These documents contain solutions to common deployment issues and optimizations for the testnet environment.
 
 ### Building the Docker Image {#building-the-docker-image}
 
@@ -200,6 +239,22 @@ docker exec -it supernova-seed-1 supernova wallet send --address RECIPIENT_ADDRE
    docker exec -it supernova-seed-1 supernova blockchain info
    ```
 
+5. **Verify Endpoint Connectivity**
+
+   According to the `FINAL_SOLUTION.md` document, you should verify that all endpoints are accessible:
+
+   ```bash
+   # Check RPC endpoint
+   curl -s http://localhost:8545 -X POST -H "Content-Type: application/json" \
+     -d '{"jsonrpc":"2.0","method":"web3_clientVersion","params":[],"id":1}'
+
+   # Check Faucet endpoint
+   curl -s http://localhost:8080/health
+
+   # Check Explorer endpoint
+   curl -s http://localhost:8081/api/status
+   ```
+
 ### Node Startup with ASCII Art {#node-startup-with-ascii-art}
 
 Supernova includes ASCII art animations that can be displayed during node startup:
@@ -252,6 +307,16 @@ The different animation modes provide various visual effects:
    docker exec -it supernova-seed-1 supernova wallet list
    ```
 
+4. **Import Existing Wallet**
+
+   If you have an existing wallet mnemonic, you can import it:
+
+   ```bash
+   docker exec -it supernova-seed-1 supernova wallet import \
+     --mnemonic "your twelve word mnemonic phrase here" \
+     --name imported_wallet
+   ```
+
 ### Obtaining Test Tokens {#obtaining-test-tokens}
 
 1. **Request Tokens from Faucet**
@@ -268,6 +333,8 @@ The different animation modes provide various visual effects:
      -d '{"address":"YOUR_WALLET_ADDRESS","amount":100}' \
      https://testnet.supernovanetwork.xyz/api/faucet/send
    ```
+
+   When using the Docker setup method, your wallet is automatically funded with test tokens.
 
 2. **Verify Token Receipt**
 
@@ -341,6 +408,8 @@ docker exec -it supernova-seed-1 supernova wallet list-addresses
 2. **View Transaction in Explorer**
 
    Visit [https://explorer.testnet.supernovanetwork.xyz](https://explorer.testnet.supernovanetwork.xyz) and search for your transaction ID.
+
+   If using the local Docker setup, the explorer is available at `http://localhost:8081`.
 
 3. **View Transaction History**
 
@@ -678,7 +747,13 @@ curl -X POST "http://localhost:8332" \
 
 1. **Block Explorer**
 
-   Visit [https://explorer.testnet.supernovanetwork.xyz](https://explorer.testnet.supernovanetwork.xyz) to:
+   If using the remote testnet:
+   Visit [https://explorer.testnet.supernovanetwork.xyz](https://explorer.testnet.supernovanetwork.xyz)
+
+   If using the local Docker setup:
+   Visit `http://localhost:8081`
+
+   Features include:
    - View recent blocks
    - Search for transactions
    - Check addresses and balances
@@ -686,7 +761,13 @@ curl -X POST "http://localhost:8332" \
 
 2. **Network Status**
 
-   Visit [https://status.testnet.supernovanetwork.xyz](https://status.testnet.supernovanetwork.xyz) to monitor:
+   If using the remote testnet:
+   Visit [https://status.testnet.supernovanetwork.xyz](https://status.testnet.supernovanetwork.xyz)
+
+   If using the local Docker setup:
+   Visit `http://localhost:8082`
+
+   Monitor:
    - Network uptime
    - Node distribution
    - Transaction throughput
@@ -787,6 +868,8 @@ Some known issues in the testnet implementation and their fixes:
    curl -v http://localhost:8545
    ```
 
+   For more details, refer to the [TESTNET_FIXES_UPDATED.md](https://github.com/mjohnson518/supernova/blob/main/TESTNET_FIXES_UPDATED.md) document.
+
 2. **Node Synchronization Problems**
 
    Occasionally nodes may fall out of sync. This can be resolved by:
@@ -808,6 +891,19 @@ Some known issues in the testnet implementation and their fixes:
    ```bash
    # Edit Docker Compose file to add resource limits
    # Example: add "mem_limit: 2g" to each service
+   ```
+
+4. **Database Corruption Issues**
+
+   As noted in FINAL_SOLUTION.md, database corruption can occur during improper shutdowns. The solution is:
+   
+   ```bash
+   # Proper shutdown sequence
+   docker-compose stop supernova-node-1 supernova-node-2
+   docker-compose stop supernova-seed-1
+   
+   # If corruption occurs, use the repair tool
+   docker exec -it supernova-seed-1 supernova db repair
    ```
 
 ## Troubleshooting {#troubleshooting}
@@ -876,6 +972,9 @@ docker-compose up -d
 # Alternative: use the reset script
 cd scripts
 ./reset_testnet.sh
+
+# For the simplified Docker setup
+./docker_setup.sh --reset
 ```
 
 ## Getting Help {#getting-help}
