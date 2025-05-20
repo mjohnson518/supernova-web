@@ -20,14 +20,16 @@ This comprehensive guide provides detailed instructions for testing the SuperNov
   - [Basic Transfer](#basic-transfer)
   - [Tracking Transactions](#tracking-transactions)
   - [Advanced Transaction Options](#advanced-transaction-options)
-- [Smart Contract Testing](#smart-contract-testing)
-  - [Deploying Contracts](#deploying-contracts)
-  - [Interacting with Contracts](#interacting-with-contracts)
+- [Lightning Network Testing](#lightning-network-testing)
+  - [Opening Channels](#opening-channels)
+  - [Creating and Paying Invoices](#creating-and-paying-invoices)
+  - [Managing Channels](#managing-channels)
 - [Explorer and Network Status](#explorer-and-network-status)
 - [Advanced Testing](#advanced-testing)
   - [Performance Testing](#performance-testing)
   - [Stress Testing](#stress-testing)
   - [Node Statistics](#node-statistics)
+  - [Environmental Metrics](#environmental-metrics)
 - [Troubleshooting](#troubleshooting)
 - [Testnet Reset Procedure](#testnet-reset-procedure)
 - [Getting Help](#getting-help)
@@ -53,7 +55,7 @@ For those who want to get up and running quickly:
 
 ```bash
 # Clone repository
-git clone https://github.com/supernovanetwork/supernova.git
+git clone https://github.com/mjohnson518/supernova.git
 cd supernova
 
 # Build the Docker image
@@ -80,7 +82,7 @@ docker exec -it supernova-seed-1 supernova wallet send --address RECIPIENT_ADDRE
 1. **Clone the Repository**
 
    ```bash
-   git clone https://github.com/supernovanetwork/supernova.git
+   git clone https://github.com/mjohnson518/supernova.git
    cd supernova
    ```
 
@@ -308,43 +310,56 @@ docker exec -it supernova-seed-1 supernova wallet balance --address YOUR_ADDRESS
      --fee-rate high
    ```
 
-## Smart Contract Testing
+## Lightning Network Testing
 
-### Deploying Contracts
+### Opening Channels
 
-1. **Deploy a Simple Contract**
+1. **Open a Lightning Channel**
 
    ```bash
-   docker exec -it supernova-seed-1 supernova contract deploy \
-     --path ./contracts/examples/simple_storage.sol \
-     --account YOUR_ADDRESS
+   docker exec -it supernova-seed-1 supernova wallet lightning open-channel \
+     --node NODE_ID \
+     --capacity 0.01 \
+     --push 0.005
    ```
 
-2. **Verify Deployment**
+2. **List Open Channels**
 
    ```bash
-   docker exec -it supernova-seed-1 supernova contract list
+   docker exec -it supernova-seed-1 supernova wallet lightning list-channels
    ```
 
-### Interacting with Contracts
+### Creating and Paying Invoices
 
-1. **Call Contract Method**
+1. **Create an Invoice**
 
    ```bash
-   docker exec -it supernova-seed-1 supernova contract call \
-     --address CONTRACT_ADDRESS \
-     --method "store(uint256)" \
-     --args 42 \
-     --account YOUR_ADDRESS
+   docker exec -it supernova-seed-1 supernova wallet lightning create-invoice \
+     --amount 0.001 \
+     --description "Test payment"
    ```
 
-2. **Query Contract State**
+2. **Pay an Invoice**
 
    ```bash
-   docker exec -it supernova-seed-1 supernova contract query \
-     --address CONTRACT_ADDRESS \
-     --method "retrieve()" \
-     --account YOUR_ADDRESS
+   docker exec -it supernova-seed-1 supernova wallet lightning pay-invoice \
+     --invoice INVOICE_STRING
+   ```
+
+### Managing Channels
+
+1. **Get Channel Details**
+
+   ```bash
+   docker exec -it supernova-seed-1 supernova wallet lightning channel-info \
+     --channel-id CHANNEL_ID
+   ```
+
+2. **Close a Channel**
+
+   ```bash
+   docker exec -it supernova-seed-1 supernova wallet lightning close-channel \
+     --channel-id CHANNEL_ID
    ```
 
 ## Explorer and Network Status
@@ -419,6 +434,32 @@ docker exec -it supernova-seed-1 supernova node peers
 docker exec -it supernova-seed-1 supernova node mempool
 ```
 
+### Environmental Metrics
+
+1. **View Network Emissions**
+
+   ```bash
+   docker exec -it supernova-seed-1 supernova node env-metrics
+   ```
+
+2. **Transaction Carbon Footprint**
+
+   ```bash
+   docker exec -it supernova-seed-1 supernova node tx-emissions --txid YOUR_TRANSACTION_ID
+   ```
+
+3. **Mining Pool Energy Sources**
+
+   ```bash
+   docker exec -it supernova-seed-1 supernova node pool-energy
+   ```
+
+4. **Lightning Network Emissions Savings**
+
+   ```bash
+   docker exec -it supernova-seed-1 supernova node lightning-emissions-report
+   ```
+
 ## Troubleshooting
 
 ### Common Issues and Solutions
@@ -489,7 +530,7 @@ If you encounter issues while testing:
 
 - **Documentation**: Visit [https://docs.supernovanetwork.xyz](https://docs.supernovanetwork.xyz)
 - **Discord Community**: Join our [developer channel](https://discord.gg/supernova-dev)
-- **GitHub Issues**: Submit bugs at [https://github.com/supernovanetwork/supernova/issues](https://github.com/supernovanetwork/supernova/issues)
+- **GitHub Issues**: Submit bugs at [https://github.com/mjohnson518/supernova/issues](https://github.com/mjohnson518/supernova/issues)
 - **Contact Support**: Email [testnet-support@supernovanetwork.xyz](mailto:testnet-support@supernovanetwork.xyz)
 
 ---
