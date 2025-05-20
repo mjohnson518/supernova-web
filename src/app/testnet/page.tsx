@@ -105,6 +105,9 @@ export default function TestnetPage() {
             <a href="https://docs.supernovanetwork.xyz" target="_blank" rel="noopener noreferrer" className="px-6 py-3 bg-gray-800 text-white rounded-md hover:bg-gray-700 transition-colors">
               View Documentation
             </a>
+            <a href="https://docs.supernovanetwork.xyz/developers/testnet-guide" target="_blank" rel="noopener noreferrer" className="px-6 py-3 bg-blue-600 text-white rounded-md hover:bg-blue-700 transition-colors">
+              Testnet Guide
+            </a>
             <a href="https://discord.gg/supernova" className="px-6 py-3 bg-indigo-600 text-white rounded-md hover:bg-indigo-700 transition-colors">
               Join Discord
             </a>
