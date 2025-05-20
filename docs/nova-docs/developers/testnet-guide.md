@@ -641,8 +641,6 @@ curl -X POST "http://localhost:8332" \
 
 ## Explorer and Network Status
 
-Once your DNS configuration is complete and subdomains are properly propagated:
-
 1. **Block Explorer**
 
    Visit [https://explorer.testnet.supernovanetwork.xyz](https://explorer.testnet.supernovanetwork.xyz) to:
@@ -780,11 +778,7 @@ docker-compose up -d
 If you encounter issues while testing:
 
 - **Documentation**: Visit [https://docs.supernovanetwork.xyz](https://docs.supernovanetwork.xyz)
-- **Discord Community**: Join our [developer channel](https://discord.gg/supernova-dev)
+- **Discord Community**: Join our [developer channel](https://discord.gg/Z4k9Ayp3)
 - **GitHub Issues**: Submit bugs at [https://github.com/mjohnson518/supernova/issues](https://github.com/mjohnson518/supernova/issues)
-- **Contact Support**: Email [testnet-support@supernovanetwork.xyz](mailto:testnet-support@supernovanetwork.xyz)
 
----
-
-By following this guide, you should now have a fully operational Supernova testnet environment for development and testing. The testnet allows you to experiment with all features of the Supernova blockchain in a safe environment before deploying to mainnet.
  
