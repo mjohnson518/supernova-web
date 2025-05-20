@@ -1,6 +1,6 @@
-# SuperNova Testnet: Complete Testing Guide
+# Supernova Testnet: Complete Testing Guide
 
-This comprehensive guide provides detailed instructions for testing the SuperNova blockchain on the testnet environment. Follow these steps to build, deploy, and interact with the testnet for development and validation purposes.
+This guide provides detailed instructions for testing the Supernova blockchain on the testnet environment. Follow these steps to build, deploy, and interact with the testnet for development and validation purposes.
 
 ## Table of Contents
 
@@ -36,7 +36,7 @@ This comprehensive guide provides detailed instructions for testing the SuperNov
 
 ## Overview
 
-The SuperNova testnet provides a sandbox environment for testing and development without using real tokens or affecting the main network. The testnet is functionally identical to the mainnet but operates with test tokens (tSNOVA) that have no real-world value. This allows developers to experiment freely with application development, transaction testing, and node operation.
+The Supernova testnet provides a sandbox environment for testing and development without using real tokens or affecting the main network. The testnet is functionally identical to the mainnet but operates with test tokens (tSNOVA) that have no real-world value. This allows developers to experiment freely with application development, transaction testing, and node operation.
 
 ## Prerequisites
 
@@ -97,13 +97,13 @@ docker exec -it supernova-seed-1 supernova wallet send --address RECIPIENT_ADDRE
 
 ### Building the Docker Image
 
-1. **Build the SuperNova Image**
+1. **Build the Supernova Image**
 
    ```bash
    docker build -t supernova:latest -f docker/Dockerfile .
    ```
 
-   This process compiles the SuperNova blockchain code and creates a Docker image with all necessary dependencies.
+   This process compiles the Supernova blockchain code and creates a Docker image with all necessary dependencies.
 
 2. **Verify the Image**
 
@@ -529,10 +529,5 @@ docker-compose up -d
 If you encounter issues while testing:
 
 - **Documentation**: Visit [https://docs.supernovanetwork.xyz](https://docs.supernovanetwork.xyz)
-- **Discord Community**: Join our [developer channel](https://discord.gg/supernova-dev)
 - **GitHub Issues**: Submit bugs at [https://github.com/mjohnson518/supernova/issues](https://github.com/mjohnson518/supernova/issues)
-- **Contact Support**: Email [testnet-support@supernovanetwork.xyz](mailto:testnet-support@supernovanetwork.xyz)
-
----
-
-By following this guide, you should now have a fully operational SuperNova testnet environment for development and testing. The testnet allows you to experiment with all features of the SuperNova blockchain in a safe environment before deploying to mainnet. 
+ 
