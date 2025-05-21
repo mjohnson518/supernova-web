@@ -1,4 +1,4 @@
-# Supernova Testnet: Complete Testing Guide {#testnet-guide}
+# Supernova Testnet: Complete Testing Guide
 
 This guide provides detailed instructions for testing the Supernova blockchain on the testnet environment. Follow these steps to build, deploy, and interact with the testnet for development and validation purposes.
 
@@ -54,11 +54,15 @@ This guide provides detailed instructions for testing the Supernova blockchain o
 - [Testnet Reset Procedure](#testnet-reset-procedure)
 - [Getting Help](#getting-help)
 
-## Overview {#overview}
+<a id="overview"></a>
+
+## Overview
 
 The Supernova testnet provides a sandbox environment for testing and development without using real tokens or affecting the main network. The testnet is functionally identical to the mainnet but operates with test tokens (tSNOVA) that have no real-world value. This allows developers to experiment freely with application development, transaction testing, and node operation.
 
-## Prerequisites {#prerequisites}
+<a id="prerequisites"></a>
+
+## Prerequisites
 
 Before beginning, ensure you have the following installed:
 
@@ -70,7 +74,9 @@ Before beginning, ensure you have the following installed:
 - 100GB free disk space
 - Open ports: 8545 (RPC), 8080 (Faucet), 26656-26657 (P2P/Tendermint)
 
-## Simplified Docker Setup {#simplified-docker-setup}
+<a id="simplified-docker-setup"></a>
+
+## Simplified Docker Setup
 
 For the easiest and most reliable testnet deployment, use our new streamlined Docker setup:
 
@@ -97,7 +103,9 @@ After running the script, your testnet will be fully operational and ready for t
 
 For more details on the Docker setup, refer to the [TESTNET_FIXES_UPDATED.md](https://github.com/mjohnson518/supernova/blob/main/TESTNET_FIXES_UPDATED.md) document.
 
-## Quick Start {#quick-start}
+<a id="quick-start"></a>
+
+## Quick Start
 
 For those who want to get up and running quickly with the standard approach:
 
@@ -123,9 +131,13 @@ docker exec -it supernova-seed-1 supernova wallet create --network testnet
 docker exec -it supernova-seed-1 supernova wallet send --address RECIPIENT_ADDRESS --amount 10 --fee 0.001
 ```
 
-## Detailed Setup Instructions {#detailed-setup-instructions}
+<a id="detailed-setup-instructions"></a>
 
-### Environment Preparation {#environment-preparation}
+## Detailed Setup Instructions
+
+<a id="environment-preparation"></a>
+
+### Environment Preparation
 
 1. **Clone the Repository**
 
@@ -155,7 +167,9 @@ docker exec -it supernova-seed-1 supernova wallet send --address RECIPIENT_ADDRE
 
    These documents contain solutions to common deployment issues and optimizations for the testnet environment.
 
-### Building the Docker Image {#building-the-docker-image}
+<a id="building-the-docker-image"></a>
+
+### Building the Docker Image
 
 1. **Build the Supernova Image**
 
@@ -177,7 +191,9 @@ docker exec -it supernova-seed-1 supernova wallet send --address RECIPIENT_ADDRE
    cargo build --release
    ```
 
-### Deploying the Testnet {#deploying-the-testnet}
+<a id="deploying-the-testnet"></a>
+
+### Deploying the Testnet
 
 1. **Navigate to the Testnet Directory**
 
@@ -205,7 +221,9 @@ docker exec -it supernova-seed-1 supernova wallet send --address RECIPIENT_ADDRE
    docker-compose ps
    ```
 
-### Verifying Deployment {#verifying-deployment}
+<a id="verifying-deployment"></a>
+
+### Verifying Deployment
 
 1. **Check Container Status**
 
@@ -255,7 +273,9 @@ docker exec -it supernova-seed-1 supernova wallet send --address RECIPIENT_ADDRE
    curl -s http://localhost:8081/api/status
    ```
 
-### Node Startup with ASCII Art {#node-startup-with-ascii-art}
+<a id="node-startup-with-ascii-art"></a>
+
+### Node Startup with ASCII Art
 
 Supernova includes ASCII art animations that can be displayed during node startup:
 
@@ -278,9 +298,13 @@ The different animation modes provide various visual effects:
 - `complete`: Run a full animation sequence
 - `testnet`: Show the testnet-specific animation
 
-## Wallet Operations {#wallet-operations}
+<a id="wallet-operations"></a>
 
-### Creating Wallets {#creating-wallets}
+## Wallet Operations
+
+<a id="creating-wallets"></a>
+
+### Creating Wallets
 
 1. **Create Your First Wallet**
 
@@ -317,7 +341,9 @@ The different animation modes provide various visual effects:
      --name imported_wallet
    ```
 
-### Obtaining Test Tokens {#obtaining-test-tokens}
+<a id="obtaining-test-tokens"></a>
+
+### Obtaining Test Tokens
 
 1. **Request Tokens from Faucet**
 
@@ -344,7 +370,9 @@ The different animation modes provide various visual effects:
 
    It may take a few moments for tokens to arrive.
 
-### Checking Balances {#checking-balances}
+<a id="checking-balances"></a>
+
+### Checking Balances
 
 ```bash
 # Check by wallet name (if you created with --name)
@@ -357,7 +385,9 @@ docker exec -it supernova-seed-1 supernova wallet balance --address YOUR_ADDRESS
 docker exec -it supernova-seed-1 supernova wallet list-utxos
 ```
 
-### Quantum-Resistant Addresses {#quantum-resistant-addresses}
+<a id="quantum-resistant-addresses"></a>
+
+### Quantum-Resistant Addresses
 
 Supernova supports post-quantum cryptography for enhanced security:
 
@@ -372,9 +402,13 @@ docker exec -it supernova-seed-1 supernova wallet new-address --type quantum --a
 docker exec -it supernova-seed-1 supernova wallet list-addresses
 ```
 
-## Testing Transactions {#testing-transactions}
+<a id="testing-transactions"></a>
 
-### Basic Transfer {#basic-transfer}
+## Testing Transactions
+
+<a id="basic-transfer"></a>
+
+### Basic Transfer
 
 1. **Send a Simple Transaction**
 
@@ -397,7 +431,9 @@ docker exec -it supernova-seed-1 supernova wallet list-addresses
    docker exec -it supernova-seed-1 supernova wallet balance --address RECIPIENT_ADDRESS
    ```
 
-### Tracking Transactions {#tracking-transactions}
+<a id="tracking-transactions"></a>
+
+### Tracking Transactions
 
 1. **Check Transaction Status**
 
@@ -417,7 +453,9 @@ docker exec -it supernova-seed-1 supernova wallet list-addresses
    docker exec -it supernova-seed-1 supernova wallet history
    ```
 
-### Advanced Transaction Options {#advanced-transaction-options}
+<a id="advanced-transaction-options"></a>
+
+### Advanced Transaction Options
 
 1. **Send with Memo**
 
@@ -461,7 +499,9 @@ docker exec -it supernova-seed-1 supernova wallet list-addresses
      --label "Test payment"
    ```
 
-### Quantum-Protected Transactions {#quantum-protected-transactions}
+<a id="quantum-protected-transactions"></a>
+
+### Quantum-Protected Transactions
 
 Send transactions using quantum-resistant signatures:
 
@@ -477,512 +517,665 @@ docker exec -it supernova-seed-1 supernova wallet send \
   --address RECIPIENT_ADDRESS \
   --amount 5 \
   --quantum-protected \
-  --algorithm sphincs
+  --algorithm dilithium
 ```
 
-## Lightning Network Testing {#lightning-network-testing}
+<a id="lightning-network-testing"></a>
 
-### Opening Channels {#opening-channels}
+## Lightning Network Testing
 
-1. **Open a Lightning Channel**
+<a id="opening-channels"></a>
 
-   ```bash
-   docker exec -it supernova-seed-1 supernova wallet lightning open-channel \
-     --node NODE_ID \
-     --capacity 0.01 \
-     --push 0.005
-   ```
+### Opening Channels
 
-2. **List Open Channels**
+1. **Start Lightning Node**
 
    ```bash
-   docker exec -it supernova-seed-1 supernova wallet lightning list-channels
+   docker exec -it supernova-seed-1 supernova lightning start
    ```
 
-### Creating and Paying Invoices {#creating-and-paying-invoices}
+2. **Create a New Channel**
+
+   ```bash
+   docker exec -it supernova-seed-1 supernova lightning open-channel \
+     --peer NODE_ID@IP_ADDRESS:PORT \
+     --local-amount 1000000 \
+     --push-amount 200000
+   ```
+
+3. **List Open Channels**
+
+   ```bash
+   docker exec -it supernova-seed-1 supernova lightning list-channels
+   ```
+
+<a id="creating-and-paying-invoices"></a>
+
+### Creating and Paying Invoices
 
 1. **Create an Invoice**
 
    ```bash
-   docker exec -it supernova-seed-1 supernova wallet lightning create-invoice \
-     --amount 0.001 \
-     --description "Test payment"
+   docker exec -it supernova-seed-1 supernova lightning create-invoice \
+     --amount 50000 \
+     --memo "Test Invoice"
    ```
 
 2. **Pay an Invoice**
 
    ```bash
-   docker exec -it supernova-seed-1 supernova wallet lightning pay-invoice \
-     --invoice INVOICE_STRING
+   docker exec -it supernova-seed-1 supernova lightning pay \
+     --invoice LIGHTNING_INVOICE
    ```
 
-### Managing Channels {#managing-channels}
-
-1. **Get Channel Details**
+3. **List Invoices**
 
    ```bash
-   docker exec -it supernova-seed-1 supernova wallet lightning channel-info \
+   docker exec -it supernova-seed-1 supernova lightning list-invoices
+   ```
+
+<a id="managing-channels"></a>
+
+### Managing Channels
+
+1. **Close a Channel**
+
+   ```bash
+   docker exec -it supernova-seed-1 supernova lightning close-channel \
      --channel-id CHANNEL_ID
    ```
 
-2. **Close a Channel**
+2. **Force Close (if needed)**
 
    ```bash
-   docker exec -it supernova-seed-1 supernova wallet lightning close-channel \
+   docker exec -it supernova-seed-1 supernova lightning force-close-channel \
      --channel-id CHANNEL_ID
    ```
 
-3. **Get Lightning Network Information**
+3. **Check Channel Status**
 
    ```bash
-   docker exec -it supernova-seed-1 supernova wallet lightning network-info
+   docker exec -it supernova-seed-1 supernova lightning channel-info \
+     --channel-id CHANNEL_ID
    ```
 
-## Environmental Impact Monitoring {#environmental-impact-monitoring}
+<a id="environmental-impact-monitoring"></a>
 
-### Green Mining Registration {#green-mining-registration}
+## Environmental Impact Monitoring
 
-Register as a green miner to receive fee discounts:
+<a id="green-mining-registration"></a>
 
-```bash
-# Register as a green miner
-docker exec -it supernova-seed-1 supernova miner register-green \
-  --renewable-percentage 75 \
-  --provider "GreenEnergy Inc" \
-  --certificate "CERT-12345"
+### Green Mining Registration
 
-# Update green mining credentials
-docker exec -it supernova-seed-1 supernova miner update-green \
-  --renewable-percentage 90
-```
+1. **Register as Green Miner**
 
-### Environmental Reporting {#environmental-reporting}
+   ```bash
+   docker exec -it supernova-seed-1 supernova env register-green \
+     --power-source solar \
+     --percentage 100 \
+     --location "San Francisco, CA" \
+     --proof-url "https://example.com/solar-certificate.pdf"
+   ```
 
-Monitor and report environmental impact:
+   Available power sources: `solar`, `wind`, `hydro`, `geothermal`, `nuclear`, `carbon-offset`
 
-```bash
-# View current network emissions
-docker exec -it supernova-seed-1 supernova node env-metrics
+2. **Verify Registration**
 
-# View transaction carbon footprint
-docker exec -it supernova-seed-1 supernova node tx-emissions \
-  --txid YOUR_TRANSACTION_ID
+   ```bash
+   docker exec -it supernova-seed-1 supernova env status
+   ```
 
-# Export environmental report (daily)
-docker exec -it supernova-seed-1 supernova node env-report \
-  --period daily \
-  --output report.txt
+<a id="environmental-reporting"></a>
 
-# View mining pool energy sources
-docker exec -it supernova-seed-1 supernova node pool-energy
+### Environmental Reporting
 
-# View Lightning Network emissions savings
-docker exec -it supernova-seed-1 supernova node lightning-emissions-report
-```
+1. **Submit Monthly Report**
 
-### Fee Discounts for Green Mining {#fee-discounts-for-green-mining}
+   ```bash
+   docker exec -it supernova-seed-1 supernova env submit-report \
+     --month 2023-06 \
+     --kwh-consumed 120.5 \
+     --kwh-offset 120.5 \
+     --proof-url "https://example.com/june-energy-bill.pdf"
+   ```
 
-The testnet simulates Supernova's green mining incentives. Miners using renewable energy receive fee discounts:
+2. **View Environmental Impact**
 
-| Renewable Percentage | Fee Discount |
-| -------------------- | ------------ |
-| 95-100%              | 10%          |
-| 75-94%               | 7%           |
-| 50-74%               | 5%           |
-| 25-49%               | 2%           |
-| 0-24%                | 0%           |
+   ```bash
+   docker exec -it supernova-seed-1 supernova env impact-report
+   ```
 
-## Security Feature Testing {#security-feature-testing}
+   This command displays:
+   - Total estimated carbon offset
+   - Energy efficiency rating
+   - Comparison to network average
 
-### Network Security Metrics {#network-security-metrics}
+<a id="fee-discounts-for-green-mining"></a>
 
-Monitor various security aspects of the network:
+### Fee Discounts for Green Mining
+
+Verified green miners receive transaction fee discounts:
 
 ```bash
-# View network security metrics
-docker exec -it supernova-seed-1 supernova node security-metrics
+# Check your current fee discount
+docker exec -it supernova-seed-1 supernova env fee-discount
 
-# View network diversity score
-docker exec -it supernova-seed-1 supernova node diversity-score
-
-# Monitor banned peers
-docker exec -it supernova-seed-1 supernova node banned-peers
+# Apply fee discount to a transaction
+docker exec -it supernova-seed-1 supernova wallet send \
+  --address RECIPIENT_ADDRESS \
+  --amount 10 \
+  --apply-green-discount
 ```
 
-### Peer Reputation System {#peer-reputation-system}
+<a id="security-feature-testing"></a>
 
-Examine the peer reputation system:
+## Security Feature Testing
 
-```bash
-# View peer reputation scores
-docker exec -it supernova-seed-1 supernova node peer-scores
+<a id="network-security-metrics"></a>
 
-# View detailed information about a specific peer
-docker exec -it supernova-seed-1 supernova node peer-info --peer PEER_ID
-```
+### Network Security Metrics
 
-### Security Configuration {#security-configuration}
+1. **View Security Status**
 
-Customize security parameters:
+   ```bash
+   docker exec -it supernova-seed-1 supernova security status
+   ```
 
-```bash
-# Set custom security parameters
-docker exec -it supernova-seed-1 supernova node configure-security \
-  --min-diversity 0.8 \
-  --rotation-interval 3600
+   This displays:
+   - Network health score
+   - Active security incidents
+   - Threat assessment level
+   - Recommended security settings
 
-# Reset security configuration to defaults
-docker exec -it supernova-seed-1 supernova node reset-security
-```
+2. **Run Security Scan**
 
-## Disaster Recovery Testing {#disaster-recovery-testing}
+   ```bash
+   docker exec -it supernova-seed-1 supernova security scan
+   ```
 
-### Creating Backups {#creating-backups}
+<a id="peer-reputation-system"></a>
 
-Create manual and automated backups:
+### Peer Reputation System
 
-```bash
-# Create a manual backup
-docker exec -it supernova-seed-1 supernova node create-backup
+1. **Check Peer Reputation**
 
-# Configure automated backups
-docker exec -it supernova-seed-1 supernova node configure-backup \
-  --interval 24 \
-  --retention 7
-```
+   ```bash
+   docker exec -it supernova-seed-1 supernova security peer-reputation \
+     --peer-id PEER_NODE_ID
+   ```
 
-### Integrity Verification {#integrity-verification}
+2. **List Banned Peers**
 
-Verify database integrity:
+   ```bash
+   docker exec -it supernova-seed-1 supernova security list-banned
+   ```
 
-```bash
-# Verify database integrity
-docker exec -it supernova-seed-1 supernova node verify-integrity
+3. **Report Malicious Activity**
 
-# Verify with detailed report
-docker exec -it supernova-seed-1 supernova node verify-integrity --verbose
-```
+   ```bash
+   docker exec -it supernova-seed-1 supernova security report-peer \
+     --peer-id PEER_NODE_ID \
+     --reason "Spamming transactions" \
+     --evidence "Transaction logs at 2023-06-15T14:30:00Z"
+   ```
 
-### Restoring from Backup {#restoring-from-backup}
+<a id="security-configuration"></a>
 
-Test backup restoration:
+### Security Configuration
 
-```bash
-# Restore from backup
-docker exec -it supernova-seed-1 supernova node restore \
-  --backup-file ./backups/supernova_backup_timestamp.db
+1. **Update Security Settings**
 
-# Check repair status
-docker exec -it supernova-seed-1 supernova node repair-status
-```
+   ```bash
+   docker exec -it supernova-seed-1 supernova security config \
+     --auto-ban true \
+     --max-banned-peers 100 \
+     --ban-threshold 50
+   ```
 
-## API Testing {#api-testing}
+2. **Enable Enhanced Security Mode**
 
-### RESTful API {#restful-api}
+   ```bash
+   docker exec -it supernova-seed-1 supernova security enhanced-mode \
+     --level high
+   ```
 
-Test the RESTful API endpoints:
+   Security levels: `standard`, `enhanced`, `high`, `paranoid`
 
-```bash
-# Get blockchain info
-curl -X GET "http://localhost:8080/api/v1/blockchain/info" \
-  -H "Authorization: Bearer YOUR_API_KEY"
+<a id="disaster-recovery-testing"></a>
 
-# Get block by height
-curl -X GET "http://localhost:8080/api/v1/blocks/height/100" \
-  -H "Authorization: Bearer YOUR_API_KEY"
+## Disaster Recovery Testing
 
-# Get transaction details
-curl -X GET "http://localhost:8080/api/v1/transactions/YOUR_TXID" \
-  -H "Authorization: Bearer YOUR_API_KEY"
+<a id="creating-backups"></a>
 
-# Get address balance
-curl -X GET "http://localhost:8080/api/v1/addresses/YOUR_ADDRESS/balance" \
-  -H "Authorization: Bearer YOUR_API_KEY"
+### Creating Backups
 
-# Get environmental metrics
-curl -X GET "http://localhost:8080/api/v1/environmental/metrics" \
-  -H "Authorization: Bearer YOUR_API_KEY"
-```
+1. **Create Full Node Backup**
 
-### JSON-RPC API {#json-rpc-api}
+   ```bash
+   docker exec -it supernova-seed-1 supernova backup create \
+     --output /backups/full-node-backup.zip
+   ```
 
-Test the JSON-RPC API:
+2. **Create Wallet-Only Backup**
 
-```bash
-# Get blockchain info
-curl -X POST "http://localhost:8332" \
-  -H "Content-Type: application/json" \
-  -H "X-API-Key: YOUR_API_KEY" \
-  -d '{
-    "jsonrpc": "2.0",
-    "id": "1",
-    "method": "getblockchaininfo",
-    "params": []
-  }'
+   ```bash
+   docker exec -it supernova-seed-1 supernova wallet backup \
+     --output /backups/wallet-backup.zip \
+     --encrypt
+   ```
 
-# Get block by hash
-curl -X POST "http://localhost:8332" \
-  -H "Content-Type: application/json" \
-  -H "X-API-Key: YOUR_API_KEY" \
-  -d '{
-    "jsonrpc": "2.0",
-    "id": "1",
-    "method": "getblock",
-    "params": ["BLOCK_HASH"]
-  }'
+3. **Schedule Automated Backups**
 
-# Get transaction details
-curl -X POST "http://localhost:8332" \
-  -H "Content-Type: application/json" \
-  -H "X-API-Key: YOUR_API_KEY" \
-  -d '{
-    "jsonrpc": "2.0",
-    "id": "1",
-    "method": "getrawtransaction",
-    "params": ["YOUR_TXID", true]
-  }'
-```
+   ```bash
+   docker exec -it supernova-seed-1 supernova backup schedule \
+     --interval daily \
+     --output-dir /backups/ \
+     --retain 7
+   ```
 
-## Explorer and Network Status {#explorer-and-network-status}
+   Intervals: `hourly`, `daily`, `weekly`, `monthly`
 
-1. **Block Explorer**
+<a id="integrity-verification"></a>
 
-   If using the remote testnet:
-   Visit [https://explorer.testnet.supernovanetwork.xyz](https://explorer.testnet.supernovanetwork.xyz)
+### Integrity Verification
 
-   If using the local Docker setup:
-   Visit `http://localhost:8081`
+1. **Verify Backup Integrity**
 
-   Features include:
-   - View recent blocks
-   - Search for transactions
-   - Check addresses and balances
-   - View network statistics
+   ```bash
+   docker exec -it supernova-seed-1 supernova backup verify \
+     --input /backups/full-node-backup.zip
+   ```
 
-2. **Network Status**
+2. **Test Recovery Process**
 
-   If using the remote testnet:
-   Visit [https://status.testnet.supernovanetwork.xyz](https://status.testnet.supernovanetwork.xyz)
+   ```bash
+   docker exec -it supernova-seed-1 supernova backup test-recovery \
+     --input /backups/full-node-backup.zip \
+     --target /tmp/recovery-test
+   ```
 
-   If using the local Docker setup:
-   Visit `http://localhost:8082`
+<a id="restoring-from-backup"></a>
 
-   Monitor:
+### Restoring from Backup
+
+1. **Restore Full Node**
+
+   ```bash
+   docker exec -it supernova-seed-1 supernova backup restore \
+     --input /backups/full-node-backup.zip \
+     --force
+   ```
+
+2. **Restore Wallet Only**
+
+   ```bash
+   docker exec -it supernova-seed-1 supernova wallet restore \
+     --input /backups/wallet-backup.zip
+   ```
+
+3. **Verify Restored Data**
+
+   ```bash
+   docker exec -it supernova-seed-1 supernova blockchain verify
+   docker exec -it supernova-seed-1 supernova wallet verify
+   ```
+
+<a id="api-testing"></a>
+
+## API Testing
+
+<a id="restful-api"></a>
+
+### RESTful API
+
+1. **Test RESTful API Endpoints**
+
+   ```bash
+   # Get blockchain status
+   curl http://localhost:8080/api/v1/status
+
+   # Get block by height
+   curl http://localhost:8080/api/v1/blocks/1000
+
+   # Get transaction by ID
+   curl http://localhost:8080/api/v1/transactions/TRANSACTION_ID
+   ```
+
+2. **Create Transaction via API**
+
+   ```bash
+   curl -X POST http://localhost:8080/api/v1/transactions \
+     -H "Content-Type: application/json" \
+     -d '{
+       "from": "SENDER_ADDRESS",
+       "to": "RECIPIENT_ADDRESS",
+       "amount": 1.5,
+       "fee": 0.001,
+       "signature": "VALID_SIGNATURE"
+     }'
+   ```
+
+<a id="json-rpc-api"></a>
+
+### JSON-RPC API
+
+1. **Test JSON-RPC API**
+
+   ```bash
+   # Get node info
+   curl -X POST http://localhost:8545 \
+     -H "Content-Type: application/json" \
+     -d '{
+       "jsonrpc": "2.0",
+       "method": "supernova_getNodeInfo",
+       "params": [],
+       "id": 1
+     }'
+
+   # Get balance
+   curl -X POST http://localhost:8545 \
+     -H "Content-Type: application/json" \
+     -d '{
+       "jsonrpc": "2.0",
+       "method": "supernova_getBalance",
+       "params": ["ADDRESS"],
+       "id": 1
+     }'
+   ```
+
+2. **Create New Block (Validator Only)**
+
+   ```bash
+   curl -X POST http://localhost:8545 \
+     -H "Content-Type: application/json" \
+     -d '{
+       "jsonrpc": "2.0",
+       "method": "supernova_createBlock",
+       "params": [],
+       "id": 1
+     }'
+   ```
+
+<a id="explorer-and-network-status"></a>
+
+## Explorer and Network Status
+
+1. **Access Testnet Explorer**
+
+   Visit the explorer at:
+   - Public URL: [https://explorer.testnet.supernovanetwork.xyz](https://explorer.testnet.supernovanetwork.xyz)
+   - Local Docker: http://localhost:8081
+
+   The explorer provides:
+   - Real-time block information
+   - Transaction history
+   - Network statistics
+   - Validator performance
+
+2. **Check Network Status Dashboard**
+
+   Visit the status page at:
+   - Public URL: [https://status.testnet.supernovanetwork.xyz](https://status.testnet.supernovanetwork.xyz)
+   - Local Docker: http://localhost:8082
+
+   The status page shows:
    - Network uptime
-   - Node distribution
    - Transaction throughput
-   - Environmental metrics
+   - Active validators
+   - Error rates
+   - Environmental impact metrics
 
-## Advanced Testing {#advanced-testing}
+<a id="advanced-testing"></a>
 
-### Performance Testing {#performance-testing}
+## Advanced Testing
 
-1. **Transaction Throughput**
+<a id="performance-testing"></a>
 
-   ```bash
-   # Generate load with 100 transactions
-   docker exec -it supernova-seed-1 supernova benchmark tx-throughput \
-     --count 100 \
-     --from YOUR_ADDRESS
-   ```
+### Performance Testing
 
-2. **Response Time**
+1. **Run Benchmarks**
 
    ```bash
-   # Measure RPC response time
-   docker exec -it supernova-seed-1 supernova benchmark rpc-latency
+   docker exec -it supernova-seed-1 supernova benchmark all
    ```
 
-### Stress Testing {#stress-testing}
+   This runs comprehensive benchmarks for:
+   - Transaction processing
+   - Block validation
+   - Consensus algorithms
+   - Network communication
 
-1. **Mempool Capacity**
+2. **Test Transaction Throughput**
 
    ```bash
-   # Fill mempool with transactions
-   docker exec -it supernova-seed-1 supernova benchmark fill-mempool \
-     --from YOUR_ADDRESS \
-     --tx-count 1000
+   docker exec -it supernova-seed-1 supernova benchmark transactions \
+     --count 10000 \
+     --threads 4 \
+     --size small
    ```
 
-2. **Node Recovery**
+   Transaction sizes: `small`, `medium`, `large`
+
+<a id="stress-testing"></a>
+
+### Stress Testing
+
+1. **Network Flood Test**
 
    ```bash
-   # Restart a node and measure sync time
-   docker-compose restart supernova-node-1
-   docker exec -it supernova-node-1 supernova benchmark sync-time
+   docker exec -it supernova-seed-1 supernova test flood \
+     --tx-per-second 1000 \
+     --duration 300
    ```
 
-### Node Statistics {#node-statistics}
+2. **Validator Failover Test**
+
+   ```bash
+   docker exec -it supernova-seed-1 supernova test validator-failover \
+     --validators 3 \
+     --fail-count 1
+   ```
+
+3. **Network Partition Test**
+
+   ```bash
+   docker exec -it supernova-seed-1 supernova test network-partition
+   ```
+
+<a id="node-statistics"></a>
+
+### Node Statistics
+
+1. **View Detailed Stats**
+
+   ```bash
+   docker exec -it supernova-seed-1 supernova stats --detailed
+   ```
+
+2. **Export Performance Metrics**
+
+   ```bash
+   docker exec -it supernova-seed-1 supernova stats export \
+     --format json \
+     --output /tmp/node-stats.json
+   ```
+
+   Export formats: `json`, `csv`, `prometheus`
+
+<a id="using-utility-scripts"></a>
+
+## Using Utility Scripts
+
+The testnet includes several utility scripts to simplify common tasks:
 
 ```bash
-# Get comprehensive node stats
-docker exec -it supernova-seed-1 supernova node stats
+# Reset testnet environment
+./scripts/reset_testnet.sh
 
-# Get peer information
-docker exec -it supernova-seed-1 supernova node peers
+# Generate test transactions
+./scripts/generate_transactions.sh --count 100
 
-# Check memory pool
-docker exec -it supernova-seed-1 supernova node mempool
+# Monitor node performance
+./scripts/monitor_performance.sh --interval 10
 ```
 
-## Using Utility Scripts {#using-utility-scripts}
+Additional scripts available:
 
-Supernova provides several utility scripts to simplify testnet operations:
-
-```bash
-# Navigate to the scripts directory
-cd scripts
-
-# Start all testnet services
-./start_testnet.sh
-
-# Stop all testnet services
-./stop_testnet.sh
-
-# Reset the testnet state
-./reset_testnet.sh
-
-# Generate test data
-./generate_test_data.sh --tx-count 1000
-
-# Monitor node health
-./monitor_nodes.sh
-
-# Run a health check
-./health_check.sh
-```
-
-## Known Issues and Fixes {#known-issues-and-fixes}
-
-Some known issues in the testnet implementation and their fixes:
-
-1. **RPC Connection Issues**
-
-   If you encounter RPC connection issues, check your firewall settings and ensure ports are properly exposed.
+1. **Network Visualization**
 
    ```bash
-   # Verify port exposure
-   docker-compose ps
-   
-   # Check if ports are accessible
-   curl -v http://localhost:8545
+   ./scripts/visualize_network.sh --output network.html
    ```
 
-   For more details, refer to the [TESTNET_FIXES_UPDATED.md](https://github.com/mjohnson518/supernova/blob/main/TESTNET_FIXES_UPDATED.md) document.
-
-2. **Node Synchronization Problems**
-
-   Occasionally nodes may fall out of sync. This can be resolved by:
+2. **Quick Environment Setup**
 
    ```bash
-   # Restart the affected node
-   docker-compose restart supernova-node-1
+   ./scripts/quick_setup.sh --nodes 3 --with-explorer
+   ```
+
+3. **Automated Testing**
+
+   ```bash
+   ./scripts/run_tests.sh --suite complete
+   ```
+
+<a id="known-issues-and-fixes"></a>
+
+## Known Issues and Fixes
+
+The testnet may encounter the following known issues. Here are the solutions:
+
+1. **Docker Network Conflicts**
+
+   **Issue**: Docker network conflicts with existing networks.
    
-   # In severe cases, reset the node's data
-   docker-compose down
-   docker volume rm testnet_blockchain_data
+   **Solution**:
+   ```bash
+   docker network prune
+   # Then modify the docker-compose.yml to use a different subnet:
+   # networks:
+   #   supernova_net:
+   #     ipam:
+   #       config:
+   #         - subnet: 172.20.0.0/16
+   ```
+
+2. **Node Synchronization Issues**
+
+   **Issue**: Nodes fail to synchronize properly.
+   
+   **Solution**:
+   ```bash
+   # Reset the node data
+   docker exec -it supernova-seed-1 supernova node reset-data
+   
+   # Restart with specified seed node
+   docker-compose restart
+   ```
+
+3. **Transaction Processing Delays**
+
+   **Issue**: Transactions take too long to process.
+   
+   **Solution**: Adjust block parameters in the configuration:
+   ```bash
+   docker exec -it supernova-seed-1 supernova config set \
+     --max-block-size 2048576 \
+     --block-time 5
+   ```
+
+<a id="troubleshooting"></a>
+
+## Troubleshooting
+
+If you encounter issues not listed above, try these general troubleshooting steps:
+
+1. **Check Logs**
+
+   ```bash
+   docker-compose logs -f
+   ```
+
+2. **Verify Network Connectivity**
+
+   ```bash
+   docker exec -it supernova-seed-1 ping supernova-node-1
+   ```
+
+3. **Inspect Container Health**
+
+   ```bash
+   docker inspect --format='{{.State.Health.Status}}' supernova-seed-1
+   ```
+
+4. **Check Resource Usage**
+
+   ```bash
+   docker stats
+   ```
+
+5. **Restart Services**
+
+   ```bash
+   docker-compose restart
+   ```
+
+6. **Reset Environment**
+
+   If all else fails, reset the entire environment:
+   
+   ```bash
+   docker-compose down -v
    docker-compose up -d
    ```
 
-3. **Memory Issues with Multiple Nodes**
+<a id="testnet-reset-procedure"></a>
 
-   Running many nodes may cause memory pressure. Adjust Docker resource limits:
+## Testnet Reset Procedure
 
-   ```bash
-   # Edit Docker Compose file to add resource limits
-   # Example: add "mem_limit: 2g" to each service
-   ```
+The testnet is periodically reset to ensure optimal performance. To prepare for a reset:
 
-4. **Database Corruption Issues**
-
-   As noted in FINAL_SOLUTION.md, database corruption can occur during improper shutdowns. The solution is:
-   
-   ```bash
-   # Proper shutdown sequence
-   docker-compose stop supernova-node-1 supernova-node-2
-   docker-compose stop supernova-seed-1
-   
-   # If corruption occurs, use the repair tool
-   docker exec -it supernova-seed-1 supernova db repair
-   ```
-
-## Troubleshooting {#troubleshooting}
-
-### Common Issues and Solutions
-
-1. **Nodes Not Connecting**
+1. **Export Your Wallets**
 
    ```bash
-   # Check node status
-   docker exec -it supernova-seed-1 supernova node status
-   
-   # Restart networking
-   docker-compose restart supernova-seed-1
+   docker exec -it supernova-seed-1 supernova wallet export \
+     --output /backups/wallets.json
    ```
 
-2. **Transactions Not Confirming**
+2. **Save Important Data**
 
    ```bash
-   # Check mempool status
-   docker exec -it supernova-seed-1 supernova node mempool
-   
-   # Try resending with higher fee
-   docker exec -it supernova-seed-1 supernova wallet send \
-     --address RECIPIENT_ADDRESS \
-     --amount 1 \
-     --fee 0.01
+   docker exec -it supernova-seed-1 supernova data export \
+     --output /backups/important-data.json
    ```
 
-3. **Node Not Syncing**
+3. **Monitor Reset Announcements**
 
-   ```bash
-   # Check sync status
-   docker exec -it supernova-seed-1 supernova blockchain status
-   
-   # Force resync
-   docker-compose down
-   docker volume rm testnet_blockchain_data
-   docker-compose up -d
-   ```
+   Reset announcements are posted on:
+   - Discord #testnet channel
+   - GitHub repository issues
+   - Status page banner
 
-### Logs and Diagnostics
+<a id="getting-help"></a>
 
-```bash
-# Collect diagnostic information
-docker exec -it supernova-seed-1 supernova diagnostics collect
+## Getting Help
 
-# View detailed logs
-docker-compose logs --tail=100 -f
-```
+If you need assistance with the testnet:
 
-## Testnet Reset Procedure {#testnet-reset-procedure}
+1. **Join Discord Community**
 
-Occasionally, you may want to reset the testnet to a clean state:
+   Join our [Discord server](https://discord.gg/supernova) and ask questions in the #testnet-support channel.
 
-```bash
-# Stop all containers
-docker-compose down
+2. **GitHub Issues**
 
-# Remove volumes to clear blockchain data
-docker-compose down -v
+   Report bugs or suggest improvements on our [GitHub repository](https://github.com/mjohnson518/supernova/issues).
 
-# Restart from clean state
-docker-compose up -d
+3. **Documentation**
 
-# Alternative: use the reset script
-cd scripts
-./reset_testnet.sh
+   Refer to the [complete documentation](https://docs.supernovanetwork.xyz) for detailed information.
 
-# For the simplified Docker setup
-./docker_setup.sh --reset
-```
+4. **Developer Office Hours**
 
-## Getting Help {#getting-help}
-
-If you encounter issues while testing:
-
-- **Documentation**: Visit [https://docs.supernovanetwork.xyz](https://docs.supernovanetwork.xyz)
-- **Discord Community**: Join our [developer channel](https://discord.gg/Z4k9Ayp3)
-- **GitHub Issues**: Submit bugs at [https://github.com/mjohnson518/supernova/issues](https://github.com/mjohnson518/supernova/issues)
+   Attend our weekly developer office hours every Wednesday at 2:00 PM UTC on Discord.
 
  

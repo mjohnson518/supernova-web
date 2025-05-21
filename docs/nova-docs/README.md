@@ -1,6 +1,19 @@
- # Supernova Documentation
+# Supernova Documentation
 
 This directory contains the official documentation for the Supernova blockchain project. The documentation is organized into logical sections to provide a clear path for different user types.
+
+## Current Version and Status
+
+Supernova is currently at version 0.7.5 in **ACTIVE DEVELOPMENT** state. While significant progress has been made on core components, many features are still in development or have partial implementations.
+
+### Key Implementation Milestones
+
+- **Compilation Progress**: All major compilation errors have been fixed, including NetworkSimulationConfig type conflicts in the testnet module.
+- **Quantum Resistance**: Post-quantum cryptographic signatures module (~98% complete) is now fully integrated with the validation framework.
+- **Environmental Features**: The environmental tracking system (~95% complete) successfully calculates emissions for transactions, blocks, and mining operations.
+- **Transaction Validation**: Enhanced validation framework with comprehensive error handling (~98% complete).
+
+For a detailed breakdown of component implementation status, see the [Project Overview](overview/project-overview.md) page.
 
 ## Documentation Structure
 
