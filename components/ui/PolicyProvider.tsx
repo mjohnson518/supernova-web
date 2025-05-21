@@ -11,6 +11,8 @@ import PolicyModal from './PolicyModal';
 import CookiePolicy from '../policies/CookiePolicy';
 import TermsOfService from '../policies/TermsOfService';
 import PrivacyPolicy from '../policies/PrivacyPolicy';
+import PolicyButton from './PolicyButton';
+import styles from '../layout/MainLayout.module.scss';
 
 interface PolicyContextType {
   showTerms: () => void;
@@ -132,26 +134,10 @@ export const PolicyProvider: React.FC<PolicyProviderProps> = ({ children }) => {
           <div className="container mx-auto flex flex-wrap items-center justify-between">
             <div className="w-full lg:w-3/4 mb-4 lg:mb-0">
               <p>
-                This website uses cookies to ensure you get the best experience. By using our website, 
-                you agree to our{' '}
-                <button 
-                  onClick={showTerms}
-                  className="underline text-blue-300 hover:text-blue-200"
-                >
-                  Terms of Service
-                </button>,{' '}
-                <button 
-                  onClick={showPrivacy}
-                  className="underline text-blue-300 hover:text-blue-200"
-                >
-                  Privacy Policy
-                </button>, and{' '}
-                <button 
-                  onClick={showCookies}
-                  className="underline text-blue-300 hover:text-blue-200"
-                >
-                  Cookie Policy
-                </button>.
+                This website uses cookies to ensure you get the best experience. By using our website, you agree to our{' '}
+                <PolicyButton type="terms" className={styles.footerLink}>Terms of Service</PolicyButton>,{' '}
+                <PolicyButton type="privacy" className={styles.footerLink}>Privacy Policy</PolicyButton>, and{' '}
+                <PolicyButton type="cookies" className={styles.footerLink}>Cookie Policy</PolicyButton>.
               </p>
             </div>
             <div className="w-full lg:w-1/4 flex justify-end space-x-4">
