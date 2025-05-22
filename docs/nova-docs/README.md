@@ -4,16 +4,26 @@ This directory contains the official documentation for the Supernova blockchain 
 
 ## Current Version and Status
 
-Supernova is currently at version 0.7.5 in **ACTIVE DEVELOPMENT** state. While significant progress has been made on core components, many features are still in development or have partial implementations.
+Supernova is currently at version 0.9.0-BETA. The architecture and core components have been designed and implemented, with all core functionality now operational. We've successfully resolved all compilation issues and the codebase builds successfully.
 
 ### Key Implementation Milestones
 
-- **Compilation Progress**: All major compilation errors have been fixed, including NetworkSimulationConfig type conflicts in the testnet module.
-- **Quantum Resistance**: Post-quantum cryptographic signatures module (~98% complete) is now fully integrated with the validation framework.
-- **Environmental Features**: The environmental tracking system (~95% complete) successfully calculates emissions for transactions, blocks, and mining operations.
-- **Transaction Validation**: Enhanced validation framework with comprehensive error handling (~98% complete).
+- **Quantum Resistance**: Post-quantum cryptographic signatures fully integrated using Falcon-based lattice cryptography, providing protection against quantum computer attacks.
+- **Environmental Tracking**: Real-time emissions monitoring with geographical attribution, green mining incentives, and environmental treasury for carbon offsets.
+- **Advanced Security**: Comprehensive security manager implementing IP diversity, peer rotation, challenge-response systems, and behavioral scoring to prevent various attack vectors.
+- **Lightning Network**: Full implementation of payment channels with HTLC support, proper channel lifecycle management, and security measures.
+- **Monitoring System**: Complete blockchain metrics framework tracking network health, environmental impact, performance, and security indicators.
 
-For a detailed breakdown of component implementation status, see the [Project Overview](overview/project-overview.md) page.
+For a detailed breakdown of component implementation status, see the [Project Overview](overview/project-overview.md) page and the [Roadmap](overview/roadmap.md).
+
+## Development Timeline
+
+The project is moving toward mainnet launch with the following timeline:
+
+1. **Current Phase (Q2 2025)**: Finalize remaining components and optimize performance
+2. **Testing Phase (Q2 2025)**: Comprehensive testing and security audits
+3. **Testnet Phase (Q2 2025)**: Complete testnet deployment with all features
+4. **Mainnet Launch (Q3 2025)**: Production infrastructure and genesis block
 
 ## Documentation Structure
 

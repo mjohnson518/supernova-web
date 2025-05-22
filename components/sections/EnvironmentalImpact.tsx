@@ -8,29 +8,30 @@ const EnvironmentalImpact = () => {
       <div className={styles['impact-content']}>
         <div className={styles['impact-stats']}>
           <div className={styles['stat-card']}>
-            <h3>99%</h3>
-            <p>Less energy than traditional proof-of-work blockchains</p>
+            <h3>Real-Time Tracking</h3>
+            <p>Comprehensive emissions monitoring with geographical attribution</p>
           </div>
           <div className={styles['stat-card']}>
-            <h3>Carbon Neutral</h3>
-            <p>Through renewable energy partnerships and carbon offsets</p>
+            <h3>Impact Reduction</h3>
+            <p>Green mining incentives and renewable energy verification</p>
           </div>
           <div className={styles['stat-card']}>
-            <h3>Sustainable Growth</h3>
-            <p>Designed to scale without increasing environmental impact</p>
+            <h3>Environmental Treasury</h3>
+            <p>Transaction fees fund verifiable carbon offset projects</p>
           </div>
         </div>
         <div className={styles['impact-description']}>
           <p>
-            At Supernova, we believe blockchain technology can thrive without 
-            compromising our environment. Our innovative consensus mechanism 
-            drastically reduces energy consumption while maintaining security and
-            decentralization.
+            Supernova acknowledges the energy requirements of proof-of-work 
+            while implementing concrete measures to mitigate environmental impact. 
+            Our system tracks energy consumption, incentivizes renewable sources, 
+            and maintains a transparent environmental treasury.
           </p>
           <p>
-            We&apos;re committed to leading the industry toward a more sustainable 
-            future, proving that performance and environmental responsibility 
-            can go hand in hand.
+            Through our fee allocation system, miners using verified renewable 
+            energy receive higher rewards, creating a measurable shift toward 
+            greener operations while preserving the security and decentralization 
+            benefits of proof-of-work.
           </p>
         </div>
       </div>

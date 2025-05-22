@@ -154,40 +154,47 @@ const Hero = () => {
       />
 
       <div className={styles['hero-content']}>
-        <h1 className={styles.heading}>
-          <AuroraText 
-            speed={1.25}
-            size="large"
-            colors={["#4D84FF", "#00F5D4", "#6A3093", "#FF3366"]}
-            glowOpacity={0.2}
-          >
-            Supernova
-          </AuroraText>
-          <TextAnimate 
-            by="word" 
-            delay={0.2} 
-            duration={0.8} 
-            as="span" 
-            className={styles.subheading}
-          >
-            Advanced Security, Scalability, and Sustainability
-          </TextAnimate>
-        </h1>
+        <div className="relative">
+          <h1 className={styles.heading}>
+            <AuroraText 
+              speed={1.25}
+              size="large"
+              colors={["#4D84FF", "#00F5D4", "#6A3093", "#FF3366"]}
+              glowOpacity={0.2}
+            >
+              Supernova
+            </AuroraText>
+            <TextAnimate 
+              by="word" 
+              delay={0.2} 
+              duration={0.8} 
+              as="span" 
+              className={styles.subheading}
+            >
+              Advanced Security, Scalability, and Sustainability
+            </TextAnimate>
+          </h1>
+        </div>
         <p>
           A next-generation PoW blockchain combining quantum-resistant cryptography, 
           advanced security features, and environmental consciousness for a secure, 
-          scalable, and sustainable decentralized future.
+          scalable, and sustainable future.
         </p>
         <div className={styles['cta-buttons']}>
           <a 
             href="https://github.com/mjohnson518/supernova" 
             target="_blank" 
             rel="noopener noreferrer"
-            className={styles['primary-button']}
+            className={`${styles['primary-button']} w-[180px] flex justify-center items-center`}
           >
             Get Started
           </a>
-          <a href="#technology" className={styles['secondary-button']}>Explore Technology</a>
+          <a 
+            href="/docs" 
+            className={`${styles['secondary-button']} w-[180px] flex justify-center items-center`}
+          >
+            Documentation
+          </a>
         </div>
       </div>
     </section>
