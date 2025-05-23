@@ -1,6 +1,42 @@
-# Supernova Blockchain: Complete Node Setup and Operation Guide
+# Supernova Blockchain v1.0.0-BETA: Complete Node Setup and Operation Guide
 
-This guide provides detailed instructions for setting up a Supernova blockchain node, participating in mining, and conducting transactions on the network. Supernova combines quantum-resistant cryptography with environmental consciousness for a secure, sustainable blockchain.
+This guide provides comprehensive instructions for setting up a Supernova blockchain node, participating in mining, and conducting transactions on the production-ready v1.0.0-BETA network. Supernova combines industry-leading quantum-resistant cryptography with automated environmental consciousness for a secure, sustainable, and scalable blockchain platform.
+
+## Production-Ready v1.0.0-BETA Features
+
+This version includes enterprise-grade capabilities:
+
+- **Complete Quantum Resistance**: Production-ready post-quantum signature schemes (Falcon, Dilithium, SPHINCS+)
+- **Automated Environmental Tracking**: Real-time emissions monitoring with automated carbon offsetting
+- **Lightning Network Integration**: Full Layer 2 scaling with quantum-resistant payment channels
+- **Enterprise Security**: Advanced threat detection, IP diversity, and peer reputation systems
+- **High-Performance Architecture**: Optimized for throughput with sub-second block confirmations
+- **Comprehensive APIs**: RESTful and JSON-RPC APIs with full documentation and monitoring
+- **Production Monitoring**: Built-in Prometheus metrics and alerting for enterprise deployment
+
+## Hardware Requirements Update
+
+### Minimum Requirements (Development/Testing)
+- **CPU**: 8 cores (Intel/AMD x64 or ARM64)
+- **RAM**: 16 GB (32 GB recommended)
+- **Storage**: 500 GB NVMe SSD (1 TB recommended)
+- **Network**: 25 Mbps stable connection with low latency
+- **Operating System**: Ubuntu 22.04 LTS, Debian 12, or CentOS Stream 9
+
+### Recommended Requirements (Production/Mainnet)
+- **CPU**: 32+ cores with high single-thread performance
+- **RAM**: 64+ GB ECC memory
+- **Storage**: 2+ TB NVMe SSD with RAID 1 for redundancy
+- **Network**: 1 Gbps dedicated connection with < 50ms latency to peers
+- **Operating System**: Ubuntu 22.04 LTS (recommended for production)
+
+### Mining Node Requirements (v1.0.0-BETA)
+- **CPU**: 64+ cores optimized for quantum-resistant proof-of-work
+- **RAM**: 32+ GB
+- **Storage**: 1+ TB NVMe SSD
+- **GPU**: NVIDIA RTX 4090 or equivalent (optional but significantly improves mining performance)
+- **Network**: 1 Gbps with < 25ms latency for optimal block propagation
+- **Power**: Renewable energy sources preferred for green mining incentives
 
 ## Table of Contents
 - [System Requirements](#system-requirements)
